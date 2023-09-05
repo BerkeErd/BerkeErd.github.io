@@ -1,0 +1,53 @@
+#featured-games {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+
+
+
+  #contact {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  
+  #project-viewport {
+    display: flex;
+    overflow-x: auto;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+  }
+  
+  .project-card {
+    text-align: center; /* Başlığı ve diğer içeriği yatay olarak ortalayın */
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    cursor: pointer;
+  }
+  
+  
+  .project-card h3 {
+    margin-bottom: 10px; /* İsteğe bağlı: resimle arasında biraz boşluk bırakın */
+  }
+  .project-card:hover {
+    transform: scale(1.1);
+  }
+  
+  #project-details {
+    text-align: center;
+  }
+
+
+  .carousel-item {
+    opacity: 0.3;  /* Şeffaf */
+    transition: opacity 0.5s ease;  /* Geçiş efekti */
+  }
+  
+  .carousel-item.active {
+    opacity: 1;  /* Tamamen görünür */
+  }
+  
+  
+    

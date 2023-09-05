@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projeler - Beruke Games</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap ve jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Özel Stiller */
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+    .navbar {
+      background-color: #141414;
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+    }
+    .project-card {
+      background-color: #1F1F1F;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      color: #fff;
+    }
+    h3 {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Beruke Games</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Hakkımda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projeler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">İletişim</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <div id="project-viewport">
+    <div class="project-card" data-project="stick-slasher">
+      <!-- Stick Slasher içeriği -->
+      <h3>Stick Slasher</h3>
+      <img src="https://play-lh.googleusercontent.com/VOJlyhIJwcGv4YNJhk4G9fT1pdc8UQp67JGAwzJpLPQORhCL8JvexaJHnEwBrUvBspbO=w240-h480-rw" alt="Stick Slasher Thumbnail">
+    </div>
+    <div class="project-card" data-project="sesli-sorulu-milyonlar">
+      <!-- Sesli Sorulu Milyonlar içeriği -->
+      <h3>Sesli Sorulu Milyonlar</h3>
+      <img src="https://play-lh.googleusercontent.com/xd9qMoRqj82l_Qr9RVyo-SNhqo-ds0vl6MEQHmvroKFu2dv14kVqTRIyhh_n7d5f3c0=w240-h480-rw" alt="Sesli Sorulu Milyonlar Thumbnail">
+    </div>  
+    <div class="project-card" data-project="ability-runner">
+        <!-- Ability Runner - Evolve içeriği -->
+        <h3>Ability Runner - Evolve</h3>
+        <img src="https://play-lh.googleusercontent.com/E4u9zVzBUxLiyFchX4UHX9O0zbxmfXW5d0S54NVmEBnf5lQTdbLREgyrrgnxJriSmpQ=w240-h480-rw" alt="Ability Runner Thumbnail">
+      </div> 
+      <div class="project-card" data-project="patlat-bi-kelime">
+        <!-- Patlat Bi Kelime içeriği -->
+        <h3>Patlat Bi Kelime - Kelime Bul</h3>
+        <img src="https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw" alt="Patlat Bi Kelime Thumbnail">
+      </div> 
+      <div class="project-card" data-project="bubble-pass">
+        <!-- Bubble Pass içeriği -->
+        <h3>Bubble Pass</h3>
+        <img src="https://play-lh.googleusercontent.com/iEWzNCoSMXX6pBKoKKWqcaRrKCBYA4R9EGfy56RK-xp0wggXPQi1in9Z0d8Nt40HUHY=w240-h480-rw" alt="Bubble Pass Thumbnail">
+      </div> 
+      <div class="project-card" data-project="simple-kalimba">
+        <!-- Simple Kalimba içeriği -->
+        <h3>Simple Kalimba</h3>
+        <img src="https://play-lh.googleusercontent.com/cGSdxq6t_3tSMm3DStn7zpux9ldUYroWQE6kAeirgP7tm7dBW_jeLcTVgbRNxkbkz8g=w240-h480-rw" alt="Simple Kalimba Thumbnail">
+      </div> 
+      <div class="project-card" data-project="bilgi-kat">
+        <!-- Bilgi Kat içeriği -->
+        <h3>Bilgi Kat</h3>
+        <img src="https://play-lh.googleusercontent.com/nA-cJ97TXxrjESfiWS0CE2jzUXI04uvJKq6BEnr8NEgB041PjG6b7l8AhmS88FI_RXc=w240-h480-rw" alt="Bilgi Kat Thumbnail">
+      </div> 
+      <div class="project-card" data-project="timeloop-traffic">
+        <!-- TimeLoop Traffic içeriği -->
+        <h3>TimeLoop Traffic: AutoClone</h3>
+        <img src="https://play-lh.googleusercontent.com/Xzv0OIXhkYPE4OrOIhOdDki3to0EPOB-xHm6rZ8NKNxKTXEWaH3scLgEfP3194Kmdx8C=w240-h480-rw" alt="TimeLoop Traffic Thumbnail">
+      </div> 
+    <!-- Diğer projeler -->
+  </div>
+
+  <div id="project-details">
+    <!-- Dinamik olarak doldurulacak -->
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
