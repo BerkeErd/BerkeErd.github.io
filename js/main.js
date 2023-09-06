@@ -15,7 +15,7 @@ const projectDetails = {
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
-    description: "Stick Slasher is a fast-paced, action-packed 2D fighting game where players wield a variety of weapons to fend off endless waves of enemies. As you vanquish foes, increasingly diverse and challenging adversaries emerge. Whether you decapitate them, sever their limbs, or strike elsewhere, each kill brings its own satisfaction.",
+    description: "Sesli Sorulu Milyonlar takes your trivia game experience to the next level.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SesliSoruMilyoner2021",
     steam: "#",
     itch: "#",
@@ -41,7 +41,7 @@ const projectDetails = {
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
     image: "https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw",
-    description: "Bomba patlamadan kelimeyi bul!",
+    description: "Find the word before the bomb explodes!",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PatlatBiKelime",
     steam: "#",
     itch: "#",
@@ -80,7 +80,7 @@ const projectDetails = {
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Bilgi Kat ile 45 kategoride bilginizi ölçün, kat kat zorluklarla rekor kırın!",
+    description: "Measure your knowledge in 45 categories with Knowledge Layer, break records with increasing difficulties!",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
     steam: "#",
     itch: "#",
@@ -112,7 +112,7 @@ const projectDetails = {
     itch: "https://beruke.itch.io/rgb-square",
     webGL: "#",
     youtube: "#",
-    additionalImages: ["https://play-lh.googleusercontent.com/emxtrseac2hPQv4wlS0wtbleLRea5rF1aqg4Y8P-UhJ4OMdg8E99_QkO-6uZDgajw-0=w2560-h1440-rw", "https://play-lh.googleusercontent.com/Zy0kebYkz72gwV6zMgrlOOd1hUeWQp4-rU_VjBE4Rx07R9CjjXRByhlK2ivNSzPOJw=w2560-h1440-rw"],
+    additionalImages: [],
     color: "#000000",
     backgroundColor: "#FFFFFF"
   }
@@ -137,7 +137,7 @@ $(document).ready(function() {
     if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
     if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
     if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
-    if (project.webGL !== '#') buttonsHtml += `<a href="${project.webGL}" class="btn btn-success">Oyna</a>`;
+    if (project.webGL !== '#') buttonsHtml += `<a href="${project.webGL}" class="btn btn-success">Play</a>`;
     if (project.youtube !== '#') buttonsHtml += `<a href="${project.youtube}" class="btn btn-danger">YouTube</a>`;
 
     const projectDetailsHtml = `
