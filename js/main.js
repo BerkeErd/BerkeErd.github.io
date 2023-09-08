@@ -106,7 +106,7 @@ const projectDetails = {
   "rgb-square": {
     name: "RGB Square",
     image: "https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png",
-    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released 81 days ago as of Sep 8, 2023.",
+    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
