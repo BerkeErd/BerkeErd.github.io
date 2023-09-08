@@ -103,5 +103,9 @@
   text-align: center;
 }
 
+.card-body p {
+  font-weight: bold;
+}
+
   
     

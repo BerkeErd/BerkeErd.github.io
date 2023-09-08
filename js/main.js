@@ -2,7 +2,7 @@ const projectDetails = {
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
-    description: "Stick Slasher is a fast-paced, action-packed 2D fighting game where players wield a variety of weapons to fend off endless waves of enemies. As you vanquish foes, increasingly diverse and challenging adversaries emerge. Whether you decapitate them, sever their limbs, or strike elsewhere, each kill brings its own satisfaction.",
+    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
@@ -15,7 +15,7 @@ const projectDetails = {
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
-    description: "Sesli Sorulu Milyonlar takes your trivia game experience to the next level.",
+    description: "My first game on Google Play Store, Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SesliSoruMilyoner2021",
     steam: "#",
     itch: "#",
@@ -28,7 +28,7 @@ const projectDetails = {
   "ability-runner": {
     name: "Ability Runner - Evolve",
     image: "https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw",
-    description: "Unleash abilities in this endless adventure. Can you conquer the race?",
+    description: "An unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.AbilityRunner",
     steam: "#",
     itch: "https://beruke.itch.io/ability-runner",
@@ -41,7 +41,7 @@ const projectDetails = {
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
     image: "https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw",
-    description: "Find the word before the bomb explodes!",
+    description: "Developed in 4-5 days, Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PatlatBiKelime",
     steam: "#",
     itch: "#",
@@ -54,20 +54,20 @@ const projectDetails = {
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
-    description: "Match filter to the bubbles color to survive in this fast and colorful game.",
+    description: "Developed in 4-5 days, Bubble Pass is a Tetris-like 2D Hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
     steam: "#",
     itch: "#",
     webGL: "#",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/6tS-hW7NLv3O2mkIKkJJ9PlG8SpzENXy-ACCbaV2XkvEzKZCS3QpJruKDyQQWNvODMM=w526-h296-rw", "https://play-lh.googleusercontent.com/d6DZ_SXqMzrMnIIKVfpgb0YVf9DWt8950_yJs-GCpQqAoZy4XHsRfJdVk3pdpzgxxGE=w526-h296-rw"],
-    color: "#F1F1F1",
+    color: "#000000",
     backgroundColor: "#1ab5f2"
   },
   "simple-kalimba": {
     name: "Simple Kalimba",
     image: "https://play-lh.googleusercontent.com/fNIUcRC5siSf1VH5CSRmJLmhCC3fzbSXNqa_ePOsQieCotMTa66llKgDHalKS3UEqZg=w416-h235-rw",
-    description: "Just a simple app for playing kalimba",
+    description: "My second Unity game, developed in 2 days for fun after buying a real-life Kalimba. Simple Kalimba is an Instrumental Simulator game built for Mobile platforms, featuring basic graphics, released on Jan 10, 2021.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SimpleKalimba",
     steam: "#",
     itch: "#",
@@ -80,20 +80,20 @@ const projectDetails = {
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Measure your knowledge in 45 categories with Knowledge Layer, break records with increasing difficulties!",
+    description: "Measure your knowledge in 45 categories with Knowledge Layer, break records with increasing difficulties. Released on Aug 24, 2023.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
     steam: "#",
     itch: "#",
     webGL: "#",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/XfDDe6QKd5IApgkCRWWaZ5ohWCoqQQdqlnmfRx1EBCTnH8RON0RtmdS4JW5fFkFzEJo=w2560-h1440-rw", "https://play-lh.googleusercontent.com/MmiH3tDQmbfOZd3RxuTB-elXtpzY9Sz5I16JQG7Rjr9FY3RVfmj1MMSgU7AUbYtXIQ=w2560-h1440-rw"],
-    color: "#F1F1F1",
+    color: "#000000",
     backgroundColor: "#f7ac1d"
   },
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
-    description: "Drive, clone, control! Create your own traffic chaos in a time-looping city!",
+    description: "TimeLoop, a game designed using Unity Engine, was released on Aug 26, 2023.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
     steam: "#",
     itch: "https://beruke.itch.io/timeloop-traffic-autoclone-city",
@@ -106,7 +106,7 @@ const projectDetails = {
   "rgb-square": {
     name: "RGB Square",
     image: "https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png",
-    description: "Collect the color you needed to survive!",
+    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released 81 days ago as of Sep 8, 2023.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
