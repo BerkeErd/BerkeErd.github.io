@@ -115,6 +115,19 @@ const projectDetails = {
     additionalImages: [],
     color: "#000000",
     backgroundColor: "#FFFFFF"
+  },
+  "suburban-racer": {
+    name: "Suburban Drift Racer",
+    image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
+    description: "Crafted with precision and passion, 'Suburban Drift Racer' is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023, this game promises adrenaline-packed action for racing enthusiasts.",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TheCar",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: ["https://play-lh.googleusercontent.com/Ry2xsLHSlWm-SXxSHv5MFolIjKKZPAMWlO3YwofnhcR-8T6wjzPyOMLjihJnWvnkVHg=w526-h296-rw", "https://play-lh.googleusercontent.com/COlE3MVcGix79sRONLYjMvTKDrNcA-SoiK14Jbsg4KBhxZ0KLqr5OtQ6_5s7oG7d3PE=w526-h296-rw"],
+    color: "#FFFFFF",
+    backgroundColor: "#9acde1"
   }
   // diğer projeler
 };
