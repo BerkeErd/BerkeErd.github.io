@@ -131,7 +131,7 @@ const projectDetails = {
   },
   "komik-mektup": {
     name: "Komik Mektup",
-    image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
+    image: "https://play-lh.googleusercontent.com/okZnElQqX4RkaZl69Bk8Rbk_zKog8A6xAHR87hhkvUZOXf8h7CjGa_XwPnnua6WphjU=w416-h235-rw",
     "description": "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.KomikMektup",
     steam: "#",
@@ -139,8 +139,8 @@ const projectDetails = {
     webGL: "#",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/g1hmpumJyg0JPZeL_muUgHxNkYg806zBLIAN1H0WKoV-VPmRVE6AUyUy9kyaezpmpA=w2560-h1440-rw", "https://play-lh.googleusercontent.com/yGsaMed0gQQp2pt7pksJOzCRXaiJPgfXkW0akYMolgyz_RHLXup50Vol2Pe7HCykhgI=w2560-h1440-rw"],
-    color: "#FFFFFF",
-    backgroundColor: "#9acde1"
+    color: "#000000",
+    backgroundColor: "#f86a16"
   }
   // diğer projeler
 };
