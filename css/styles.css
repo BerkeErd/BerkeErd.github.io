@@ -107,5 +107,12 @@
   font-weight: bold;
 }
 
-  
+.welcome-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;  /* Alt boşluk ekler */
+  margin-bottom: 20px;  /* Alt boşluk ekler */
+  max-width: 25%;  /* İsterseniz bu satırı kaldırabilir veya değiştirebilirsiniz */
+}
     
