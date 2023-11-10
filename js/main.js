@@ -112,7 +112,7 @@ const projectDetails = {
     itch: "https://beruke.itch.io/rgb-square",
     webGL: "#",
     youtube: "#",
-    additionalImages: [],
+    additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png","https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/347x500/PPV3M6.png"],
     color: "#000000",
     backgroundColor: "#FFFFFF"
   },
