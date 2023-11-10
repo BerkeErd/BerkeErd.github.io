@@ -1,3 +1,7 @@
+body {
+  padding-top: 70px; /* Navbar yüksekliğine göre ayarlayın */
+}
+
 #featured-games {
     background-color: #f9f9f9;
     padding: 20px;
@@ -19,8 +23,11 @@
   }
   
   #project-details {
-    flex: 3;
-    max-width: 75%;
+    position: sticky;
+    top: 70px; 
+    overflow-y: auto;
+    height: auto; 
+    max-height: calc(100vh - 140px); 
   }
   #project-details .card-header {
     transition: background-color 0.5s ease, color 0.5s ease;
@@ -41,27 +48,26 @@
   }
   
   .project-card {
-    text-align: center;
-    border: 1px solid #000000;
-    margin: auto;
-    margin-top: 5%;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 75px;  /* Genişlik belirlendi */
-    height: 100px;  /* Yükseklik belirlendi */
-    
-    overflow: hidden; 
-
+    border: 1px solid #ddd; /* Kenarlık ekle */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    overflow: hidden; /* Taşan içerikleri gizle */
+    margin: 10px;
+    transition: transform 0.3s ease; /* Animasyon ekleyin */
   }
-
-  .project-card h5 {
-    font-size: 12px;  /* Font boyutu küçültüldü */
-    font-weight: bold;  /* Metin kalın yapıldı */
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Kartın üzerine gelindiğinde büyüt */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Gölge efekti */
   }
   
   .project-card img {
-    max-width: 100%;  /* Resmin maksimum genişliği kartın genişliği ile aynı olacak */
-    height: auto;  /* Yükseklik otomatik olarak ayarlanacak */
+    width: 100%; /* Resimleri kartın genişliğine uydur */
+    display: block; /* Blok seviyesinde gösterim */
+  }
+  .project-card h5 {
+    text-align: center; /* Başlığı ortala */
+    margin-top: 15px; /* Üstten boşluk ekle */
+    margin-bottom: 15px; /* Alttan boşluk ekle */
   }
   
   
