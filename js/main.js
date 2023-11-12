@@ -80,7 +80,7 @@ const projectDetails = {
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Measure your knowledge in 45 categories with Knowledge Layer, break records with increasing difficulties. Released on Aug 24, 2023.",
+    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched in real-time from a Firebase database, ensuring a fresh and up-to-date gaming experience. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
     steam: "#",
     itch: "#",
