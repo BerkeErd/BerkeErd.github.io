@@ -233,7 +233,7 @@ $("#project-details .card-body").css({
 });
 
   
-  
+
   
 
 
