@@ -141,6 +141,19 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/g1hmpumJyg0JPZeL_muUgHxNkYg806zBLIAN1H0WKoV-VPmRVE6AUyUy9kyaezpmpA=w2560-h1440-rw", "https://play-lh.googleusercontent.com/yGsaMed0gQQp2pt7pksJOzCRXaiJPgfXkW0akYMolgyz_RHLXup50Vol2Pe7HCykhgI=w2560-h1440-rw"],
     color: "#000000",
     backgroundColor: "#f86a16"
+  },
+  "mystiCloned": {
+    name: "MystiCloned",
+    image: "https://cdn.magarajam.com/content/1700659987242751483734888.jpeg",
+    "description": "Developed in 72 hours for Magara Jam 2023",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "https://www.youtube.com/watch?v=eSFObQB12pw",
+    additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
+    color: "#FFFFFF",
+    backgroundColor: "#12002e"
   }
   // diğer projeler
 };
