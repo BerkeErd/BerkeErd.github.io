@@ -93,7 +93,7 @@ const projectDetails = {
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
-    description: "TimeLoop, a game designed using Unity Engine, was released on Aug 26, 2023.",
+    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
     steam: "#",
     itch: "https://beruke.itch.io/timeloop-traffic-autoclone-city",
@@ -119,7 +119,7 @@ const projectDetails = {
   "suburban-racer": {
     name: "Suburban Drift Racer",
     image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
-    description: "Crafted with precision and passion, 'Suburban Drift Racer' is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023, this game promises adrenaline-packed action for racing enthusiasts.",
+    description: "Suburban Drift Racer is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TheCar",
     steam: "#",
     itch: "#",

@@ -73,8 +73,17 @@ body {
 
 .project-card img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 50%;
+  object-fit: scale-down;
+}
+
+.project-card h5 {
+  line-height: 1.5em; /* Satır yüksekliği */
+  max-height: 3em; /* Maksimum yükseklik (2 satır için) */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Maksimum satır sayısı */
+  -webkit-box-orient: vertical;
 }
 
 .project-card:hover {
@@ -119,8 +128,27 @@ body {
   font-weight: bold;
 }
 
-.welcome-logo {
-  display: block;
-  margin: auto;
-  max-width: 25%;
+#welcome p {
+  margin-top: 20px; /* İstenilen boşluk miktarına göre ayarlayabilirsiniz */
 }
+
+.welcome-group {
+  animation: slideFromLeft 0.5s ease-out;
+}
+
+.welcome-logo {
+  width: 50%;
+  height: auto;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
