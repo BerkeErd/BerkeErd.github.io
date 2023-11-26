@@ -148,7 +148,7 @@ const projectDetails = {
     "description": "Developed in 72 hours for Magara Jam 2023",
     googlePlay: "#",
     steam: "#",
-    itch: "#",
+    itch: "https://beruke.itch.io/mysticloned",
     webGL: "#",
     youtube: "https://www.youtube.com/watch?v=eSFObQB12pw",
     additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
