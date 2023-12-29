@@ -173,8 +173,8 @@ $(document).ready(function() {
 
   
     let buttonsHtml = '';
-    if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
     if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
+    if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`; 
     if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
     if (project.webGL !== '#') buttonsHtml += `<a href="${project.webGL}" class="btn btn-success">Play</a>`;
 
