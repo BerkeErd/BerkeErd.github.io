@@ -48,6 +48,23 @@ body {
   color: var(--color-secondary);
 }
 
+.contact-form button[type="submit"] {
+  background-color: #ff6600; /* Turuncu renk */
+  color: white; /* Buton yazısı beyaz */
+  border: none; /* Kenarlık kaldırıldı */
+  margin-bottom: 20px; /* Butonun altına boşluk ekle */
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #cc5200; /* Üzerine gelindiğinde daha koyu turuncu */
+}
+
+.contact-form {
+  max-width: 50%; /* Formun maksimum genişliğini %50 olarak sınırla */
+  margin: auto; /* Formu ortala */
+}
+
+
 .card{
   margin-top: 50px; 
 }

@@ -11,6 +11,15 @@
    <!-- Favicon -->
    <link rel="icon" href="https://imgur.com/47wFN7x.png" type="image/png">
 
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH6CXG80EP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NH6CXG80EP');
+</script>
+
 </head>
 
 <body>
@@ -38,10 +47,67 @@
   </div>
 </nav>
 
+<section id="contact" class="text-center my-5">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/mnqeqqed" method="POST" class="form-container contact-form" id="my-form">
+    <div class="row">
+      <div class="col-md-6 form-group">
+        <label for="name">Name (Optional):</label>
+        <input type="text" class="form-control" id="name" name="name">
+      </div>
+      <div class="col-md-6 form-group">
+        <label for="email">Email (Optional, if you want a reply):</label>
+        <input type="email" class="form-control" id="email" name="_replyto">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+    </div>
+    <input type="text" name="_gotcha" style="display:none" />
+    <button type="submit" class="btn btn-primary">Send</button>
+  </form>
 
-  <section id="contact" class="text-center my-5">
-    <h2>Contact Me</h2>
-    <p>You can reach me at <a href="mailto:bedeirisi@gmail.com">bedeirisi@gmail.com</a>.</p>
-  </section>
+  <p>You can also reach me directly at <a href="mailto:bedeirisi@gmail.com">bedeirisi@gmail.com</a>.</p>
+  <p><small>Note: If you prefer a quicker response, please email me directly due to the monthly limit of form submissions.</small></p>
+</section>
+
+  
+  
+  
   
 </body>
+
+<script>
+  window.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("my-form");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      var honeypot = document.querySelector('input[name="_gotcha"]').value;
+      if (honeypot) {
+        // Honeypot doluysa, form gönderimini engelle
+        console.log("Spam detected!");
+        return false;
+      }
+
+      var data = new FormData(form);
+      var xhr = new XMLHttpRequest();
+      xhr.open(form.method, form.action);
+      xhr.setRequestHeader("Accept", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+          form.reset();
+          alert("Thanks for your submission!");
+        } else if (xhr.status === 429) { // 429 status kodu, limit aşıldığını belirtir
+          alert("Form submission limit reached. Please try again later.");
+        } else {
+          alert("Oops! There was a problem.");
+        }
+      };
+      xhr.send(data);
+    });
+  });
+</script>
