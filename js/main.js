@@ -7,7 +7,7 @@ const projectDetails = {
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
     webGL: "#",
-    youtube: "https://www.youtube.com/watch?v=MSdYlAcypdM",
+    youtube: "https://www.youtube.com/embed/MSdYlAcypdM",
     additionalImages: ["https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140", "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140"],
     color: "#F1F1F1",
     backgroundColor: "#2a2a2a"
@@ -150,7 +150,7 @@ const projectDetails = {
     steam: "#",
     itch: "https://beruke.itch.io/mysticloned",
     webGL: "#",
-    youtube: "https://www.youtube.com/watch?v=eSFObQB12pw",
+    youtube: "https://www.youtube.com/embed/eSFObQB12pw",
     additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
     color: "#FFFFFF",
     backgroundColor: "#12002e"
@@ -177,36 +177,48 @@ $(document).ready(function() {
     if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
     if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
     if (project.webGL !== '#') buttonsHtml += `<a href="${project.webGL}" class="btn btn-success">Play</a>`;
-    if (project.youtube !== '#') buttonsHtml += `<a href="${project.youtube}" class="btn btn-danger">YouTube</a>`;
 
+
+    let youtubeEmbedHtml = '';
+    if (project.youtube !== '#') {
+      youtubeEmbedHtml = `
+        <div class="row mt-4">
+          <div class="col-md-12 youtube-embed-container">
+            <iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      `;
+    }
     const projectDetailsHtml = `
-      <div class="card">
-        <div class="card-header">
-          <h3>${project.name}</h3>
-        </div>
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-6">
-              <img src="${project.image}" alt="${project.name}" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-              <p>${project.description}</p>
-              <div class="btn-group" role="group" aria-label="Project Links">
-                ${buttonsHtml}
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <img src="${project.additionalImages[0]}" alt="Additional Image 1" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-              <img src="${project.additionalImages[1]}" alt="Additional Image 2" class="img-fluid">
-            </div>
-          </div>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>${project.name}</h3>
       </div>
-    `;
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="${project.image}" alt="${project.name}" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <p>${project.description}</p>
+            <div class="btn-group" role="group" aria-label="Project Links">
+              ${buttonsHtml}
+            </div>
+            ${youtubeEmbedHtml}
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <img src="${project.additionalImages[0]}" alt="Additional Image 1" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <img src="${project.additionalImages[1]}" alt="Additional Image 2" class="img-fluid">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  `;
 
     
 
