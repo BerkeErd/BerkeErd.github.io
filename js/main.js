@@ -6,7 +6,7 @@ const projectDetails = {
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
-    webGL: "#",
+    webGL: "https://i.simmer.io/@Beruke/stick-slasher",
     youtube: "https://www.youtube.com/embed/MSdYlAcypdM",
     additionalImages: ["https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140", "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140"],
     color: "#F1F1F1",
@@ -97,7 +97,7 @@ const projectDetails = {
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
     steam: "#",
     itch: "#",
-    webGL: "#",
+    webGL: "https://i.simmer.io/@Beruke/timeloop-traffic-autoclone",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw", "https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw"],
     color: "#000000",
@@ -110,7 +110,7 @@ const projectDetails = {
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
-    webGL: "#",
+    webGL: "https://i.simmer.io/@Beruke/rgb-square",
     youtube: "#",
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png","https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/original/0e0AfX.png"],
     color: "#000000",
@@ -149,11 +149,24 @@ const projectDetails = {
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/mysticloned",
-    webGL: "#",
+    webGL: "https://i.simmer.io/@Beruke/mysticloned",
     youtube: "https://www.youtube.com/embed/eSFObQB12pw",
     additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
     color: "#FFFFFF",
     backgroundColor: "#12002e"
+  },
+  "junkman-Driver": {
+    name: "Junkman Driver",
+    image: "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOC5qcGc=/347x500/T9EE32.jpg",
+    "description": "'Junkman Driver' is an engaging game that I developed with two beginner friends during a beginner-friendly game jam.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "https://beruke.itch.io/junkman-driver",
+    webGL: "https://i.simmer.io/@Beruke/junkman-driver",
+    youtube: "#",
+    additionalImages: ["https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDg0MC5qcGc=/original/8H6mrX.jpg", "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOS5qcGc=/original/ChdZiS.jpg"],
+    color: "#FFFFFF",
+    backgroundColor: "#18191d"
   }
   // diğer projeler
 };
@@ -176,7 +189,9 @@ $(document).ready(function() {
     if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
     if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`; 
     if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
-    if (project.webGL !== '#') buttonsHtml += `<a href="${project.webGL}" class="btn btn-success">Play</a>`;
+    if (project.webGL !== '#') {
+      buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play</button>`;
+    }
 
 
     let youtubeEmbedHtml = '';
@@ -224,7 +239,13 @@ $(document).ready(function() {
 
     $("#project-details").html(projectDetailsHtml);
 
-     
+    $(document).on('click', '.btn-success', function() {
+      const webGLLink = $(this).data('webgl');
+      const gameName = $(this).data('name');
+      $('#gameIframe').attr('src', webGLLink);
+      $('#gameModalLabel').text(gameName); 
+    });
+    
    
 
   // CSS'i güncelle
