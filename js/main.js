@@ -167,12 +167,25 @@ const projectDetails = {
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDg0MC5qcGc=/original/8H6mrX.jpg", "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOS5qcGc=/original/ChdZiS.jpg"],
     color: "#FFFFFF",
     backgroundColor: "#18191d"
+  },
+  "potion-mutation": {
+    name: "Potion Mutation",
+    image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/105x83%23/4MvRJd.png",   
+    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game immerses players in a mystical landscape filled with diverse traps and unique creatures, offering a mix of strategic potion crafting and automatic progression to navigate elemental hazards and achieve high scores.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "https://beruke.itch.io/potion-mutation",
+    webGL: "https://i.simmer.io/@Beruke/potion-mutation",
+    youtube: "#",
+    additionalImages: [],
+    color: "#FFFFFF",
+    backgroundColor: "#130f10"
   }
-  // diğer projeler
+  
 };
 
-let lastColor = "white"; // Varsayılan olarak beyaz
-let lastBackgroundColor = "white"; // Varsayılan olarak siyah
+let lastColor = "white"; 
+let lastBackgroundColor = "white"; 
 
 $(document).ready(function() {
   $(".project-card").click(function() {
@@ -222,18 +235,18 @@ $(document).ready(function() {
             ${youtubeEmbedHtml}
           </div>
         </div>
+        ${project.additionalImages.length > 0 ? `
         <div class="row mt-4">
-          <div class="col-md-6">
-            <img src="${project.additionalImages[0]}" alt="Additional Image 1" class="img-fluid">
+          ${project.additionalImages.map((img, index) => `
+          <div class="col-md-${12 / project.additionalImages.length}">
+            <img src="${img}" alt="Additional Image ${index + 1}" class="img-fluid">
           </div>
-          <div class="col-md-6">
-            <img src="${project.additionalImages[1]}" alt="Additional Image 2" class="img-fluid">
-          </div>
+          `).join('')}
         </div>
-        
+        ` : ''}
       </div>
-    </div>
-  `;
+    </div>`;
+
 
     
 
@@ -248,21 +261,16 @@ $(document).ready(function() {
     
    
 
-  // CSS'i güncelle
   $("#project-details .card-body").css({
     "color": lastColor,
     "background-color": lastBackgroundColor,
     "transition": "background-color 0.5s ease, color 0.5s ease"
   });
 
-    // Önce transition özelliğini ayarla
 $("#project-details .card-body").css({
   "transition": "background-color 0.5s ease, color 0.5s ease"
 });
 
-
-
-  // Biraz bekleyip sonra renkleri değiştir
   setTimeout(function() {
     $("#project-details .card-body").css({
       "color": project.color,
@@ -270,7 +278,6 @@ $("#project-details .card-body").css({
     });
   }, 50); 
     
-    // Son renkleri güncelle
     lastColor = project.color;
     lastBackgroundColor = project.backgroundColor;
   });
