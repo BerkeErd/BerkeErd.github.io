@@ -2,7 +2,7 @@ const projectDetails = {
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
-    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022.",
+    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022. After creating the mobile and WebGL versions, I further developed the game by adding new weapons, enemies, and released it on the Steam platform. The game is also among the most beloved stickman games on various websites. It's a game where we try to survive by cutting down stickmen coming from all directions or allowing them to escape. The Steam version features support for over 20 languages, achievements, leaderboards with country information, a sandbox mode, and new weapons and enemies.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
@@ -15,7 +15,7 @@ const projectDetails = {
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
-    description: "My first game on Google Play Store, Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020.",
+    description: "My first game on Google Play Store, Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020. It is a game that applies all the rules and details of the real competition exactly, and it only supports Turkish.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SesliSoruMilyoner2021",
     steam: "#",
     itch: "#",
@@ -28,7 +28,7 @@ const projectDetails = {
   "ability-runner": {
     name: "Ability Runner - Evolve",
     image: "https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw",
-    description: "An unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022.",
+    description: "An unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.AbilityRunner",
     steam: "#",
     itch: "#",
@@ -41,7 +41,7 @@ const projectDetails = {
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
     image: "https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw",
-    description: "Developed in 4-5 days, Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022.",
+    description: "Developed in 4-5 days, Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022. Inspired by jklm.fun, I wanted to create a Turkish version of this game.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PatlatBiKelime",
     steam: "#",
     itch: "#",
@@ -54,7 +54,7 @@ const projectDetails = {
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
-    description: "Developed in 4-5 days, Bubble Pass is a Tetris-like 2D Hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022.",
+    description: "Developed in 4-5 days, Bubble Pass is a Tetris-like 2D Hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
     steam: "#",
     itch: "#",
@@ -80,7 +80,7 @@ const projectDetails = {
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched in real-time from a Firebase database, ensuring a fresh and up-to-date gaming experience. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure.",
+    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched in real-time from a Firebase database, ensuring a fresh and up-to-date gaming experience. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure. The game contains only Turkish questions.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
     steam: "#",
     itch: "#",
@@ -93,7 +93,7 @@ const projectDetails = {
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
-    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023.",
+    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
     steam: "#",
     itch: "#",
@@ -106,7 +106,7 @@ const projectDetails = {
   "rgb-square": {
     name: "RGB Square",
     image: "https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png",
-    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023.",
+    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023. I continued to develop this game by adding extra features; in this game, the main stats of our character, such as speed and health, are determined by the ratio of primary colors on the character. We use random colors passing by to adjust our character's stats to our desired balance. Additionally, we can gain abilities based on the color we have on us. There are also black-colored enemies that absorb our colors, introducing a strategic element to managing our character's colors and abilities.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
@@ -119,7 +119,7 @@ const projectDetails = {
   "suburban-racer": {
     name: "Suburban Drift Racer",
     image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
-    description: "Suburban Drift Racer is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023.",
+    description: "Suburban Drift Racer is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023. In this game, which is my first 3D game, there are modes for freely roaming around the city and progressing on a straight road.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TheCar",
     steam: "#",
     itch: "#",
@@ -132,7 +132,7 @@ const projectDetails = {
   "komik-mektup": {
     name: "Komik Mektup",
     image: "https://play-lh.googleusercontent.com/okZnElQqX4RkaZl69Bk8Rbk_zKog8A6xAHR87hhkvUZOXf8h7CjGa_XwPnnua6WphjU=w416-h235-rw",
-    "description": "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages.",
+    description: "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages. This game, which I created because I wanted to make a mobile version of a game I enjoyed in a magazine as a child, is simple and was developed without much effort, resulting in a poor UI. It only includes support for the Turkish language.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.KomikMektup",
     steam: "#",
     itch: "#",
@@ -145,7 +145,7 @@ const projectDetails = {
   "mystiCloned": {
     name: "MystiCloned",
     image: "https://cdn.magarajam.com/content/1700659987242751483734888.jpeg",
-    "description": "Developed in 72 hours for Magara Jam 2023",
+    description: "Developed in 72 hours for Magara Jam 2023, this game is a 2D Puzzle where you solve various puzzles by creating clones. You can swap places with your clones or freeze them to navigate through the challenges.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/mysticloned",
@@ -158,7 +158,7 @@ const projectDetails = {
   "junkman-Driver": {
     name: "Junkman Driver",
     image: "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOC5qcGc=/347x500/T9EE32.jpg",
-    "description": "'Junkman Driver' is an engaging game that I developed with two beginner friends during a beginner-friendly game jam.",
+    description: "'Junkman Driver' is an engaging game that I developed with two beginner friends during a beginner-friendly game jam.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/junkman-driver",
@@ -171,7 +171,7 @@ const projectDetails = {
   "potion-mutation": {
     name: "Potion Mutation",
     image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/105x83%23/4MvRJd.png",   
-    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game immerses players in a mystical landscape filled with diverse traps and unique creatures, offering a mix of strategic potion crafting and automatic progression to navigate elemental hazards and achieve high scores.",
+    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/potion-mutation",
