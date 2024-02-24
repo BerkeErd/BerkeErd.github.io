@@ -180,7 +180,20 @@ const projectDetails = {
     additionalImages: [],
     color: "#FFFFFF",
     backgroundColor: "#130f10"
-  }
+  },
+  "Koy-Lideri": {
+    name: "Köy Lideri",
+    image: "https://img.itch.zone/aW1nLzE1MTQ2MjIwLnBuZw==/315x250%23c/DYARIg.png",
+    description: "Köy Lideri is a prototype designed to test the capabilities of artificial intelligence within the Unity game engine. The game serves as a platform to explore and demonstrate the advanced functionalities and potential of AI in game development. Players take on the role of a village leader, with AI-driven elements significantly influencing the gameplay and decision-making processes. This project is a testament to the evolving intersection of AI technology and interactive gaming.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "https://beruke.itch.io/ky-lideri-yapay-zeka-oyunu",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: [],
+    color: "#FFFFFF",
+    backgroundColor: "#18191d"
+    }
   
 };
 
