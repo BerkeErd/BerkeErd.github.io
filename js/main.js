@@ -132,7 +132,7 @@ const projectDetails = {
   "komik-mektup": {
     name: "Komik Mektup",
     image: "https://play-lh.googleusercontent.com/okZnElQqX4RkaZl69Bk8Rbk_zKog8A6xAHR87hhkvUZOXf8h7CjGa_XwPnnua6WphjU=w416-h235-rw",
-    description: "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages. This game, which I created because I wanted to make a mobile version of a game I enjoyed in a magazine as a child, is simple and was developed without much effort, resulting in a poor UI. It only includes support for the Turkish language.",
+    description: "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages. This game, which I created because I wanted to make a mobile version of a game I enjoyed in a magazine as a child, is simple and was developed without much effort, resulting in a poor UI. It only support for the Turkish language.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.KomikMektup",
     steam: "#",
     itch: "#",
@@ -184,7 +184,7 @@ const projectDetails = {
   "Koy-Lideri": {
     name: "Köy Lideri",
     image: "https://img.itch.zone/aW1nLzE1MTQ2MjIwLnBuZw==/315x250%23c/DYARIg.png",
-    description: "Köy Lideri is a prototype designed to test the capabilities of artificial intelligence within the Unity game engine. The game serves as a platform to explore and demonstrate the advanced functionalities and potential of AI in game development. Players take on the role of a village leader, with AI-driven elements significantly influencing the gameplay and decision-making processes. This project is a testament to the evolving intersection of AI technology and interactive gaming.",
+    description: "Köy Lideri is a prototype designed to test the capabilities of artificial intelligence within the Unity game engine. The game serves as a platform to explore and demonstrate the advanced functionalities and potential of AI in game development. Players take on the role of a village leader, with AI-driven elements significantly influencing the gameplay and decision-making processes. This project is a testament to the evolving intersection of AI technology and interactive gaming. It only supports Turkish.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/ky-lideri-yapay-zeka-oyunu",
