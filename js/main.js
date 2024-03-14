@@ -193,7 +193,20 @@ const projectDetails = {
     additionalImages: [],
     color: "#FFFFFF",
     backgroundColor: "#18191d"
-    }
+    },
+    "Cat-Race": {
+      name: "Cat Race",
+      image: "#",
+      description: "It is a part developed solely for predicting the outcome of a cat racing game that is still under construction. The game is in the development stage.",
+      googlePlay: "#",
+      steam: "#",
+      itch: "#",
+      webGL: "https://i.simmer.io/@Beruke/cat-race-prediction",
+      youtube: "#",
+      additionalImages: [],
+      color: "#FFFFFF",
+      backgroundColor: "#f59926"
+      }
   
 };
 
@@ -270,6 +283,10 @@ $(document).ready(function() {
       const gameName = $(this).data('name');
       $('#gameIframe').attr('src', webGLLink);
       $('#gameModalLabel').text(gameName); 
+    });
+    
+    $('#gameModal').on('hide.bs.modal', function () {
+        $('#gameIframe').attr('src', '');
     });
     
    
