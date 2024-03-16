@@ -196,7 +196,7 @@ const projectDetails = {
     },
     "Cat-Race": {
       name: "Cat Race",
-      image: "#",
+      image: "https://process.filestackapi.com/AnP4G3pixRCyMaUo5jr8bz/cache=expiry:max/output=format:webp/resize=height:300/https://simmercdn.com/unity/167uqZ7rkxSe2p7GKRVyjlRqhx62/content/b382d121-81a5-0556-839e-5ab08bb58516/screens/3.png ",
       description: "It is a part developed solely for predicting the outcome of a cat racing game that is still under construction. The game is in the development stage.",
       googlePlay: "#",
       steam: "#",
@@ -205,7 +205,7 @@ const projectDetails = {
       youtube: "#",
       additionalImages: [],
       color: "#FFFFFF",
-      backgroundColor: "#f59926"
+      backgroundColor: "#649c6a"
       }
   
 };
