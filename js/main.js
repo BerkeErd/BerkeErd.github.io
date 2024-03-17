@@ -214,6 +214,7 @@ let lastColor = "white";
 let lastBackgroundColor = "white"; 
 
 $(document).ready(function() {
+
   $(".project-card").click(function() {
     
     $(".project-card").css("transform", "scale(1)");
@@ -310,8 +311,15 @@ $("#project-details .card-body").css({
     
     lastColor = project.color;
     lastBackgroundColor = project.backgroundColor;
+  
+    
+      $('html, body').animate({
+        scrollTop: $("#project-details").offset().top
+      }, 100);
+  
   });
-
+ 
+  
   
 });
 

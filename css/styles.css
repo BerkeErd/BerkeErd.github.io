@@ -11,11 +11,12 @@
 }
 
 
-body {
-  padding-top: 70px;
-  background-color: var(--color-background)  !important;
-  color: var(--color-text);
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Yatay kaydırmayı engelle */
 }
+
 
 #featured-games,
 #contact {
@@ -34,7 +35,6 @@ body {
 
 #project-details {
   position: sticky;
-  top: 70px; 
   overflow-y: auto;
   text-align: center;
   height: auto; 
@@ -47,6 +47,8 @@ body {
   background-color: var(--color-accent);
   color: var(--color-secondary);
 }
+
+
 
 .contact-form button[type="submit"] {
   background-color: #ff6600; /* Turuncu renk */
@@ -83,6 +85,7 @@ body {
   border-radius: 8px;
   overflow: hidden;
   margin: 10px;
+  margin-top: 60px;
   transition: transform 0.3s ease;
   width: auto; 
   height: 150px; 
@@ -106,10 +109,6 @@ body {
 .project-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-  width: 100%;
 }
 
 .project-card h5 {
@@ -149,14 +148,67 @@ body {
   margin-top: 20px; 
 }
 
-.welcome-group {
-  animation: slideFromLeft 0.5s ease-out;
+.welcome-group img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.welcome-logo {
-  width: 50%;
-  height: auto;
+@media (max-width: 768px) {
+  .welcome-group img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+  }
+  #project-details {
+    position: sticky;
+    top: 70px; 
+    overflow-y: auto;
+    text-align: center;
+    height: auto; 
+    max-height: calc(100vh - 80px); 
+  }
 }
+
+
+
+.scroll-downs {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;/
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.mousey {
+  display: block;
+  margin: 0 auto 20px;
+  width: 25px;
+  height: 45px;
+  border: 2px solid white; 
+  border-radius: 25px;
+  position: relative;
+  pointer-events: none;
+}
+
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: white; 
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-animate 2s infinite;
+}
+
+@keyframes scroll-animate {
+  0% { opacity: 0; }
+  10% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(15px); opacity: 0;}
+}
+
 
 @keyframes slideFromLeft {
   from {
