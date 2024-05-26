@@ -205,8 +205,21 @@ const projectDetails = {
       youtube: "#",
       additionalImages: [],
       color: "#FFFFFF",
-      backgroundColor: "#649c6a"
-      }
+      backgroundColor: "#34333c"
+      },
+      "Dugum": {
+        name: "Düğüm",
+        image: "https://img.itch.zone/aW1nLzE2MjAzOTYxLmpwZWc=/347x500/rjbYQf.jpeg",
+        description: "Developed for Boğaziçi Game Jam 24 within 48 hours.",
+        googlePlay: "#",
+        steam: "#",
+        itch: "https://beruke.itch.io/dm",
+        webGL: "#",
+        youtube: "#",
+        additionalImages: [],
+        color: "#000000",
+        backgroundColor: "#FFFFFF"
+        }
   
 };
 
@@ -214,114 +227,73 @@ let lastColor = "white";
 let lastBackgroundColor = "white"; 
 
 $(document).ready(function() {
-
-  $(".project-card").click(function() {
-    
-    $(".project-card").css("transform", "scale(1)");
-    $(this).css("transform", "scale(1.1)");
-
-    const projectKey = $(this).data("project");
-    const project = projectDetails[projectKey];
-
+  
+  $('#projects-list').empty();
 
   
-    let buttonsHtml = '';
-    if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
-    if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`; 
-    if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
-    if (project.webGL !== '#') {
-      buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play</button>`;
-    }
+  $.each(projectDetails, function(key, project) {
+    
+      const projectCard = $(`
+          <div class="col-md-4">
+              <div class="project-card" data-project="${key}">
+                  <img src="${project.image}" alt="${project.name}" class="img-fluid">
+                  <h5>${project.name}</h5>
+              </div>
+          </div>
+      `);
 
+      
+      $('#projects-list').append(projectCard);
+  });
 
-    let youtubeEmbedHtml = '';
-    if (project.youtube !== '#') {
-      youtubeEmbedHtml = `
-        <div class="row mt-4">
-          <div class="col-md-12 youtube-embed-container">
-            <iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  $(".project-card").click(function() {
+      $(".project-card").removeClass('active');
+      $(this).addClass('active');
+
+      const projectId = $(this).data('project');
+      const project = projectDetails[projectId];
+
+      let buttonsHtml = '';
+      if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
+      if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
+      if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
+      if (project.webGL !== '#') buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play in Browser</button>`;
+
+      let youtubeEmbedHtml = '';
+      if (project.youtube !== '#') {
+        youtubeEmbedHtml = `<iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe>`;
+      }
+
+      const detailsHtml = `
+        <div class="card">
+          <div class="card-header">${project.name}</div>
+          <div class="card-body">
+            <img src="${project.image}" alt="${project.name}" class="img-fluid">
+            <p>${project.description}</p>
+            <p>${youtubeEmbedHtml}</p>
+            <div class="btn-group" role="group" aria-label="Game Links">${buttonsHtml}</div>
           </div>
         </div>
       `;
-    }
-    const projectDetailsHtml = `
-    <div class="card">
-      <div class="card-header">
-        <h3>${project.name}</h3>
-      </div>
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="${project.image}" alt="${project.name}" class="img-fluid">
-          </div>
-          <div class="col-md-6">
-            <p>${project.description}</p>
-            <div class="btn-group" role="group" aria-label="Project Links">
-              ${buttonsHtml}
-            </div>
-            ${youtubeEmbedHtml}
-          </div>
-        </div>
-        ${project.additionalImages.length > 0 ? `
-        <div class="row mt-4">
-          ${project.additionalImages.map((img, index) => `
-          <div class="col-md-${12 / project.additionalImages.length}">
-            <img src="${img}" alt="Additional Image ${index + 1}" class="img-fluid">
-          </div>
-          `).join('')}
-        </div>
-        ` : ''}
-      </div>
-    </div>`;
 
-
-    
-
-    $("#project-details").html(projectDetailsHtml);
-
-    $(document).on('click', '.btn-success', function() {
-      const webGLLink = $(this).data('webgl');
-      const gameName = $(this).data('name');
-      $('#gameIframe').attr('src', webGLLink);
-      $('#gameModalLabel').text(gameName); 
-    });
-    
-    $('#gameModal').on('hide.bs.modal', function () {
-        $('#gameIframe').attr('src', '');
-    });
-    
-   
-
-  $("#project-details .card-body").css({
-    "color": lastColor,
-    "background-color": lastBackgroundColor,
-    "transition": "background-color 0.5s ease, color 0.5s ease"
-  });
-
-$("#project-details .card-body").css({
-  "transition": "background-color 0.5s ease, color 0.5s ease"
-});
-
-  setTimeout(function() {
-    $("#project-details .card-body").css({
-      "color": project.color,
-      "background-color": project.backgroundColor
-    });
-  }, 50); 
-    
-    lastColor = project.color;
-    lastBackgroundColor = project.backgroundColor;
-  
-    
+      $('#project-details').html(detailsHtml);
       $('html, body').animate({
         scrollTop: $("#project-details").offset().top
-      }, 100);
-  
+      }, 500);
+      setTimeout(function() {
+        $("#project-details .card-body").css({
+          "color": project.color,
+          "background-color": project.backgroundColor
+        });
+      }, 50); 
+        
+        lastColor = project.color;
+        lastBackgroundColor = project.backgroundColor;
   });
- 
-  
-  
 });
+
+
 
   
 
