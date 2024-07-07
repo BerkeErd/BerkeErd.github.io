@@ -231,6 +231,115 @@ html, body {
     margin-bottom: 20px;
 }
 
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.turkish-filter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turkish-label {
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filter-btn {
+    width: 100%;
+  }
+}
+
+.badge-info {
+  font-size: 0.8em;
+}
+
+
 @media (max-width: 768px) {
     .additional-images img {
         width: 100%;

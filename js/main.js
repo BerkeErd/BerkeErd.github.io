@@ -10,7 +10,8 @@ const projectDetails = {
     youtube: "https://www.youtube.com/embed/MSdYlAcypdM",
     additionalImages: ["https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140", "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140"],
     color: "#F1F1F1",
-    backgroundColor: "#2a2a2a"
+    backgroundColor: "#2a2a2a",
+    turkish: false
   },
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
@@ -23,7 +24,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/emxtrseac2hPQv4wlS0wtbleLRea5rF1aqg4Y8P-UhJ4OMdg8E99_QkO-6uZDgajw-0=w2560-h1440-rw", "https://play-lh.googleusercontent.com/Zy0kebYkz72gwV6zMgrlOOd1hUeWQp4-rU_VjBE4Rx07R9CjjXRByhlK2ivNSzPOJw=w2560-h1440-rw"],
     color: "#F1F1F1",
-    backgroundColor: "#6000bf"
+    backgroundColor: "#6000bf",
+    turkish: true
   },
   "ability-runner": {
     name: "Ability Runner - Evolve",
@@ -36,7 +38,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/AsrrB4QX8cme5A6f_372xy1eIBXN75kBB6durgWL3dAQUgUSkZIN9tmy31RTmI6gO5A=w2560-h1440-rw", "https://play-lh.googleusercontent.com/kCi8SXO0jakfeZvqWBMpCjjdEXs2_c0NGu-kfyJnv8CUaHGAKT_fBFhhTdc1CBj9eJc=w2560-h1440-rw"],
     color: "#000000",
-    backgroundColor: "#ddf8ff"
+    backgroundColor: "#ddf8ff",
+    turkish: false
   },
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
@@ -49,7 +52,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/93OOOSOGiqF123bhBgSBCHFUI897XxfRlyGehJGOKhm7mkHgYfcH9cA4jTCbfmDfzqBO=w526-h296-rw", "https://play-lh.googleusercontent.com/apNCK561KuakiNvY2BUBCTfs8ZMLFWenjjnbA4Y8512lg__e1ylB-wKASAgB8f43_Q=w526-h296-rw"],
     color: "#F1F1F1",
-    backgroundColor: "#0014bd"
+    backgroundColor: "#0014bd",
+    turkish: true
   },
   "bubble-pass": {
     name: "Bubble Pass",
@@ -62,7 +66,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/6tS-hW7NLv3O2mkIKkJJ9PlG8SpzENXy-ACCbaV2XkvEzKZCS3QpJruKDyQQWNvODMM=w526-h296-rw", "https://play-lh.googleusercontent.com/d6DZ_SXqMzrMnIIKVfpgb0YVf9DWt8950_yJs-GCpQqAoZy4XHsRfJdVk3pdpzgxxGE=w526-h296-rw"],
     color: "#000000",
-    backgroundColor: "#1ab5f2"
+    backgroundColor: "#1ab5f2",
+    turkish: false
   },
   "simple-kalimba": {
     name: "Simple Kalimba",
@@ -75,7 +80,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/m6uyZFaL8DQ1D84Ef_uOHdjS-rcZblI8EmYN1jcZiDCAu63nOYxkoZwjJ2lCWcvW0joo=w2560-h1440-rw", "https://play-lh.googleusercontent.com/woU8BqnyI-Pg2YtnhXTUAqqbmgCJ5nesVATWqO9NYs3gEQuh-3fE2G4jucPmygC1qnRV=w2560-h1440-rw"],
     color: "#F1F1F1",
-    backgroundColor: "#8e2b08"
+    backgroundColor: "#8e2b08",
+    turkish: false
   },
   "bilgi-kat": {
     name: "Bilgi Kat",
@@ -88,7 +94,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/XfDDe6QKd5IApgkCRWWaZ5ohWCoqQQdqlnmfRx1EBCTnH8RON0RtmdS4JW5fFkFzEJo=w2560-h1440-rw", "https://play-lh.googleusercontent.com/MmiH3tDQmbfOZd3RxuTB-elXtpzY9Sz5I16JQG7Rjr9FY3RVfmj1MMSgU7AUbYtXIQ=w2560-h1440-rw"],
     color: "#000000",
-    backgroundColor: "#f7ac1d"
+    backgroundColor: "#f7ac1d",
+    turkish: true
   },
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
@@ -101,7 +108,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw", "https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw"],
     color: "#000000",
-    backgroundColor: "#F1F1F1"
+    backgroundColor: "#F1F1F1",
+    turkish: false
   },
   "rgb-square": {
     name: "RGB Square",
@@ -114,7 +122,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png","https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/original/0e0AfX.png"],
     color: "#000000",
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF",
+    turkish: false
   },
   "suburban-racer": {
     name: "Suburban Drift Racer",
@@ -127,7 +136,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/Ry2xsLHSlWm-SXxSHv5MFolIjKKZPAMWlO3YwofnhcR-8T6wjzPyOMLjihJnWvnkVHg=w526-h296-rw", "https://play-lh.googleusercontent.com/COlE3MVcGix79sRONLYjMvTKDrNcA-SoiK14Jbsg4KBhxZ0KLqr5OtQ6_5s7oG7d3PE=w526-h296-rw"],
     color: "#FFFFFF",
-    backgroundColor: "#9acde1"
+    backgroundColor: "#9acde1",
+    turkish: false
   },
   "mystiCloned": {
     name: "MystiCloned",
@@ -140,7 +150,8 @@ const projectDetails = {
     youtube: "https://www.youtube.com/embed/eSFObQB12pw",
     additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
     color: "#FFFFFF",
-    backgroundColor: "#12002e"
+    backgroundColor: "#12002e",
+    turkish: false
   },
   "junkman-Driver": {
     name: "Junkman Driver",
@@ -153,7 +164,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDg0MC5qcGc=/original/8H6mrX.jpg", "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOS5qcGc=/original/ChdZiS.jpg"],
     color: "#FFFFFF",
-    backgroundColor: "#18191d"
+    backgroundColor: "#18191d",
+    turkish: false
   },
   "potion-mutation": {
     name: "Potion Mutation",
@@ -166,7 +178,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: [],
     color: "#FFFFFF",
-    backgroundColor: "#130f10"
+    backgroundColor: "#130f10",
+    turkish: false
   },
   "Koy-Lideri": {
     name: "Köy Lideri",
@@ -179,7 +192,8 @@ const projectDetails = {
     youtube: "#",
     additionalImages: [],
     color: "#FFFFFF",
-    backgroundColor: "#18191d"
+    backgroundColor: "#18191d",
+    turkish: true
     },
     "Cat-Race": {
       name: "Cat Race",
@@ -192,7 +206,8 @@ const projectDetails = {
       youtube: "#",
       additionalImages: [],
       color: "#FFFFFF",
-      backgroundColor: "#34333c"
+      backgroundColor: "#34333c",
+      turkish: false
       },
       "Dugum": {
         name: "Düğüm",
@@ -205,7 +220,8 @@ const projectDetails = {
         youtube: "#",
         additionalImages: [],
         color: "#000000",
-        backgroundColor: "#FFFFFF"
+        backgroundColor: "#FFFFFF",
+    	turkish: false
         }
   
 };
@@ -215,37 +231,71 @@ let lastBackgroundColor = "white";
 
 $(document).ready(function() {
   
-  $('#projects-list').empty();
+   let currentFilter = 'all';
+  let turkishOnly = false;
 
-  $('#gameModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget);
-    var gameUrl = button.data('webgl');
-    var gameName = button.data('name');
-    var modal = $(this);
-    modal.find('.modal-title').text(gameName);
-    modal.find('#gameIframe').attr('src', gameUrl);
-  });
-
-  // Modal kapandığında iframe'i temizle
-  $('#gameModal').on('hidden.bs.modal', function () {
-    $(this).find('#gameIframe').attr('src', '');
-  });
-  
-  $.each(projectDetails, function(key, project) {
-    
-      const projectCard = $(`
-          <div class="col-md-4">
-              <div class="project-card" data-project="${key}">
-                  <img src="${project.image}" alt="${project.name}" class="img-fluid">
-                  <h5>${project.name}</h5>
-              </div>
-          </div>
-      `);
-
+  function filterProjects() {
+    $('.project-card').each(function() {
+      const projectId = $(this).data('project');
+      const project = projectDetails[projectId];
       
-      $('#projects-list').append(projectCard);
+      const matchesFilter = currentFilter === 'all' || 
+        (currentFilter === 'mobile' && project.googlePlay !== '#') ||
+        (currentFilter === 'pc' && project.steam !== '#') ||
+        (currentFilter === 'web' && project.webGL !== '#') || 
+        (currentFilter === 'web' && project.itch !== '#');
+      
+      const matchesTurkish = !turkishOnly || project.turkish === true;
+      
+      if (matchesFilter && matchesTurkish) {
+        $(this).parent().show();
+      } else {
+        $(this).parent().hide();
+      }
+    });
+
+    $('#project-details').empty();
+  }
+
+  $('.filter-btn').click(function() {
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+    currentFilter = $(this).data('filter');
+    filterProjects();
   });
 
+  $('#turkishToggle').change(function() {
+    turkishOnly = $(this).is(':checked');
+    filterProjects();
+  });
+
+  // Initial filter
+  filterProjects();
+
+  $('.filter-btn').click(function() {
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+    filterProjects($(this).data('filter'));
+  });
+
+  // Projeleri bir kez listele
+  $.each(projectDetails, function(key, project) {
+    const turkishBadge = project.turkish ? '<span class="badge badge-info">Turkish Only</span>' : '';
+    
+    const projectCard = $(`
+      <div class="col-md-4">
+        <div class="project-card" data-project="${key}">
+          <img src="${project.image}" alt="${project.name}" class="img-fluid">
+          ${turkishBadge}
+          <h5>${project.name}</h5>
+        </div>
+      </div>
+    `);
+
+    $('#projects-list').append(projectCard);
+  });
+
+  filterProjects('all');
   
   $(".project-card").click(function() {
     $(".project-card").removeClass('active');
