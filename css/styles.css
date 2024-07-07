@@ -206,6 +206,38 @@ html, body {
   animation: scroll-animate 2s infinite;
 }
 
+.additional-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.additional-images img {
+    width: 48%;
+    margin-bottom: 10px;
+}
+
+.additional-images img.left {
+    float: left;
+}
+
+.additional-images img.right {
+    float: right;
+}
+
+.main-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .additional-images img {
+        width: 100%;
+        float: none;
+    }
+}
+
 @keyframes scroll-animate {
   0% { opacity: 0; }
   10% { transform: translateX(-50%) translateY(0); opacity: 1; }

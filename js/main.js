@@ -248,49 +248,66 @@ $(document).ready(function() {
 
   
   $(".project-card").click(function() {
-      $(".project-card").removeClass('active');
-      $(this).addClass('active');
+    $(".project-card").removeClass('active');
+    $(this).addClass('active');
 
-      const projectId = $(this).data('project');
-      const project = projectDetails[projectId];
+    const projectId = $(this).data('project');
+    const project = projectDetails[projectId];
 
-      let buttonsHtml = '';
-      if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
-      if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
-      if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
-      if (project.webGL !== '#') buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play in Browser</button>`;
+    let buttonsHtml = '';
+    if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
+    if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
+    if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
+    if (project.webGL !== '#') buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play in Browser</button>`;
 
-      let youtubeEmbedHtml = '';
-      if (project.youtube !== '#') {
+    let youtubeEmbedHtml = '';
+    if (project.youtube !== '#') {
         youtubeEmbedHtml = `<iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe>`;
-      }
+    }
 
-      const detailsHtml = `
-        <div class="card">
-          <div class="card-header">${project.name}</div>
-          <div class="card-body">
-            <img src="${project.image}" alt="${project.name}" class="img-fluid">
-            <p>${project.description}</p>
-            <p>${youtubeEmbedHtml}</p>
-            <div class="btn-group" role="group" aria-label="Game Links">${buttonsHtml}</div>
-          </div>
+    let additionalImagesHtml = '';
+if (project.additionalImages && project.additionalImages.length > 0) {
+    additionalImagesHtml = '<div class="additional-images">';
+    project.additionalImages.forEach((image, index) => {
+        let position = index % 2 === 0 ? 'left' : 'right';
+        additionalImagesHtml += `<img src="${image}" alt="Additional image" class="img-fluid ${position}">`;
+    });
+    additionalImagesHtml += '</div>';
+}
+
+const detailsHtml = `
+    <div class="card">
+        <div class="card-header">${project.name}</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="${project.image}" alt="${project.name}" class="img-fluid main-image">
+                </div>
+                <div class="col-md-6">
+                    <p>${project.description}</p>
+                    <figure>${youtubeEmbedHtml}</figure>
+                    <div class="btn-group" role="group" aria-label="Game Links">${buttonsHtml}</div>
+                </div>
+            </div>
+            ${additionalImagesHtml}
         </div>
-      `;
+    </div>
+`;
 
-      $('#project-details').html(detailsHtml);
-      $('html, body').animate({
+    $('#project-details').html(detailsHtml);
+    $('html, body').animate({
         scrollTop: $("#project-details").offset().top
-      }, 500);
-      setTimeout(function() {
+    }, 500);
+    setTimeout(function() {
         $("#project-details .card-body").css({
-          "color": project.color,
-          "background-color": project.backgroundColor
+            "color": project.color,
+            "background-color": project.backgroundColor
         });
-      }, 50); 
-        
-        lastColor = project.color;
-        lastBackgroundColor = project.backgroundColor;
-  });
+    }, 50);
+
+    lastColor = project.color;
+    lastBackgroundColor = project.backgroundColor;
+});
 });
 
 
