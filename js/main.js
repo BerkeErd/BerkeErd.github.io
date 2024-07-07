@@ -129,19 +129,6 @@ const projectDetails = {
     color: "#FFFFFF",
     backgroundColor: "#9acde1"
   },
-  "komik-mektup": {
-    name: "Komik Mektup",
-    image: "https://play-lh.googleusercontent.com/okZnElQqX4RkaZl69Bk8Rbk_zKog8A6xAHR87hhkvUZOXf8h7CjGa_XwPnnua6WphjU=w416-h235-rw",
-    description: "Dive into a world of laughter with 'Komik Mektup'! Fill in the blanks and unveil hilarious letters that promise unexpected twists and turns. Crafted meticulously using the Unity Engine for mobile platforms, this game offers a unique blend of creativity and humor. Released on September 29, 2023, 'Komik Mektup' guarantees endless fun and chuckles for players of all ages. This game, which I created because I wanted to make a mobile version of a game I enjoyed in a magazine as a child, is simple and was developed without much effort, resulting in a poor UI. It only support for the Turkish language.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.KomikMektup",
-    steam: "#",
-    itch: "#",
-    webGL: "#",
-    youtube: "#",
-    additionalImages: ["https://play-lh.googleusercontent.com/g1hmpumJyg0JPZeL_muUgHxNkYg806zBLIAN1H0WKoV-VPmRVE6AUyUy9kyaezpmpA=w2560-h1440-rw", "https://play-lh.googleusercontent.com/yGsaMed0gQQp2pt7pksJOzCRXaiJPgfXkW0akYMolgyz_RHLXup50Vol2Pe7HCykhgI=w2560-h1440-rw"],
-    color: "#000000",
-    backgroundColor: "#f86a16"
-  },
   "mystiCloned": {
     name: "MystiCloned",
     image: "https://cdn.magarajam.com/content/1700659987242751483734888.jpeg",
