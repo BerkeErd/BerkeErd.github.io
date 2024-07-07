@@ -15,7 +15,7 @@ const projectDetails = {
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
-    description: "My first game on Google Play Store, Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020. It is a game that applies all the rules and details of the real competition exactly, and it only supports Turkish.",
+    description: "Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020. It is a game that applies all the rules and details of the real competition exactly, and it only supports Turkish.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SesliSoruMilyoner2021",
     steam: "#",
     itch: "#",
@@ -28,7 +28,7 @@ const projectDetails = {
   "ability-runner": {
     name: "Ability Runner - Evolve",
     image: "https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw",
-    description: "An unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard.",
+    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.AbilityRunner",
     steam: "#",
     itch: "#",
@@ -41,7 +41,7 @@ const projectDetails = {
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
     image: "https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw",
-    description: "Developed in 4-5 days, Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022. Inspired by jklm.fun, I wanted to create a Turkish version of this game.",
+    description: "Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022. Inspired by jklm.fun, I wanted to create a Turkish version of this game.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PatlatBiKelime",
     steam: "#",
     itch: "#",
@@ -54,7 +54,7 @@ const projectDetails = {
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
-    description: "Developed in 4-5 days, Bubble Pass is a Tetris-like 2D Hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
+    description: "Bubble Pass is a unique hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
     steam: "#",
     itch: "#",
@@ -67,7 +67,7 @@ const projectDetails = {
   "simple-kalimba": {
     name: "Simple Kalimba",
     image: "https://play-lh.googleusercontent.com/fNIUcRC5siSf1VH5CSRmJLmhCC3fzbSXNqa_ePOsQieCotMTa66llKgDHalKS3UEqZg=w416-h235-rw",
-    description: "My second Unity game, developed in 2 days for fun after buying a real-life Kalimba. Simple Kalimba is an Instrumental Simulator game built for Mobile platforms, featuring basic graphics, released on Jan 10, 2021.",
+    description: "Simple Kalimba is an Instrumental Simulator game built for Mobile platforms, featuring basic graphics, released on Jan 10, 2021.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SimpleKalimba",
     steam: "#",
     itch: "#",
