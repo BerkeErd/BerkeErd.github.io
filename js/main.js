@@ -94,7 +94,7 @@ const projectDetails = {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
     description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
+    googlePlay: "#",
     steam: "#",
     itch: "#",
     webGL: "https://i.simmer.io/@Beruke/timeloop-traffic-autoclone",
