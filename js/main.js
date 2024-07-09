@@ -222,7 +222,21 @@ const projectDetails = {
         color: "#000000",
         backgroundColor: "#FFFFFF",
     	turkish: false
-        }
+        },
+        "bus-game": {
+  name: "Bus Game",	
+  image: "images/BusGame/Gameplay2.jpg",
+  description: "Bus Game is a puzzle game inspired by the original Bus Jam, featuring a robust Level Editor for game designers. While players enjoy solving challenging puzzles, the Unity-based Level Editor allows developers to create diverse levels by customizing cell colors, passenger placements, tunnel positions and directions, game duration, and board size. The editor includes a random cell color fill option and maintains color balance based on the 3-passenger-per-bus rule. This combination of engaging gameplay for players and powerful design tools for developers makes Bus Jam Clone a versatile and enjoyable puzzle experience.",
+  googlePlay: "#",
+  steam: "#",
+  itch: "#",
+  webGL: "#",
+  youtube: "#",
+  additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
+  color: "#FFFFFF",
+    backgroundColor: "#130f10",
+    turkish: false
+},
   
 };
 
