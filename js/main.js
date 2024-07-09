@@ -235,7 +235,7 @@ const projectDetails = {
   youtube: "#",
   additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
   color: "#FFFFFF",
-  backgroundColor: "#130f10",
+  backgroundColor: "#3a070c",
   turkish: false,
   unpublished: true
 
@@ -329,7 +329,7 @@ $(document).ready(function() {
 		if (project.inDevelopment) {
 		  statusMessage = '<p class="text-warning">This game is currently in development.</p>';
 		} else if (project.unpublished) {
-		  statusMessage = '<p class="text-secondary">This game is completed but not yet published.</p>';
+		  statusMessage = '<p class="text-secondary">This game is not yet published.</p>';
 		}
 
 		if (!project.unpublished) {
