@@ -207,7 +207,8 @@ const projectDetails = {
       additionalImages: [],
       color: "#FFFFFF",
       backgroundColor: "#34333c",
-      turkish: false
+      turkish: false,
+      inDevelopment: true
       },
       "Dugum": {
         name: "Düğüm",
@@ -234,8 +235,10 @@ const projectDetails = {
   youtube: "#",
   additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
   color: "#FFFFFF",
-    backgroundColor: "#130f10",
-    turkish: false
+  backgroundColor: "#130f10",
+  turkish: false,
+  unpublished: true
+
 },
   
 };
@@ -253,11 +256,10 @@ $(document).ready(function() {
       const projectId = $(this).data('project');
       const project = projectDetails[projectId];
       
-      const matchesFilter = currentFilter === 'all' || 
-        (currentFilter === 'mobile' && project.googlePlay !== '#') ||
-        (currentFilter === 'pc' && project.steam !== '#') ||
-        (currentFilter === 'web' && project.webGL !== '#') || 
-        (currentFilter === 'web' && project.itch !== '#');
+       const matchesFilter = currentFilter === 'all' || 
+      (currentFilter === 'mobile' && (project.googlePlay !== '#' || project.unpublished)) ||
+      (currentFilter === 'pc' && (project.steam !== '#' || project.unpublished)) ||
+      (currentFilter === 'web' && ((project.webGL !== '#' || project.itch !== '#') || project.unpublished));
       
       const matchesTurkish = !turkishOnly || project.turkish === true;
       
@@ -292,22 +294,25 @@ $(document).ready(function() {
     filterProjects($(this).data('filter'));
   });
 
-  // Projeleri bir kez listele
   $.each(projectDetails, function(key, project) {
-    const turkishBadge = project.turkish ? '<span class="badge badge-info">Turkish Only</span>' : '';
-    
-    const projectCard = $(`
-      <div class="col-md-4">
-        <div class="project-card" data-project="${key}">
-          <img src="${project.image}" alt="${project.name}" class="img-fluid">
-          ${turkishBadge}
-          <h5>${project.name}</h5>
-        </div>
+  const turkishBadge = project.turkish ? '<span class="badge badge-info">Turkish Only</span>' : '';
+  const inDevelopmentBadge = project.inDevelopment ? '<span class="badge badge-warning">In Development</span>' : '';
+  const unpublishedBadge = project.unpublished ? '<span class="badge badge-secondary">Unpublished</span>' : '';
+  
+  const projectCard = $(`
+    <div class="col-md-4">
+      <div class="project-card" data-project="${key}">
+        <img src="${project.image}" alt="${project.name}" class="img-fluid">
+        ${turkishBadge}
+        ${inDevelopmentBadge}
+        ${unpublishedBadge}
+        <h5>${project.name}</h5>
       </div>
-    `);
+    </div>
+  `);
 
-    $('#projects-list').append(projectCard);
-  });
+  $('#projects-list').append(projectCard);
+});
 
   filterProjects('all');
   
@@ -318,11 +323,21 @@ $(document).ready(function() {
     const projectId = $(this).data('project');
     const project = projectDetails[projectId];
 
-    let buttonsHtml = '';
-    if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
-    if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
-    if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
-    if (project.webGL !== '#') buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play in Browser</button>`;
+	   let buttonsHtml = '';
+	   let statusMessage = '';
+
+		if (project.inDevelopment) {
+		  statusMessage = '<p class="text-warning">This game is currently in development.</p>';
+		} else if (project.unpublished) {
+		  statusMessage = '<p class="text-secondary">This game is completed but not yet published.</p>';
+		}
+
+		if (!project.unpublished) {
+		  if (project.googlePlay !== '#') buttonsHtml += `<a href="${project.googlePlay}" class="btn btn-primary">Google Play</a>`;
+		  if (project.steam !== '#') buttonsHtml += `<a href="${project.steam}" class="btn btn-secondary">Steam</a>`;
+		  if (project.itch !== '#') buttonsHtml += `<a href="${project.itch}" class="btn btn-info">Itch.io</a>`;
+		  if (project.webGL !== '#') buttonsHtml += `<button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}">Play in Browser</button>`;
+		}
 
     let youtubeEmbedHtml = '';
     if (project.youtube !== '#') {
@@ -350,6 +365,7 @@ const detailsHtml = `
                 <div class="col-md-6">
                     <p>${project.description}</p>
                     <figure>${youtubeEmbedHtml}</figure>
+                    ${statusMessage}
                     <div class="btn-group" role="group" aria-label="Game Links">${buttonsHtml}</div>
                 </div>
             </div>
