@@ -169,7 +169,7 @@ const projectDetails = {
   },
   "potion-mutation": {
     name: "Potion Mutation",
-    image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/105x83%23/4MvRJd.png",   
+    image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png",   
     description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success.",
     googlePlay: "#",
     steam: "#",
@@ -358,34 +358,46 @@ $(document).ready(function() {
         youtubeEmbedHtml = `<iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe>`;
     }
 
-    let additionalImagesHtml = '';
+   let additionalImagesHtml = '';
 if (project.additionalImages && project.additionalImages.length > 0) {
     additionalImagesHtml = '<div class="additional-images">';
     project.additionalImages.forEach((image, index) => {
         let position = index % 2 === 0 ? 'left' : 'right';
-        additionalImagesHtml += `<img src="${image}" alt="Additional image" class="img-fluid ${position}">`;
+        additionalImagesHtml += `<img src="${image}" alt="Additional image" class="img-fluid additional-image ${position}">`;
     });
     additionalImagesHtml += '</div>';
 }
 
 const detailsHtml = `
     <div class="card">
-        <div class="card-header">${project.name}</div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="${project.image}" alt="${project.name}" class="img-fluid main-image">
-                </div>
-                <div class="col-md-6">
-                    <p>${project.description}</p>
-                    <figure>${youtubeEmbedHtml}</figure>
-                    ${statusMessage}
-                    <div class="btn-group" role="group" aria-label="Game Links">${buttonsHtml}</div>
+    <div class="card-header">
+        <h2>${project.name}</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="${project.image}" alt="${project.name}" class="img-fluid main-image">
+            </div>
+            <div class="col-md-6">
+                <h3>Description</h3>
+                <p>${project.description}</p>
+                
+                ${statusMessage}
+
+                <h3>Links</h3>
+                <div class="btn-group" role="group" aria-label="Game Links">
+                    ${buttonsHtml}
                 </div>
             </div>
+        </div>
+
+        <div class="media-section">
+            <h3>Media</h3>
+            ${youtubeEmbedHtml}
             ${additionalImagesHtml}
         </div>
     </div>
+</div>
 `;
 
     $('#project-details').html(detailsHtml);

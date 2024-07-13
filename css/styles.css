@@ -206,30 +206,48 @@ html, body {
   animation: scroll-animate 2s infinite;
 }
 
+.card-header h2 {
+    margin-bottom: 0;
+}
+
+.card-body h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.media-section {
+    margin-top: 2rem;
+}
+
 .additional-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Resimleri yatayda merkeze hizalar */
+    align-items: center; /* Resimleri dikeyde merkeze hizalar */
     margin-top: 20px;
+    gap: 20px; /* Resimler arasında boşluk bırakır */
 }
 
 .additional-images img {
-    width: 48%;
-    margin-bottom: 10px;
+    max-width: 400px;
+    max-height: 400px;
+    width: auto; /* Orijinal en-boy oranını korur */
+    height: auto; /* Orijinal en-boy oranını korur */
+    object-fit: contain; /* Resmi boyutlandırırken oranı korur */
 }
-
-.additional-images img.left {
-    float: left;
-}
-
-.additional-images img.right {
-    float: right;
-}
-
 .main-image {
-    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
     margin-bottom: 20px;
 }
+
 
 .filter-buttons {
   display: flex;
