@@ -314,6 +314,20 @@ $(document).ready(function() {
   $('#projects-list').append(projectCard);
 });
 
+ $('#gameModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var gameUrl = button.data('webgl');
+    var gameName = button.data('name');
+    var modal = $(this);
+    modal.find('.modal-title').text(gameName);
+    modal.find('#gameIframe').attr('src', gameUrl);
+  });
+
+  // Modal kapandığında iframe'i temizle
+  $('#gameModal').on('hidden.bs.modal', function () {
+    $(this).find('#gameIframe').attr('src', '');
+  });
+
   filterProjects('all');
   
   $(".project-card").click(function() {
