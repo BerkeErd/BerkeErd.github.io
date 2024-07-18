@@ -225,21 +225,35 @@ const projectDetails = {
     	turkish: false
         },
         "bus-game": {
-  name: "Bus Game",	
-  image: "images/BusGame/Gameplay2.jpg",
-  description: "Bus Game is a puzzle game inspired by the original Bus Jam, featuring a robust Level Editor for game designers. While players enjoy solving challenging puzzles, the Unity-based Level Editor allows developers to create diverse levels by customizing cell colors, passenger placements, tunnel positions and directions, game duration, and board size. The editor includes a random cell color fill option and maintains color balance based on the 3-passenger-per-bus rule. This combination of engaging gameplay for players and powerful design tools for developers makes Bus Jam Clone a versatile and enjoyable puzzle experience.",
-  googlePlay: "#",
-  steam: "#",
-  itch: "#",
-  webGL: "#",
-  youtube: "#",
-  additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
-  color: "#FFFFFF",
-  backgroundColor: "#3a070c",
-  turkish: false,
-  unpublished: true
+		  name: "Bus Game",	
+		  image: "images/BusGame/Gameplay2.jpg",
+		  description: "Bus Game is a puzzle game inspired by the original Bus Jam, featuring a robust Level Editor for game designers. While players enjoy solving challenging puzzles, the Unity-based Level Editor allows developers to create diverse levels by customizing cell colors, passenger placements, tunnel positions and directions, game duration, and board size. The editor includes a random cell color fill option and maintains color balance based on the 3-passenger-per-bus rule. This combination of engaging gameplay for players and powerful design tools for developers makes Bus Jam Clone a versatile and enjoyable puzzle experience.",
+		  googlePlay: "#",
+		  steam: "#",
+		  itch: "#",
+		  webGL: "#",
+		  youtube: "#",
+		  additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
+		  color: "#FFFFFF",
+		  backgroundColor: "#3a070c",
+		  turkish: false,
+		  unpublished: true
 
-},
+		},
+		"fluxeon": {
+		  name: "Fluxeon",
+		  image: "https://play-lh.googleusercontent.com/dvLaGTiXKK0fawZxNMeTjApjAU6BqE6Kn1bdUJivh-7cPN1motBOXRxH7pOMSot6NLQ=w240-h480-rw",
+		  description: "Fluxeon is an addictive one-touch gravity-flipping game that challenges players' reflexes and timing. Players control a square, tapping to rise and releasing to fall, aiming to land on moving platforms for points. The game features increasing difficulty with faster speeds and shrinking platforms as players progress. With its simple controls, dynamic gameplay, and minimalist graphics, Fluxeon offers a unique twist on classic platformer games, suitable for both quick sessions and extended play.",
+		  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.Fluxeon",
+		  steam: "#",
+		  itch: "#",
+		  webGL: "#",
+		  youtube: "#",
+		  additionalImages: ["https://play-lh.googleusercontent.com/OX4DIClkyuh8K01SHJ2RxzHlKGUjqEmEjBWroLYON9apF0PkZxg31NS0BgK4pMiShG3R=w2560-h1440-rw","https://play-lh.googleusercontent.com/BlOYSPkY4XxXicT32dITNs6n1bxkNOc6wtvII2N1WubyTQ8IB359v3NjMEXNb8GZC4L8=w2560-h1440-rw"],
+		  color: "#000000",
+	      backgroundColor: "#c4c2e7",
+		  turkish: false
+		}
   
 };
 
