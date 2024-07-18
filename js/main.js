@@ -58,7 +58,7 @@ const projectDetails = {
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
-    description: "Bubble Pass is a unique hypercasual game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
+    description: "Bubble Pass is a unique game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
     steam: "#",
     itch: "#",
