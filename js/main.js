@@ -263,7 +263,7 @@ let lastBackgroundColor = "white";
 $(document).ready(function() {
   
    let currentFilter = 'all';
-  let turkishOnly = false;
+   let playableInEnglish = false;
 
   function filterProjects() {
     $('.project-card').each(function() {
@@ -275,7 +275,7 @@ $(document).ready(function() {
       (currentFilter === 'pc' && (project.steam !== '#' || project.unpublished)) ||
       (currentFilter === 'web' && ((project.webGL !== '#' || project.itch !== '#') || project.unpublished));
       
-      const matchesTurkish = !turkishOnly || project.turkish === true;
+       const matchesTurkish = !playableInEnglish || !project.turkish === true;
       
       if (matchesFilter && matchesTurkish) {
         $(this).parent().show();
@@ -295,7 +295,7 @@ $(document).ready(function() {
   });
 
   $('#turkishToggle').change(function() {
-    turkishOnly = $(this).is(':checked');
+    playableInEnglish = $(this).is(':checked');
     filterProjects();
   });
 
