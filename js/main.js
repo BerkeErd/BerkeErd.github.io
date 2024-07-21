@@ -2,7 +2,7 @@ const projectDetails = {
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
-    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022. After creating the mobile and WebGL versions, I further developed the game by adding new weapons, enemies, and released it on the Steam platform. The game is also among the most beloved stickman games on various websites. It's a game where we try to survive by cutting down stickmen coming from all directions or allowing them to escape. The Steam version features support for over 20 languages, achievements, leaderboards with country information, a sandbox mode, and new weapons and enemies.",
+    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022. After creating the mobile and WebGL versions, I further developed the game by adding new weapons, enemies, and released it on the Steam platform. The game is also among the most beloved stickman games on various websites. It's a game where we try to survive by cutting down stickmen coming from all directions or allowing them to escape. The Steam version features support for over 20 languages, achievements, leaderboards with country information, a sandbox mode, and new weapons and enemies. The mobile version uses PlayFab SDK for leaderboards, while the Steam version utilizes Steamworks SDK for leaderboards and achievements.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
@@ -30,7 +30,7 @@ const projectDetails = {
   "ability-runner": {
     name: "Ability Runner - Evolve",
     image: "https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw",
-    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard.",
+    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard implemented using LootLocker SDK.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.AbilityRunner",
     steam: "#",
     itch: "#",
@@ -58,7 +58,7 @@ const projectDetails = {
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
-    description: "Bubble Pass is a unique game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through",
+    description: "Bubble Pass is a unique game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through. The game features a leaderboard system implemented using PlayFab SDK.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
     steam: "#",
     itch: "#",
@@ -86,7 +86,7 @@ const projectDetails = {
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched in real-time from a Firebase database, ensuring a fresh and up-to-date gaming experience. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure. The game contains only Turkish questions.",
+    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched from a Firebase Firestore database, ensuring a robust and scalable content management system. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach, powered by Firestore, ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure. The game contains only Turkish questions.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
     steam: "#",
     itch: "#",
@@ -100,7 +100,7 @@ const projectDetails = {
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
-    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars.",
+    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars. The game includes a leaderboard system powered by PlayFab SDK.",
     googlePlay: "#",
     steam: "#",
     itch: "#",
@@ -114,7 +114,7 @@ const projectDetails = {
   "rgb-square": {
     name: "RGB Square",
     image: "https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png",
-    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023. I continued to develop this game by adding extra features; in this game, the main stats of our character, such as speed and health, are determined by the ratio of primary colors on the character. We use random colors passing by to adjust our character's stats to our desired balance. Additionally, we can gain abilities based on the color we have on us. There are also black-colored enemies that absorb our colors, introducing a strategic element to managing our character's colors and abilities.",
+    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023. I continued to develop this game by adding extra features; in this game, the main stats of our character, such as speed and health, are determined by the ratio of primary colors on the character. We use random colors passing by to adjust our character's stats to our desired balance. Additionally, we can gain abilities based on the color we have on us. There are also black-colored enemies that absorb our colors, introducing a strategic element to managing our character's colors and abilities. The game features a leaderboard system implemented using LootLocker SDK.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
@@ -170,7 +170,7 @@ const projectDetails = {
   "potion-mutation": {
     name: "Potion Mutation",
     image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png",   
-    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success.",
+    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success. The game incorporates a leaderboard system using LootLocker SDK",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/potion-mutation",
@@ -243,7 +243,7 @@ const projectDetails = {
 		"fluxeon": {
 		  name: "Fluxeon",
 		  image: "https://play-lh.googleusercontent.com/dvLaGTiXKK0fawZxNMeTjApjAU6BqE6Kn1bdUJivh-7cPN1motBOXRxH7pOMSot6NLQ=w240-h480-rw",
-		  description: "Fluxeon is an addictive one-touch gravity-flipping game that challenges players' reflexes and timing. Players control a square, tapping to rise and releasing to fall, aiming to land on moving platforms for points. The game features increasing difficulty with faster speeds and shrinking platforms as players progress. With its simple controls, dynamic gameplay, and minimalist graphics, Fluxeon offers a unique twist on classic platformer games, suitable for both quick sessions and extended play.",
+		  description: "Fluxeon is an addictive one-touch gravity-flipping game that challenges players' reflexes and timing. Players control a square, tapping to rise and releasing to fall, aiming to land on moving platforms for points. The game features increasing difficulty with faster speeds and shrinking platforms as players progress. With its simple controls, dynamic gameplay, and minimalist graphics, Fluxeon offers a unique twist on classic platformer games, suitable for both quick sessions and extended play. The game integrates Google Play Games SDK for leaderboards, allowing players to compete globally.",
 		  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.Fluxeon",
 		  steam: "#",
 		  itch: "#",
