@@ -260,6 +260,30 @@ const projectDetails = {
 let lastColor = "white"; 
 let lastBackgroundColor = "white"; 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Navbar'ı yükle
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("navbar-placeholder").innerHTML = data;
+
+      // URL'ye göre "active" sınıfını ekle
+      const currentPath = window.location.pathname.split("/").pop().split(".")[0];
+      const navItems = document.querySelectorAll(".nav-item");
+
+      navItems.forEach(item => {
+        if (item.getAttribute("data-page") === currentPath) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    })
+    .catch(error => console.error("Navbar yüklenemedi:", error));
+});
+
+
 $(document).ready(function() {
   
    let currentFilter = 'all';
