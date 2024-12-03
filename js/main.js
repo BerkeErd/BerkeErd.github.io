@@ -253,6 +253,20 @@ const projectDetails = {
 		  color: "#000000",
 	      backgroundColor: "#c4c2e7",
 		  turkish: false
+		},
+		"flagRush": {
+		  name: "Flag Rush: Marble Racing",
+		  image: "https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw",
+		  description: "Race world flags in thrilling marble competitions!",
+		  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.FlagRush",
+		  steam: "#",
+		  itch: "#",
+		  webGL: "#",
+		  youtube: "#",
+		  additionalImages: ["https://play-lh.googleusercontent.com/D1YdIXqXmUcHKm2w8twGTkwoe_Whbe_fGuqCfdMkxzlMZdJAfkM6xUNLGlytVwT9AvY=w2560-h1440-rw","https://play-lh.googleusercontent.com/pffpS8KyFyOCXngUg7Uovb4CBl0Wr_NywHp_G-a3G1xHVh_3u1HuDvXP7A8IMWQMmcU=w2560-h1440-rw"],
+		  color: "#000000",
+	      backgroundColor: "#FFFFFF",
+		  turkish: false
 		}
   
 };
