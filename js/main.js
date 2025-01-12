@@ -195,21 +195,6 @@ const projectDetails = {
     backgroundColor: "#18191d",
     turkish: true
     },
-    "Cat-Race": {
-      name: "Cat Race",
-      image: "https://process.filestackapi.com/AnP4G3pixRCyMaUo5jr8bz/cache=expiry:max/output=format:webp/resize=height:300/https://simmercdn.com/unity/167uqZ7rkxSe2p7GKRVyjlRqhx62/content/b382d121-81a5-0556-839e-5ab08bb58516/screens/3.png ",
-      description: "It is a part developed solely for predicting the outcome of a cat racing game that is still under construction. The game is in the development stage.",
-      googlePlay: "#",
-      steam: "#",
-      itch: "#",
-      webGL: "https://i.simmer.io/@Beruke/cat-race-prediction",
-      youtube: "#",
-      additionalImages: [],
-      color: "#FFFFFF",
-      backgroundColor: "#34333c",
-      turkish: false,
-      inDevelopment: true
-      },
       "Dugum": {
         name: "Düğüm",
         image: "https://img.itch.zone/aW1nLzE2MjAzOTYxLmpwZWc=/347x500/rjbYQf.jpeg",
@@ -267,7 +252,29 @@ const projectDetails = {
 		  color: "#000000",
 	      backgroundColor: "#FFFFFF",
 		  turkish: false
-		}
+		},
+			"Cat-Race-Final": {
+		    name: "Purrfect Race Turbo Paw Champs",
+		    image: "https://play-lh.googleusercontent.com/bpaIYAUkYbk2oO4wvS1XmaLGkfjDJbETYRn6JDtT6ct9VW3oRYRBYrg_sLdriQ_lXQ=w240-h480-rw",
+		    description: "<p>This is the completed version of the Cat Race game. <br><span style='color: yellow; font-weight: bold;'> The Browser version remains an older prototype for demonstration purposes!</span></p>",
+		    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
+		    steam: "#",
+		    itch: "#",
+		    webGL: "https://i.simmer.io/@Beruke/cat-race-prediction",
+		    youtube: "#",
+		    additionalImages: [
+		        "https://play-lh.googleusercontent.com/l9dZExOYTfhmV6RX8gRjOZyCdvDW8SIMONm1vYm_ruOlc3huF47uUfJIezTEpFlDSA=w526-h296-rw",
+		        "https://play-lh.googleusercontent.com/ODtOQMZ0lLzLtxAvU8gJCnrml47HGzRQWbZz54ds3_6MoDeyCiwKZb7a80DhfJPUZw=w526-h296-rw",
+		        "https://play-lh.googleusercontent.com/nAgpru9ajX9Us2Ey7mCmHXk19XW2DDRZdtF0OV-wT0QEkFxpubtLZN9sPZFAk-NV1N8t=w526-h296-rw",
+		        "https://play-lh.googleusercontent.com/kh4VejqPvnbRVPk0szXlHFJtJLkJa5eE_V6icsHrQMfn1oDuYzxRT3KQOJJHIow3W8s=w526-h296-rw"
+		    ],
+		    color: "#FFFFFF",
+		    backgroundColor: "#34333c",
+		    turkish: false,
+		    inDevelopment: false
+	}
+
+
   
 };
 
