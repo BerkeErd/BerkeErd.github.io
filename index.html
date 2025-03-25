@@ -2,31 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Beruke Games - Home</title>
-  <meta name="description" content="Portfolio site of Beruke Games">
-  <!-- Viewport Meta -->
+  <title>Beruke Games - Interactive Game Studio</title>
+  <meta name="description" content="Creative indie game studio crafting unique gaming experiences">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap">
+  
+  <!-- GSAP Animasyon -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home-styles.css">
+  
   <!-- Favicon -->
   <link rel="icon" href="https://imgur.com/47wFN7x.png" type="image/png">
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH6CXG80EP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NH6CXG80EP');
-</script>
-
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NH6CXG80EP');
+  </script>
 </head>
 <body>
+  <!-- WebGL Arka Plan -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="scanlines"></div>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="index.html">Beruke Games</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,7 +56,7 @@
           <a class="nav-link" href="about.html">About Me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="games.html">Games</a>
+          <a class="nav-link" href="arcade-games.html">Games</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact Me</a>
@@ -52,93 +68,269 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-    <!-- Welcome Section -->
-    <section id="welcome" class="text-center">
-      <div class="welcome-group">
-        <img src="https://i.imgur.com/1gTLVqc.png" alt="Beruke Games Logo" class="welcome-logo">
-      </div>
-      <!-- Scroll Animasyonu -->
-      <div class="scroll-downs">
-        <div class="mousey">
-          <div class="scroller"></div>
+  <!-- Ana İçerik Konteyneri -->
+  <div class="main-container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="logo-animation">
+          <!-- Animasyonlu Logo -->
+          <div class="animated-logo">
+            <img src="https://i.imgur.com/1gTLVqc.png" alt="Beruke Games Logo" class="main-logo">
+            <div class="logo-glow"></div>
+          </div>
+          
+          <!-- Dinamik Çizgiler -->
+          <div class="dynamic-lines">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+            <div class="line line-4"></div>
+          </div>
+        </div>
+        
+        <div class="tagline">
+          <h1 class="primary-text">Create. Play. Evolve.</h1>
+        </div>
+        
+        <div class="hero-cta">
+          <a href="arcade-games.html" class="cta-button">
+            <span>Explore Games</span>
+            <i class="fas fa-gamepad"></i>
+          </a>
         </div>
       </div>
-      <p><b>Here you will find the latest projects and games from Beruke Games.</b></p>
+      
+      <!-- İnteraktif Scroll Göstergesi -->
+      <div class="scroll-indicator">
+        <div class="scroll-icon">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span class="scroll-text">Scroll to Discover</span>
+      </div>
+    </section>
+
+    <!-- Featured Game Section -->
+    <section id="featured-game" class="featured-section">
+      <div class="section-header">
+        <h2 class="glitch-text" data-text="Featured Game">Featured Game</h2>
+        <div class="section-underline"></div>
+      </div>
+      
+      <div class="featured-container">
+        <div class="feature-card">
+          <div class="card-inner">
+            <!-- Ön Yüz -->
+            <div class="card-front">
+              <div class="game-preview">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140" alt="Stick Slasher" class="game-img">
+                <div class="preview-overlay">
+                  <h3>Stick Slasher</h3>
+                  <p>Click to learn more</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Arka Yüz -->
+            <div class="card-back">
+              <div class="game-info">
+                <h3>Stick Slasher</h3>
+                <p>Survive against waves of stickmen attackers in this fast-paced action game. Cut them down or let them escape - every decision matters!</p>
+                <div class="feature-list">
+                  <span class="feature-badge">20+ Languages</span>
+                  <span class="feature-badge">Leaderboards</span>
+                  <span class="feature-badge">Sandbox Mode</span>
+                </div>
+                <div class="game-links">
+                  <a href="https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher" class="game-link android" target="_blank">
+                    <i class="fab fa-google-play"></i>
+                  </a>
+                  <a href="https://store.steampowered.com/app/2549950/Stick_Slasher/" class="game-link steam" target="_blank">
+                    <i class="fab fa-steam"></i>
+                  </a>
+                  <a href="https://beruke.itch.io/sslasher" class="game-link itch" target="_blank">
+                    <i class="fab fa-itch-io"></i>
+                  </a>
+                  <button class="game-link web" data-toggle="modal" data-target="#gameModal">
+                    <i class="fas fa-globe"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-media">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/MSdYlAcypdM?si=XtJn82Poo-7EHDj1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="media-controls">
+            <button class="media-btn play-btn active">
+              <i class="fas fa-play"></i>
+              <span>Trailer</span>
+            </button>
+            <button class="media-btn screenshot-btn">
+              <i class="fas fa-image"></i>
+              <span>Screenshots</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Collection Teaser -->
+    <section id="collection-teaser" class="teaser-section">
+      <div class="section-header">
+        <h2 class="glitch-text" data-text="Game Collection">Game Collection</h2>
+        <div class="section-underline"></div>
+      </div>
+      
+      <div class="teaser-container">
+        <div class="game-preview-grid">
+          <!-- Mini oyun önizlemeleri - Hover etkisi ile -->
+          <div class="mini-preview">
+            <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic">
+            <div class="preview-info">
+              <h4>TimeLoop Traffic</h4>
+            </div>
+          </div>
+          <div class="mini-preview">
+            <img src="https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png" alt="RGB Square">
+            <div class="preview-info">
+              <h4>RGB Square</h4>
+            </div>
+          </div>
+          <div class="mini-preview">
+            <img src="https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw" alt="Ability Runner">
+            <div class="preview-info">
+              <h4>Ability Runner</h4>
+            </div>
+          </div>
+          <div class="mini-preview">
+            <img src="https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw" alt="Bubble Pass">
+            <div class="preview-info">
+              <h4>Bubble Pass</h4>
+            </div>
+          </div>
+        </div>
+        
+        <div class="arcade-teaser">
+          <h3>Discover the Full Arcade</h3>
+          <p>Explore all Beruke Games titles in our interactive game arcade!</p>
+          <a href="arcade-games.html" class="teaser-btn">
+            <span>Enter the Arcade</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
     </section>
     
+    <!-- Newsletter / Social Media Section -->
+    <section id="connect" class="connect-section">
+      <div class="connect-container">
+        <div class="social-media">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon discord">
+              <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCBRLT-ayrIoC6mfW4YCGCoA" class="social-icon youtube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://store.steampowered.com/search/?developer=Beruke%20Games" class="social-icon steam">
+              <i class="fab fa-steam"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-    <!-- Featured Games Section -->
-<section id="featured-games" class="text-center my-5">
-  <h2>Featured Game</h2>
-  <div class="container">
-    <div class="row justify-content-center">
-      <!-- Stick Slasher Card with YouTube Embed -->
-      <div class="col-12 col-md-8 col-lg-6">
-        <div class="card">
-          <!-- YouTube Video Embed -->
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/MSdYlAcypdM?si=XtJn82Poo-7EHDj1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          
-          <div class="card-body text-center">
-            <h5 class="card-title">Stick Slasher</h5>
-            <p class="card-text">Stick Slasher offers an action-packed gaming experience.</p>
-            <div class="btn-group d-flex justify-content-center" role="group" aria-label="Game Links">
-              <a href="https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher" class="btn btn-primary">Google Play</a>
-              <a href="https://store.steampowered.com/app/2549950/Stick_Slasher/" class="btn btn-secondary">Steam</a>
-              <a href="https://beruke.itch.io/sslasher" class="btn btn-danger">Itch.io</a>
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#gameModal">Play Web Version</button>
+  <!-- Game Modal -->
+  <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl"> 
+      <div class="modal-content game-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="gameModalLabel">Stick Slasher - WebGL Version</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="https://i.simmer.io/@Beruke/stick-slasher" style="width:100%;height:640px;border:0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Screenshots Modal -->
+  <div class="modal fade" id="screenshotsModal" tabindex="-1" role="dialog" aria-labelledby="screenshotsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content screenshots-modal">
+        <div class="modal-header">
+          <h5 class="modal-title" id="screenshotsModalLabel">Stick Slasher - Screenshots</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="screenshots-container">
+            <div class="screenshot-nav prev">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="screenshots-slider">
+              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140" alt="Screenshot 1" class="screenshot">
+              <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140" alt="Screenshot 2" class="screenshot">
+            </div>
+            <div class="screenshot-nav next">
+              <i class="fas fa-chevron-right"></i>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-
-<div class="col-12 text-center mt-4">
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <div class="elfsight-app-0befae93-6535-4a4e-a146-0af7b702c0b9"></div>
-</div>
-
-
-    <!-- Game Modal -->
-    <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="gameModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl"> 
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="gameModalLabel">Stick Slasher - WebGL Version</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <iframe src="https://i.simmer.io/@Beruke/stick-slasher" style="width:100%;height:640px;border:0"></iframe> <!-- Yüksekliği 4 katına çıkardık -->
-          </div>
-        </div>
-      </div>
-    </div>
-    
-
+  <!-- Easter Egg Mini Game -->
+  <div class="easter-egg-game">
+    <div class="game-character"></div>
+    <div class="game-score">Score: <span>0</span></div>
+    <button class="game-close">
+      <i class="fas fa-times"></i>
+    </button>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center py-3">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="https://imgur.com/47wFN7x.png" alt="Beruke Games Logo" width="40">
+        <span>Beruke Games</span>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
-  <!-- Bootstrap JS and Popper.js -->
+  <!-- Bootstrap JS, Popper.js ve jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
   <!-- Custom JS -->
-  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  
+  <!-- Dialogflow Chat Bot -->
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
   <df-messenger
-  intent="WELCOME"
-  chat-title="Beruke Games"
-  agent-id="e6a86080-d562-4aca-8cc4-e13cbd74429e"
-  language-code="en"
-></df-messenger>
+    intent="WELCOME"
+    chat-title="Beruke Games"
+    agent-id="e6a86080-d562-4aca-8cc4-e13cbd74429e"
+    language-code="en">
+  </df-messenger>
 </body>
 </html>

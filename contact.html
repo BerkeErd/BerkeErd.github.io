@@ -3,119 +3,496 @@
 <head>
   <meta charset="UTF-8">
   <title>Beruke Games - Contact Me</title>
-  <meta name="description" content="Portfolio site of Beruke Games">
-  <!-- Viewport Meta -->
+  <meta name="description" content="Get in touch with Beruke Games">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap">
+  
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-   <!-- Favicon -->
-   <link rel="icon" href="https://imgur.com/47wFN7x.png" type="image/png">
+  <link rel="stylesheet" href="css/arcade-styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://imgur.com/47wFN7x.png" type="image/png">
 
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH6CXG80EP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NH6CXG80EP');
-</script>
-
-<!-- jQuery, Popper.js, ve Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH6CXG80EP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NH6CXG80EP');
+  </script>
 </head>
-
 <body>
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <a class="navbar-brand" href="index.html">Beruke Games</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About Me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="games.html">Games</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="contact.html">Contact Me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="music.html">Music</a>
-      </li>
-    </ul>
+  <!-- WebGL Background -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="scanlines"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html">Beruke Games</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="arcade-games.html">Games</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="arcade-container">
+    <div class="section-header text-center mt-5 pt-5">
+      <h1 class="neon-text primary-neon">Contact Me</h1>
+      <div class="section-underline"></div>
+    </div>
+    
+    <div class="container arcade-content">
+      <div class="arcade-card contact-card">
+        <div class="contact-form-container">
+          <div class="form-header">
+            <div class="form-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h2 class="secondary-neon">Send a Message</h2>
+          </div>
+          
+          <form action="https://formspree.io/f/mnqeqqed" method="POST" class="arcade-form" id="my-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="name" class="form-label">Player Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Optional">
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="_replyto" placeholder="For replies">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+            </div>
+            <input type="text" name="_gotcha" style="display:none" />
+            <button type="submit" class="arcade-btn submit-btn">
+              <span class="btn-text">SEND MESSAGE</span>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+          
+          <div class="direct-contact">
+            <p>You can also reach me directly at <a href="mailto:bedeirisi@gmail.com" class="email-link">bedeirisi@gmail.com</a></p>
+            <p class="note"><small>Note: If you prefer a quicker response, please email me directly due to the monthly limit of form submissions.</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
 
-<section id="contact" class="text-center my-5">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/mnqeqqed" method="POST" class="form-container contact-form" id="my-form">
-    <div class="row">
-      <div class="col-md-6 form-group">
-        <label for="name">Name (Optional):</label>
-        <input type="text" class="form-control" id="name" name="name">
-      </div>
-      <div class="col-md-6 form-group">
-        <label for="email">Email (Optional, if you want a reply):</label>
-        <input type="email" class="form-control" id="email" name="_replyto">
-      </div>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>&copy; 2023 Beruke Games. All rights reserved.</p>
     </div>
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-    </div>
-    <input type="text" name="_gotcha" style="display:none" />
-    <button type="submit" class="btn btn-primary">Send</button>
-  </form>
+  </footer>
 
-  <p>You can also reach me directly at <a href="mailto:bedeirisi@gmail.com">bedeirisi@gmail.com</a>.</p>
-  <p><small>Note: If you prefer a quicker response, please email me directly due to the monthly limit of form submissions.</small></p>
-</section>
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- WebGL Background Script -->
+  <script>
+    // WebGL Background
+    let scene, camera, renderer;
+    let particles, particleSystem;
 
-
-</body>
-
-<script>
-  window.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById("my-form");
-
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      var honeypot = document.querySelector('input[name="_gotcha"]').value;
-      if (honeypot) {
-        // Honeypot doluysa, form gönderimini engelle
-        console.log("Spam detected!");
-        return false;
-      }
-
-      var data = new FormData(form);
-      var xhr = new XMLHttpRequest();
-      xhr.open(form.method, form.action);
-      xhr.setRequestHeader("Accept", "application/json");
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-          form.reset();
-          alert("Thanks for your submission!");
-        } else if (xhr.status === 429) { // 429 status kodu, limit aşıldığını belirtir
-          alert("Form submission limit reached. Please try again later.");
+    function initWebGL() {
+      const canvas = document.getElementById('bg-canvas');
+      
+      // Create scene
+      scene = new THREE.Scene();
+      
+      // Create camera
+      camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 50;
+      
+      // Create renderer
+      renderer = new THREE.WebGLRenderer({ 
+        canvas: canvas, 
+        antialias: true,
+        alpha: true 
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(window.devicePixelRatio);
+      
+      // Create particles
+      const particlesGeometry = new THREE.BufferGeometry();
+      const particleCount = 300;
+      
+      const positionArray = new Float32Array(particleCount * 3);
+      const colorArray = new Float32Array(particleCount * 3);
+      
+      for (let i = 0; i < particleCount * 3; i += 3) {
+        // Positions
+        positionArray[i] = (Math.random() - 0.5) * 100;
+        positionArray[i + 1] = (Math.random() - 0.5) * 100;
+        positionArray[i + 2] = (Math.random() - 0.5) * 100;
+        
+        // Logo colors (orange and green)
+        const colorType = Math.random();
+        if (colorType < 0.5) {
+          // Orange/red tone
+          colorArray[i] = Math.random() * 0.6 + 0.4; // R
+          colorArray[i + 1] = Math.random() * 0.3; // G
+          colorArray[i + 2] = Math.random() * 0.1; // B
         } else {
-          alert("Oops! There was a problem.");
+          // Green/turquoise tone
+          colorArray[i] = Math.random() * 0.1; // R
+          colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
+          colorArray[i + 2] = Math.random() * 0.4; // B
         }
-      };
-      xhr.send(data);
+      }
+      
+      particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 3));
+      particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
+      
+      const particlesMaterial = new THREE.PointsMaterial({
+        size: 0.3,
+        transparent: true,
+        opacity: 0.5,
+        vertexColors: true,
+        blending: THREE.AdditiveBlending
+      });
+      
+      particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
+      scene.add(particleSystem);
+      
+      // Handle window resize
+      window.addEventListener('resize', onWindowResize);
+      
+      // Start animation
+      animate();
+    }
+
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      // Rotate particles
+      particleSystem.rotation.x += 0.0003;
+      particleSystem.rotation.y += 0.0003;
+      
+      // Render scene
+      renderer.render(scene, camera);
+    }
+
+    // Form handling
+    function initFormHandler() {
+      var form = document.getElementById("my-form");
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        var honeypot = document.querySelector('input[name="_gotcha"]').value;
+        if (honeypot) {
+          // If honeypot is filled, block form submission
+          return false;
+        }
+
+        var data = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState !== XMLHttpRequest.DONE) return;
+          
+          if (xhr.status === 200) {
+            form.reset();
+            showFormMessage("Thank you for your message! I'll get back to you soon.", "success");
+          } else if (xhr.status === 429) { // 429 status code, limit exceeded
+            showFormMessage("Form submission limit reached. Please try again later or email me directly.", "error");
+          } else {
+            showFormMessage("Oops! There was a problem sending your message. Please try again.", "error");
+          }
+        };
+        xhr.send(data);
+      });
+    }
+
+    function showFormMessage(message, type) {
+      // Create message element
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `form-message ${type}`;
+      messageDiv.innerHTML = message;
+      
+      // Add to DOM
+      const formContainer = document.querySelector('.contact-form-container');
+      formContainer.appendChild(messageDiv);
+      
+      // Animate
+      gsap.from(messageDiv, { opacity: 0, y: -20, duration: 0.5 });
+      
+      // Remove after delay
+      setTimeout(() => {
+        gsap.to(messageDiv, { 
+          opacity: 0, 
+          y: -20, 
+          duration: 0.5,
+          onComplete: () => messageDiv.remove()
+        });
+      }, 5000);
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      initWebGL();
+      initFormHandler();
+      
+      // Add animations
+      gsap.from('.form-header', { opacity: 0, y: -30, duration: 1, ease: 'power2.out' });
+      gsap.from('.arcade-form', { opacity: 0, y: 30, duration: 1, delay: 0.3, ease: 'power2.out' });
+      gsap.from('.direct-contact', { opacity: 0, y: 30, duration: 1, delay: 0.6, ease: 'power2.out' });
     });
-  });
-</script>
+  </script>
+  
+  <!-- CSS for this page only -->
+  <style>
+    .arcade-content {
+      padding-bottom: 50px;
+    }
+    
+    .contact-card {
+      background-color: rgba(26, 26, 26, 0.8);
+      border: 2px solid var(--primary-neon);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(254, 76, 1, 0.5);
+      padding: 30px;
+      margin: 50px auto;
+      max-width: 800px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .form-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: rgba(0, 229, 170, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      border: 2px solid var(--secondary-neon);
+    }
+    
+    .form-icon i {
+      font-size: 24px;
+      color: var(--secondary-neon);
+    }
+    
+    .form-header h2 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+    }
+    
+    .arcade-form {
+      margin-bottom: 30px;
+    }
+    
+    .form-label {
+      color: var(--secondary-neon);
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+    
+    .form-control {
+      background-color: rgba(15, 26, 34, 0.7);
+      border: 2px solid var(--primary-neon);
+      border-radius: 8px;
+      color: white;
+      padding: 12px;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+      box-shadow: 0 0 10px var(--primary-neon);
+      background-color: rgba(15, 26, 34, 0.9);
+      border-color: var(--secondary-neon);
+    }
+    
+    .submit-btn {
+      background-color: var(--card-dark);
+      color: white;
+      border: 2px solid var(--primary-neon);
+      border-radius: 8px;
+      padding: 12px 25px;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.9rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .submit-btn:hover {
+      background-color: rgba(254, 76, 1, 0.2);
+      box-shadow: 0 0 15px rgba(254, 76, 1, 0.5);
+      transform: translateY(-3px);
+    }
+    
+    .btn-glow {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+      );
+      transition: all 0.5s ease;
+    }
+    
+    .submit-btn:hover .btn-glow {
+      left: 100%;
+    }
+    
+    .direct-contact {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .email-link {
+      color: var(--secondary-neon);
+      text-decoration: none;
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .email-link:hover {
+      color: white;
+      text-shadow: 0 0 5px var(--secondary-neon);
+      text-decoration: none;
+    }
+    
+    .email-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--secondary-neon);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .email-link:hover::after {
+      transform: scaleX(1);
+    }
+    
+    .note {
+      font-size: 0.8rem;
+      color: #aaa;
+      margin-top: 10px;
+    }
+    
+    .form-message {
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-align: center;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      min-width: 300px;
+    }
+    
+    .form-message.success {
+      background-color: rgba(0, 229, 170, 0.2);
+      border: 2px solid var(--secondary-neon);
+      color: white;
+    }
+    
+    .form-message.error {
+      background-color: rgba(255, 76, 76, 0.2);
+      border: 2px solid #ff4c4c;
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-card {
+        padding: 20px;
+      }
+      
+      .form-header h2 {
+        font-size: 1.4rem;
+      }
+      
+      .form-label {
+        font-size: 0.7rem;
+      }
+      
+      .submit-btn {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</body>
+</html>
