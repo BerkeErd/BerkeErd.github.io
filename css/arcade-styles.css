@@ -848,84 +848,241 @@ input:checked + .slider:before {
 }
 
 /* ========== RESPONSIVE AYARLAR ========== */
+/* ========== RESPONSIVE AYARLAR ========== */
+
+/* Büyük tablet & küçük masaüstü (1200px'e kadar) */
 @media (max-width: 1200px) {
-  .arcade-marquee h1 {
+  .arcade-marquee h1, .logo-text {
     font-size: 2.5rem;
   }
-}
-
-@media (max-width: 992px) {
+  
+  .control-panel {
+    width: 90%;
+    padding: 15px;
+    transform: perspective(500px) rotateX(3deg);
+  }
+  
   .arcade-machines {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 30px 50px;
   }
   
   .arcade-cabinet {
-    height: 350px;
+    height: 380px;
   }
   
-  .game-content {
-    grid-template-columns: 1fr;
+  .modal-container {
+    width: 95%;
+    max-height: 80vh;
   }
 }
 
-@media (max-width: 768px) {
-  .arcade-marquee h1 {
+/* Tablet (992px'e kadar) */
+@media (max-width: 992px) {
+  .arcade-marquee h1, .logo-text {
     font-size: 2rem;
   }
   
   .control-panel {
     width: 95%;
     transform: none;
+    padding: 12px;
+  }
+  
+  .arcade-btn {
+    padding: 10px 20px;
+    font-size: 0.8rem;
   }
   
   .arcade-machines {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
   }
   
   .arcade-cabinet {
-    height: 300px;
+    height: 350px;
   }
   
   .cabinet-header h3 {
     font-size: 0.9rem;
   }
   
-  .youtube-container {
-    height: 250px;
+  .game-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .game-main-image {
+    max-height: 250px;
+  }
+  
+  .game-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-@media (max-width: 576px) {
-  .arcade-machines {
-    grid-template-columns: 1fr 1fr;
+/* Geniş Telefon & Dar Tablet (768px'e kadar) */
+@media (max-width: 768px) {
+  .arcade-container {
+    padding-top: 60px;
   }
   
-  .arcade-cabinet {
-    height: 250px;
+  .logo-container {
+    transform: perspective(500px) rotateX(-3deg);
   }
   
-  .arcade-marquee h1 {
-    font-size: 1.5rem;
+  .arcade-marquee h1, .logo-text {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  
+  .logo-lines::before, 
+  .logo-lines::after {
+    height: 5px;
+  }
+  
+  .control-panel {
+    margin-bottom: 20px;
   }
   
   .filter-buttons {
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 8px;
   }
   
   .arcade-btn {
-    width: calc(50% - 10px);
-    font-size: 0.8rem;
-    padding: 10px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    flex: 1 1 calc(50% - 10px);
+    min-width: calc(50% - 10px);
   }
   
-  .youtube-container {
-    height: 200px;
+  .toggle-label {
+    font-size: 0.7rem;
+  }
+  
+  .arcade-machines {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    padding: 15px 20px 40px;
+  }
+  
+  .arcade-cabinet {
+    height: 320px;
+  }
+  
+  .game-details-modal {
+    padding: 70px 10px 10px;
+  }
+  
+  .modal-container {
+    padding: 20px;
+  }
+  
+  .modal-close-btn {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .game-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .game-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  /* WebGL Oyun Modalı düzenleme */
+  .modal-dialog.modal-xl {
+    margin: 80px 10px 10px;
+  }
+  
+  .modal-body iframe {
+    height: 450px !important;
+  }
+}
+
+/* Mobil (576px'e kadar) */
+@media (max-width: 576px) {
+  .arcade-marquee h1, .logo-text {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .arcade-btn {
+    padding: 8px 12px;
+    font-size: 0.7rem;
+  }
+  
+  .arcade-machines {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 10px 15px 30px;
+  }
+  
+  .arcade-cabinet {
+    height: 280px;
+  }
+  
+  .cabinet-header h3 {
+    font-size: 0.8rem;
+  }
+  
+  .cabinet-controls {
+    gap: 15px;
+  }
+  
+  .game-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .game-description p {
+    font-size: 0.9rem;
   }
   
   .game-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .game-link-btn {
+    width: 100%;
+    text-align: center;
     justify-content: center;
+  }
+  
+  .game-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-body iframe {
+    height: 300px !important;
+  }
+}
+
+/* Çok Küçük Mobil (400px'e kadar) */
+@media (max-width: 400px) {
+  .arcade-marquee h1, .logo-text {
+    font-size: 1.1rem;
+  }
+  
+  .arcade-machines {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .arcade-cabinet {
+    height: 300px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .toggle-label {
+    font-size: 0.6rem;
+  }
+  
+  .game-status {
+    font-size: 0.8rem;
   }
 }
 
