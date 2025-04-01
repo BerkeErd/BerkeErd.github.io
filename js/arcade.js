@@ -194,7 +194,6 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#ff90fa",
     turkish: true,
-    unpublished: true
     },
       "Dugum": {
         name: "Düğüm",
