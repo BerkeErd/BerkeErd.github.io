@@ -257,12 +257,12 @@
         delay: 0.7, 
         ease: 'power2.out' 
       });
-      gsap.from('.vision-card', { opacity: 0, x: -30, duration: 1, delay: 1, ease: 'power2.out' });
-      gsap.from('.mission-card', { opacity: 0, x: 30, duration: 1, delay: 1, ease: 'power2.out' });
+gsap.set(['.vision-card', '.mission-card'], { opacity: 0 }); 
+gsap.to('.vision-card', { opacity: 1, x: 0, duration: 1, delay: 1, ease: 'power2.out', startAt: { x: -30 } });
+gsap.to('.mission-card', { opacity: 1, x: 0, duration: 1, delay: 1, ease: 'power2.out', startAt: { x: 30 } });
     });
   </script>
   
-  <!-- CSS for this page only -->
   <style>
     .arcade-content {
       padding-bottom: 50px;
