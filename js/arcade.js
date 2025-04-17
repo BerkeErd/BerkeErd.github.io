@@ -272,7 +272,39 @@ const projectDetails = {
             neonColor: "#ffd97",
             turkish: false,   
             inDevelopment: false
-    }
+    },
+	    "color-tubes": {
+	  name: "Color Tubes",
+	  image: "https://play-lh.googleusercontent.com/lSHlU-yGz4fXL5JGj3Wm1Wl1xCJGcN9bofyBJdykSJgiAjTxndNQlHI_FCnTieQwGYs=w240-h480-rw",
+	  description: "Color Tubes is a fun and colorful puzzle game.",
+	  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.ColorTubes",
+	  steam: "#",
+	  itch: "#",
+	  webGL: "#",
+	  youtube: "#",
+	  additionalImages: [
+	    "https://play-lh.googleusercontent.com/9zuG9fI28C76GCB3o6zQXM1QkMB8NHbJobCtzRqQLwzRT5gAJxYiOdtDaJDWCR2KMA=w2560-h1440-rw",
+	    "https://play-lh.googleusercontent.com/2PRtTS2TCenNXLbI6U2ZAqLhlhWaZ0LSw-8MzUwVMf-VFiio1B85dmwYgXAXl3AdGRhQ=w2560-h1440-rw"
+	  ],
+	  cabinetColor: "#8fb3c5",
+	  neonColor: "#bf8234",
+	  turkish: false
+	},
+		"rps-online": {
+	  name: "Rock Paper Scissors Online",
+	  image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
+	  description: "Rock Paper Scissors Online is a simple hand game you can now play on the web with other people in real time. It works in WebGL browsers and connects players using a Node.js and Express server hosted on Glitch. Instead of using WebSockets, it uses a method called HTTP polling to make sure it works well on all browsers. Players can create private rooms with special join codes or play directly with friends. The game keeps everything in sync with a small but strong messaging system that manages matchmaking and checks the results of each round.",
+	  googlePlay: "#",
+	  steam: "#",
+	  itch: "https://beruke.itch.io/rock-paper-scissors",
+	  webGL: "https://itch.io/embed-upload/13399217?color=000000",
+	  youtube: "#",
+	  additionalImages: [],
+	  cabinetColor: "#bf8234",
+	  neonColor: "#ffd600",
+	  turkish: false
+	}
+
 
 
   
