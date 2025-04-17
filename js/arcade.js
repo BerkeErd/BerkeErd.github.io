@@ -255,7 +255,7 @@ const projectDetails = {
         },
             "Cat-Race-Final": {
             name: "Purrfect Race",
-            image: "https://play-lh.googleusercontent.com/bpaIYAUkYbk2oO4wvS1XmaLGkfjDJbETYRn6JDtT6ct9VW3oRYRBYrg_sLdriQ_lXQ=w240-h480-rw",
+            image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
             description: "<p>This is the completed version of the Cat Race game. <br><span style='color: yellow; font-weight: bold;'> The Browser version remains an older prototype for demonstration purposes!</span></p>",
             googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
             steam: "#",
