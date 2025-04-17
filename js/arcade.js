@@ -293,7 +293,7 @@ const projectDetails = {
 		"rps-online": {
 	  name: "Rock Paper Scissors Online",
 	  image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
-	  description: "Rock Paper Scissors Online is a simple hand game you can now play on the web with other people in real time. It works in WebGL browsers and connects players using a Node.js and Express server hosted on Glitch. Instead of using WebSockets, it uses a method called HTTP polling to make sure it works well on all browsers. Players can create private rooms with special join codes or play directly with friends. The game keeps everything in sync with a small but strong messaging system that manages matchmaking and checks the results of each round.",
+	  description: "This project shows how to build a multiplayer game using WebSockets with Unity WebGL. It uses the NativeWebSocket package to let the game talk directly to a Node.js and Express server on Glitch. The server handles things like player connections, making game rooms with join codes, and keeping the game state the same for both players.The game has a very simple design on purpose. The goal is to build the main multiplayer system, not to make the game look good. It includes features like finding other players, sending moves in real time, and showing the results. There might be small sync problems since it's still early in development. This project is mostly a way to learn how browser based multiplayer games can work with WebSockets.",
 	  googlePlay: "#",
 	  steam: "#",
 	  itch: "https://beruke.itch.io/rock-paper-scissors",
