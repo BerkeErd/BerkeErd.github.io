@@ -207,7 +207,6 @@ function initMediaControls() {
 }
 
 // ========== EASTER EGG MİNİ OYUN ==========
-// Home.js dosyasına ekleyin ya da ayrı bir snake-game.js dosyası oluşturup import edin
 
 // Snake Easter Egg
 function initSnakeGame() {
