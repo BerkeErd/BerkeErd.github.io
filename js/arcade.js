@@ -218,6 +218,7 @@ const projectDetails = {
           itch: "#",
           webGL: "#",
           youtube: "#",
+          github: "https://github.com/BerkeErd/BJC",
           additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
           cabinetColor: "#FFFFFF",
           neonColor: "#ffffff",
@@ -291,24 +292,47 @@ const projectDetails = {
 	  turkish: false
 	},
 		"rps-online": {
-	  name: "Rock Paper Scissors Online",
-	  image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
-	  description: "This project shows how to build a multiplayer game using WebSockets with Unity WebGL. It uses the NativeWebSocket package to let the game talk directly to a Node.js and Express server on Glitch. The server handles things like player connections, making game rooms with join codes, and keeping the game state the same for both players.The game has a very simple design on purpose. The goal is to build the main multiplayer system, not to make the game look good. It includes features like finding other players, sending moves in real time, and showing the results. There might be small sync problems since it's still early in development. This project is mostly a way to learn how browser based multiplayer games can work with WebSockets.",
-	  googlePlay: "#",
-	  steam: "#",
-	  itch: "https://beruke.itch.io/rock-paper-scissors",
-	  webGL: "https://itch.io/embed-upload/13399217?color=000000",
-	  youtube: "#",
-	  additionalImages: [],
-	  cabinetColor: "#bf8234",
-	  neonColor: "#ffd600",
-	  turkish: false
-	}
+  name: "Rock Paper Scissors Online",
+  image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
+  description: "This project shows how to build a multiplayer game using WebSockets with Unity WebGL. It uses the NativeWebSocket package to let the game talk directly to a Node.js and Express server on Glitch. The server handles things like player connections, making game rooms with join codes, and keeping the game state the same for both players. The game has a very simple design on purpose. The goal is to build the main multiplayer system, not to make the game look good. It includes features like finding other players, sending moves in real time, and showing the results. There might be small sync problems since it's still early in development. This project is mostly a way to learn how browser-based multiplayer games can work with WebSockets.<br><span style=\"color:red;font-weight:bold;\">Note: Glitch will shut down all project hosting and user profiles on July&nbsp;8,&nbsp;2025. The backend server for this demo will go offline then, so the game is currently unpublished.</span>",
+  googlePlay: "#",
+  steam: "#",
+  itch: "https://beruke.itch.io/rock-paper-scissors",
+  webGL: "https://itch.io/embed-upload/13399217?color=000000",
+  github: "https://github.com/BerkeErd/TasKagitMakas",
+  youtube: "#",
+  additionalImages: [],
+  cabinetColor: "#bf8234",
+  neonColor: "#ffd600",
+  turkish: false,
+  unpublished: true
+},
+"punch-up": {
+  name: "Punch-Up",
+  image: "https://private-user-images.githubusercontent.com/39529687/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTExOTg1NzMsIm5iZiI6MTc1MTE5ODI3MywicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0NDctZjY2NzI4YmYtODk4OC00NTIwLTkwYjEtMDVkNmZhYzI5MGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI5VDExNTc1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc1MzQ0MjRiOWY4NTI2MjU0YTg3YjM2YzI3OWJhNTlkNjQ3NWNlNmQwY2VlNDkzYzM4OWU2MDFmNmQ3NmE4ZmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.MoVZVhEs5AYMYPr1taC8WAJ9-OBUp21kaDRq7H5_yYI",   // proje ekran görüntüsü eklenecek
+  description: "Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The prototype targets mobile devices and has never been publicly released.",
+  googlePlay: "#",
+  steam: "#",
+  itch: "#",
+  webGL: "#",
+  github: "https://github.com/BerkeErd/Unity-Game-School-Project",
+  youtube: "#",
+  additionalImages: ["https://private-user-images.githubusercontent.com/39529687/241207442-79cca35e-1a62-4878-b389-4a4258ebfda0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTExOTg1NzMsIm5iZiI6MTc1MTE5ODI3MywicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0NDItNzljY2EzNWUtMWE2Mi00ODc4LWIzODktNGE0MjU4ZWJmZGEwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI5VDExNTc1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjZjBmODFjNDAwZTViYmRiZGMyZWYwMWQyMDcxZmZlZTQ1YTQ1NTYyMzhiYzg0NGNiNWJlNDMzNTAyZDMyZGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.nG-EsMp4BUiWw5rREWO20_tcuf2aq8GHn_fvqkD5TJg","https://private-user-images.githubusercontent.com/39529687/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTExOTg1NzMsIm5iZiI6MTc1MTE5ODI3MywicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0NDctZjY2NzI4YmYtODk4OC00NTIwLTkwYjEtMDVkNmZhYzI5MGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjI5VDExNTc1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc1MzQ0MjRiOWY4NTI2MjU0YTg3YjM2YzI3OWJhNTlkNjQ3NWNlNmQwY2VlNDkzYzM4OWU2MDFmNmQ3NmE4ZmUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.MoVZVhEs5AYMYPr1taC8WAJ9-OBUp21kaDRq7H5_yYI"],
+  cabinetColor: "#2d2d2d",
+  neonColor: "#ff3366",
+  turkish: false,
+  unpublished: true
+}
 
 
-
-  
 };
+
+const LINK_DEFS = [
+  { key: "googlePlay", icon: "fab fa-google-play", label: "Google Play" },
+  { key: "steam",      icon: "fab fa-steam",       label: "Steam" },
+  { key: "itch",       icon: "fab fa-itch-io",     label: "Itch.io" },
+  { key: "github",     icon: "fab fa-github",      label: "Source" }
+];
 
 // ========== SES ÖĞELERİ ==========
 const arcadeSounds = {
@@ -323,6 +347,21 @@ let audioEnabled = false;
 // ========== WEBGL ARKA PLAN ==========
 let scene, camera, renderer;
 let particles, particleSystem;
+
+function buildLinkButtons(game) {
+  const frag = document.createDocumentFragment();
+  LINK_DEFS.forEach(({ key, icon, label }) => {
+    if (!game[key] || game[key] === '#') return;
+    const a = document.createElement('a');
+    a.href = game[key];
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.className = 'game-link-btn btn btn-outline-light m-1';
+    a.innerHTML = `<i class="${icon} mr-1"></i> ${label}`;
+    frag.appendChild(a);
+  });
+  return frag;
+}
 
 function initWebGL() {
   const canvas = document.getElementById('bg-canvas');
@@ -412,58 +451,59 @@ function animate() {
 
 // ========== ARCADE MAKİNELERİ OLUŞTURMA ==========
 function createArcadeCabinets() {
-  const arcadeMachinesContainer = document.getElementById('arcade-machines');
-  
-  // Önceki kabinetleri temizle
-  arcadeMachinesContainer.innerHTML = '';
-  
-  Object.keys(projectDetails).forEach((key) => {
-    const project = projectDetails[key];
-    
-    // Rozetler oluştur
-    let badgesHTML = '';
-    if (project.turkish) {
-      badgesHTML += '<span class="cabinet-badge badge-turkish">TURKISH</span>';
-    }
-    if (project.inDevelopment) {
-      badgesHTML += '<span class="cabinet-badge badge-dev">IN DEVELOPMENT</span>';
-    }
-    if (project.unpublished) {
-      badgesHTML += '<span class="cabinet-badge badge-unpublished">UNPUBLISHED</span>';
-    }
-    
-    // Kabinet HTML'i oluştur
-    const cabinetHTML = `
+  const publishedContainer   = document.getElementById('arcade-machines');
+  const unpublishedContainer = document.getElementById('unpublished-machines');
+  publishedContainer.innerHTML   = '';
+  unpublishedContainer.innerHTML = '';
+
+  Object.entries(projectDetails).forEach(([key, p]) => {
+    const target = p.unpublished ? unpublishedContainer : publishedContainer;
+
+    let badges = '';
+    if (p.turkish)       badges += '<span class="cabinet-badge badge-turkish">TURKISH</span>';
+    if (p.inDevelopment) badges += '<span class="cabinet-badge badge-dev">IN DEVELOPMENT</span>';
+    if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUBLISHED</span>';
+
+    target.insertAdjacentHTML('beforeend', `
       <div class="arcade-cabinet" data-project="${key}">
         <div class="cabinet-body">
-          <div class="cabinet-badges">${badgesHTML}</div>
+          <div class="cabinet-badges">${badges}</div>
           <div class="cabinet-screen">
-            <img src="${project.image}" alt="${project.name}" class="screen-content">
+            <img src="${p.image}" alt="${p.name}" class="screen-content">
             <div class="screen-glare"></div>
           </div>
-          <div class="cabinet-header">
-            <h3 style="color: ${project.neonColor}">${project.name}</h3>
-          </div>
+          <div class="cabinet-header"><h3 style="color:${p.neonColor}">${p.name}</h3></div>
           <div class="cabinet-controls">
             <div class="joystick"></div>
-            <div class="buttons-array">
-              <div class="arcade-button"></div>
-              <div class="arcade-button"></div>
-              <div class="arcade-button"></div>
-              <div class="arcade-button"></div>
-            </div>
+            <div class="buttons-array"><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div></div>
           </div>
         </div>
-      </div>
-    `;
-    
-    // Kabineti konteynere ekle
-    arcadeMachinesContainer.innerHTML += cabinetHTML;
+      </div>`);
   });
-  
-  // Kabinetlere tıklama olayları ekle
-  document.querySelectorAll('.arcade-cabinet').forEach(cabinet => {
-    cabinet.addEventListener('click', handleCabinetClick);
+
+  document.querySelectorAll('.arcade-cabinet')
+          .forEach(cab => cab.addEventListener('click', handleCabinetClick));
+}
+
+function filterCabinets() {
+  document.querySelectorAll('#arcade-machines .arcade-cabinet').forEach(cabinet => {
+    const id      = cabinet.getAttribute('data-project');
+    const project = projectDetails[id];
+
+    const matchesFilter =
+      currentFilter === 'all' ||
+      (currentFilter === 'mobile' && project.googlePlay !== '#') ||
+      (currentFilter === 'pc'     && project.steam      !== '#') ||
+      (currentFilter === 'web'    && (project.webGL !== '#' || project.itch !== '#'));
+
+    const matchesLang = !englishOnly || !project.turkish;
+    cabinet.style.display = (matchesFilter && matchesLang) ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('#unpublished-machines .arcade-cabinet').forEach(cabinet => {
+    const id      = cabinet.getAttribute('data-project');
+    const project = projectDetails[id];
+    cabinet.style.display = (!englishOnly || !project.turkish) ? 'block' : 'none';
   });
 }
 
@@ -489,104 +529,49 @@ function handleCabinetClick() {
 
 // ========== PROJE DETAYLARINI GÖSTER ==========
 function showProjectDetails(project) {
-  // Detay modalını aç
   const detailsModal = document.querySelector('.game-details-modal');
   detailsModal.classList.add('active');
-  
-  if (audioEnabled) {
-    arcadeSounds.powerUp.play();
-  }
-  
-  // Durum mesajı oluştur
+  if (audioEnabled) arcadeSounds.powerUp.play();
+
   let statusMessage = '';
-  if (project.inDevelopment) {
-    statusMessage = '<div class="game-status" style="background-color: #f39c12;">IN DEVELOPMENT</div>';
-  } else if (project.unpublished) {
-    statusMessage = '<div class="game-status" style="background-color: #7f8c8d;">UNPUBLISHED</div>';
+  if (project.inDevelopment) statusMessage = '<div class="game-status" style="background-color:#f39c12;">IN DEVELOPMENT</div>';
+  else if (project.unpublished) statusMessage = '<div class="game-status" style="background-color:#7f8c8d;">UNPUBLISHED</div>';
+
+  const linksContainer = document.createElement('div');
+  linksContainer.className = 'game-links d-flex flex-wrap';
+  linksContainer.appendChild(buildLinkButtons(project));
+
+  if (!project.unpublished && project.webGL !== '#') {
+    const playBtn = document.createElement('button');
+    playBtn.className = 'game-link-btn btn btn-success m-1';
+    playBtn.dataset.toggle = 'modal';
+    playBtn.dataset.target = '#gameModal';
+    playBtn.dataset.webgl = project.webGL;
+    playBtn.dataset.name = project.name;
+    playBtn.innerHTML = '<i class="fas fa-gamepad mr-1"></i> Play in Browser';
+    linksContainer.appendChild(playBtn);
   }
-  
-  // Butonlar HTML'i oluştur
-  let buttonsHtml = '';
-  if (!project.unpublished) {
-    if (project.googlePlay !== '#') {
-      buttonsHtml += `<a href="${project.googlePlay}" class="game-link-btn google-play" target="_blank"><i class="fab fa-google-play"></i> Google Play</a>`;
-    }
-    if (project.steam !== '#') {
-      buttonsHtml += `<a href="${project.steam}" class="game-link-btn steam" target="_blank"><i class="fab fa-steam"></i> Steam</a>`;
-    }
-    if (project.itch !== '#') {
-      buttonsHtml += `<a href="${project.itch}" class="game-link-btn itch" target="_blank"><i class="fab fa-itch-io"></i> Itch.io</a>`;
-    }
-    if (project.webGL !== '#') {
-      buttonsHtml += `<button type="button" class="game-link-btn webgl" data-toggle="modal" data-target="#gameModal" data-webgl="${project.webGL}" data-name="${project.name}"><i class="fas fa-gamepad"></i> Play in Browser</button>`;
-    }
-  }
-  
-  // YouTube embed HTML'i oluştur
+
   let youtubeEmbedHtml = '';
   if (project.youtube !== '#') {
-    youtubeEmbedHtml = `
-      <div class="youtube-container">
-        <iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe>
-      </div>
-    `;
+    youtubeEmbedHtml = `<div class="youtube-container"><iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe></div>`;
   }
-  
-  // Ek resimler HTML'i oluştur
+
   let additionalImagesHtml = '';
-  if (project.additionalImages && project.additionalImages.length > 0) {
-    additionalImagesHtml = `
-      <h3 class="gallery-title secondary-neon">Gallery</h3>
-      <div class="game-gallery">
-        ${project.additionalImages.map((image, index) => `
-          <div class="gallery-image-container">
-            <img src="${image}" alt="Screenshot ${index+1}" class="gallery-image" data-full="${image}">
-          </div>
-        `).join('')}
-      </div>
-    `;
+  if (project.additionalImages && project.additionalImages.length) {
+    additionalImagesHtml = `<h3 class="gallery-title secondary-neon">Gallery</h3><div class="game-gallery">${project.additionalImages.map((img,i)=>`<div class="gallery-image-container"><img src="${img}" alt="Screenshot ${i+1}" class="gallery-image" data-full="${img}"></div>`).join('')}</div>`;
   }
-  
-  // Detay HTML'i oluştur
-  const detailsHTML = `
-    <div class="game-header">
-      <h2 class="primary-neon">${project.name}</h2>
-      ${statusMessage}
-    </div>
-    
-    <div class="game-content">
-      <div class="game-media">
-        <img src="${project.image}" alt="${project.name}" class="game-main-image">
-        ${youtubeEmbedHtml}
-      </div>
-      
-      <div class="game-info">
-        <div class="game-description">
-          <p>${project.description}</p>
-        </div>
-        
-        <div class="game-links">
-          ${buttonsHtml}
-        </div>
-      </div>
-    </div>
-    
-    ${additionalImagesHtml}
-  `;
-  
-  // İçeriği detay modalına ekle
+
+  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><img src="${project.image}" alt="${project.name}" class="game-main-image">${youtubeEmbedHtml}</div><div class="game-info"><div class="game-description"><p>${project.description}</p></div><div class="game-links"></div></div></div>${additionalImagesHtml}`;
+
   document.getElementById('game-details-content').innerHTML = detailsHTML;
-  
-  // Arka plan renklerini güncelle
+  document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);
+
   updateBackgroundColors(project.neonColor);
-  
-  // Galeri resimlerine tıklama olay dinleyicileri ekle
-  document.querySelectorAll('.gallery-image').forEach(img => {
-    img.addEventListener('click', function() {
-      showLightbox(this.getAttribute('data-full'));
-    });
-  });
+
+  document.querySelectorAll('.gallery-image').forEach(img => img.addEventListener('click', () => showLightbox(img.dataset.full)));
 }
+
 
 // ========== ARKA PLAN RENKLERİNİ GÜNCELLE ==========
 function updateBackgroundColors(color) {
