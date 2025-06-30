@@ -309,7 +309,7 @@ const projectDetails = {
 },
 "punch-up": {
   name: "Punch-Up",
-  image: "https://private-user-images.githubusercontent.com/39529687/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyODg1ODIsIm5iZiI6MTc1MTI4ODI4MiwicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0NDctZjY2NzI4YmYtODk4OC00NTIwLTkwYjEtMDVkNmZhYzI5MGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDEyNTgwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVlMmJiOTc2NjMyZTFmZTc1OGVmNTRjNGM0MWQ0NGI2Y2IzYjRiMDlkYTNkZjc5OTRiZDRkMjVhMjJlNzE1ZGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.I5Mjl4aGMZbHGJCRIm2-c6kNjD2JgQ702WRnC9uxweI",
+  image: "https://i.postimg.cc/Dfbg5PRg/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png",
   description: "Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The prototype targets mobile devices and has never been publicly released.",
   googlePlay: "#",
   steam: "#",
@@ -317,7 +317,7 @@ const projectDetails = {
   webGL: "#",
   github: "https://github.com/BerkeErd/Unity-Game-School-Project",
   youtube: "#",
-  additionalImages: ["https://private-user-images.githubusercontent.com/39529687/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyODg1ODIsIm5iZiI6MTc1MTI4ODI4MiwicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0NDctZjY2NzI4YmYtODk4OC00NTIwLTkwYjEtMDVkNmZhYzI5MGM5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDEyNTgwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTVlMmJiOTc2NjMyZTFmZTc1OGVmNTRjNGM0MWQ0NGI2Y2IzYjRiMDlkYTNkZjc5OTRiZDRkMjVhMjJlNzE1ZGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.I5Mjl4aGMZbHGJCRIm2-c6kNjD2JgQ702WRnC9uxweI", "https://private-user-images.githubusercontent.com/39529687/241207437-09418b95-ed88-4a4b-aa61-8ae3f0323f4c.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTEyODg1ODIsIm5iZiI6MTc1MTI4ODI4MiwicGF0aCI6Ii8zOTUyOTY4Ny8yNDEyMDc0MzctMDk0MThiOTUtZWQ4OC00YTRiLWFhNjEtOGFlM2YwMzIzZjRjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA2MzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwNjMwVDEyNTgwMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgzMzc4N2NlNTE4YmM1ZmYzN2YxNTc5YTA0OTliOTFlMmU3Mjc4MzRhOTRkMTU5OTM4MGNkNjExMGYwZGUwZDkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.MRIalc1pANtf9v0vCYj65DCJkbgE1Nkt2t0WYV_xxDk"],
+  additionalImages: [],
   cabinetColor: "#2d2d2d",
   neonColor: "#ff3366",
   turkish: false,
