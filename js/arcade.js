@@ -129,7 +129,7 @@ const projectDetails = {
     name: "Suburban Drift Racer",
     image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
     description: "Suburban Drift Racer is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023. In this game, which is my first 3D game, there are modes for freely roaming around the city and progressing on a straight road.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TheCar",
+    googlePlay: "#",
     steam: "#",
     itch: "#",
     webGL: "#",
@@ -137,7 +137,8 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/Ry2xsLHSlWm-SXxSHv5MFolIjKKZPAMWlO3YwofnhcR-8T6wjzPyOMLjihJnWvnkVHg=w526-h296-rw", "https://play-lh.googleusercontent.com/COlE3MVcGix79sRONLYjMvTKDrNcA-SoiK14Jbsg4KBhxZ0KLqr5OtQ6_5s7oG7d3PE=w526-h296-rw"],
     cabinetColor: "#FFFFFF",
     neonColor: "#9acde1",
-    turkish: false
+    turkish: false,
+    unpublished: true
   },
   "mystiCloned": {
     name: "MystiCloned",
