@@ -1167,6 +1167,17 @@ input:checked + .slider:before {
   background: linear-gradient(90deg, transparent 20%, var(--primary-neon));
 }
 
+.badge-legacy {
+  background:#8e8e8e;
+  color:#000;
+}
+
+.badge-jam        { background:#8e44ad; color:#fff; }
+.badge-postjam    { background:#b97ff5; color:#000; }
+.badge-prototype  { background:#7f8c8d; color:#000; }
+.badge-remaster   { background:#3498db; color:#fff; }
+
+
 @media (max-width: 768px) {
   .logo-text {
     font-size: 2rem;
@@ -1177,3 +1188,4 @@ input:checked + .slider:before {
     height: 5px;
   }
 }
+

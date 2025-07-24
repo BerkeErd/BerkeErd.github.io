@@ -11,7 +11,11 @@ const projectDetails = {
     additionalImages: ["https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140", "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140"],
     cabinetColor: "#F1F1F1",
     neonColor: "#00ff39",
-    turkish: false
+    turkish: false,
+      jam: true,              
+      postJam: true,          
+      prototype: false,
+      remaster: false
   },
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
@@ -29,17 +33,19 @@ const projectDetails = {
   },
   "ability-runner": {
     name: "Ability Runner",
-    image: "https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw",
-    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running. It also includes a leaderboard implemented using LootLocker SDK.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.AbilityRunner",
+    image: "https://img.itch.zone/aW1nLzIyMzA5NDUwLnBuZw==/original/1ftlpm.png",
+    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running.",
+    googlePlay: "#",
     steam: "#",
-    itch: "#",
+    itch: "https://berukegameslegacy.itch.io/ability-runner-evolve-android-mobile-game",
     webGL: "#",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/AsrrB4QX8cme5A6f_372xy1eIBXN75kBB6durgWL3dAQUgUSkZIN9tmy31RTmI6gO5A=w2560-h1440-rw", "https://play-lh.googleusercontent.com/kCi8SXO0jakfeZvqWBMpCjjdEXs2_c0NGu-kfyJnv8CUaHGAKT_fBFhhTdc1CBj9eJc=w2560-h1440-rw"],
     cabinetColor: "#000000",
     neonColor: "#ddf8ff",
-    turkish: false
+    turkish: false,
+    legacy: true,     
+	mobile: true   
   },
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
@@ -57,17 +63,19 @@ const projectDetails = {
   },
   "bubble-pass": {
     name: "Bubble Pass",
-    image: "https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw",
+    image: "https://img.itch.zone/aW1nLzIyMzA5NDQ1LnBuZw==/original/Z49S39.png",
     description: "Bubble Pass is a unique game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through. The game features a leaderboard system implemented using PlayFab SDK.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BubblePass",
+    googlePlay: "#",
     steam: "#",
-    itch: "#",
+    itch: "https://berukegameslegacy.itch.io/ability-runner",
     webGL: "#",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/6tS-hW7NLv3O2mkIKkJJ9PlG8SpzENXy-ACCbaV2XkvEzKZCS3QpJruKDyQQWNvODMM=w526-h296-rw", "https://play-lh.googleusercontent.com/d6DZ_SXqMzrMnIIKVfpgb0YVf9DWt8950_yJs-GCpQqAoZy4XHsRfJdVk3pdpzgxxGE=w526-h296-rw"],
     cabinetColor: "#000000",
     neonColor: "#1ab5f2",
-    turkish: false
+    turkish: false,
+    legacy: true,     
+	mobile: true   
   },
   "simple-kalimba": {
     name: "Simple Kalimba",
@@ -95,7 +103,9 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/XfDDe6QKd5IApgkCRWWaZ5ohWCoqQQdqlnmfRx1EBCTnH8RON0RtmdS4JW5fFkFzEJo=w2560-h1440-rw", "https://play-lh.googleusercontent.com/MmiH3tDQmbfOZd3RxuTB-elXtpzY9Sz5I16JQG7Rjr9FY3RVfmj1MMSgU7AUbYtXIQ=w2560-h1440-rw"],
     cabinetColor: "#000000",
     neonColor: "#f7ac1d",
-    turkish: true
+    turkish: true,
+    legacy: false,     
+	mobile: true   
   },
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
@@ -109,7 +119,8 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw", "https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw"],
     cabinetColor: "#000000",
     neonColor: "#F1F1F1",
-    turkish: false
+    turkish: false,
+    prototype: true
   },
   "rgb-square": {
     name: "RGB Square",
@@ -123,7 +134,11 @@ const projectDetails = {
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png","https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/original/0e0AfX.png"],
     cabinetColor: "#000000",
     neonColor: "#FFFFFF",
-    turkish: false
+    turkish: false,
+      jam: true,              
+      postJam: true,          
+      prototype: false,
+      remaster: false
   },
   "suburban-racer": {
     name: "Suburban Drift Racer",
@@ -152,7 +167,11 @@ const projectDetails = {
     additionalImages: ["https://cdn.magarajam.com/media/1700396006525672552436520.png", "https://cdn.magarajam.com/media/1700396008438161531669868.png"],
     cabinetColor: "#FFFFFF",
     neonColor: "#caa8ff",
-    turkish: false
+    turkish: false,
+      jam: true,              
+      postJam: false,          
+      prototype: false,
+      remaster: false
   },
   "junkman-Driver": {
     name: "Junkman Driver",
@@ -166,7 +185,11 @@ const projectDetails = {
     additionalImages: ["https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDg0MC5qcGc=/original/8H6mrX.jpg", "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOS5qcGc=/original/ChdZiS.jpg"],
     cabinetColor: "#FFFFFF",
     neonColor: "#ab000a",
-    turkish: false
+    turkish: false,
+      jam: true,              
+      postJam: false,          
+      prototype: false,
+      remaster: false
   },
   "potion-mutation": {
     name: "Potion Mutation",
@@ -180,7 +203,11 @@ const projectDetails = {
     additionalImages: [],
     cabinetColor: "#FFFFFF",
     neonColor: "#c7fb00",
-    turkish: false
+    turkish: false,
+      jam: true,              
+      postJam: false,          
+      prototype: false,
+      remaster: false
   },
   "Koy-Lideri": {
     name: "Köy Lideri",
@@ -195,6 +222,10 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#ff90fa",
     turkish: true,
+      jam: false,              
+      postJam: false,          
+      prototype: true,
+      remaster: false
     },
       "Dugum": {
         name: "Düğüm",
@@ -208,7 +239,11 @@ const projectDetails = {
         additionalImages: [],
         cabinetColor: "#000000",
         neonColor: "#FFFFFF",
-        turkish: false
+        turkish: false,
+	      jam: true,              
+	      postJam: false,          
+	      prototype: false,
+	      remaster: false
         },
         "bus-game": {
           name: "Bus Game", 
@@ -273,7 +308,7 @@ const projectDetails = {
             cabinetColor: "#FFFFFF",
             neonColor: "#ffd97",
             turkish: false,   
-            inDevelopment: false
+            inDevelopment: true
     },
 	    "color-tubes": {
 	  name: "Color Tubes",
@@ -290,7 +325,11 @@ const projectDetails = {
 	  ],
 	  cabinetColor: "#8fb3c5",
 	  neonColor: "#bf8234",
-	  turkish: false
+	  turkish: false,
+      jam: false,              
+      postJam: false,          
+      prototype: true,
+      remaster: false
 	},
 		"rps-online": {
   name: "Rock Paper Scissors Online",
@@ -454,16 +493,28 @@ function animate() {
 function createArcadeCabinets() {
   const publishedContainer   = document.getElementById('arcade-machines');
   const unpublishedContainer = document.getElementById('unpublished-machines');
+  const legacyContainer      = document.getElementById('legacy-machines');
+
   publishedContainer.innerHTML   = '';
   unpublishedContainer.innerHTML = '';
+  legacyContainer.innerHTML      = '';
 
   Object.entries(projectDetails).forEach(([key, p]) => {
-    const target = p.unpublished ? unpublishedContainer : publishedContainer;
+    const target = p.unpublished
+                  ? unpublishedContainer          // UNPUBLISHED
+                  : (p.legacy ? legacyContainer   // LEGACY
+                              : publishedContainer); // NORMAL
 
     let badges = '';
     if (p.turkish)       badges += '<span class="cabinet-badge badge-turkish">TURKISH</span>';
-    if (p.inDevelopment) badges += '<span class="cabinet-badge badge-dev">IN DEVELOPMENT</span>';
-    if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUBLISHED</span>';
+    if (p.inDevelopment) badges += '<span class="cabinet-badge badge-dev">IN DEV</span>';
+    if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUB</span>';
+    if (p.legacy)        badges += '<span class="cabinet-badge badge-legacy">LEGACY</span>'; 
+    if (p.jam)       	badges += '<span class="cabinet-badge badge-jam">JAM</span>';
+	if (p.postJam)   	badges += '<span class="cabinet-badge badge-postjam">POST‑JAM</span>';
+	if (p.prototype) 	badges += '<span class="cabinet-badge badge-prototype">PROTOTYPE</span>';
+	if (p.remaster)  	badges += '<span class="cabinet-badge badge-remaster">REMIX</span>';
+
 
     target.insertAdjacentHTML('beforeend', `
       <div class="arcade-cabinet" data-project="${key}">
@@ -493,9 +544,9 @@ function filterCabinets() {
 
     const matchesFilter =
       currentFilter === 'all' ||
-      (currentFilter === 'mobile' && project.googlePlay !== '#') ||
+      (currentFilter === 'mobile' && (project.mobile || project.googlePlay !== '#')) ||
       (currentFilter === 'pc'     && project.steam      !== '#') ||
-      (currentFilter === 'web'    && (project.webGL !== '#' || project.itch !== '#'));
+      (currentFilter === 'web'    && (project.webGL !== '#' || (project.itch !== '#' && !project.mobile)));
 
     const matchesLang = !englishOnly || !project.turkish;
     cabinet.style.display = (matchesFilter && matchesLang) ? 'block' : 'none';
@@ -617,9 +668,9 @@ function filterCabinets() {
     
     // Projenin filtreye uyup uymadığını kontrol et
     const matchesFilter = currentFilter === 'all' || 
-      (currentFilter === 'mobile' && (project.googlePlay !== '#' || project.unpublished)) ||
+      (currentFilter === 'mobile' && (project.mobile || project.googlePlay !== '#')) ||
       (currentFilter === 'pc' && (project.steam !== '#' || project.unpublished)) ||
-      (currentFilter === 'web' && ((project.webGL !== '#' || project.itch !== '#') || project.unpublished));
+      (currentFilter === 'web'    && (project.webGL !== '#' || (project.itch !== '#' && !project.mobile)));
     
     // Projenin dil filtresine uyup uymadığını kontrol et
     const matchesLanguage = !englishOnly || !project.turkish;
