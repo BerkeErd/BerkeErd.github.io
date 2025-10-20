@@ -350,7 +350,7 @@ const projectDetails = {
 "punch-up": {
   name: "Punch-Up",
   image: "https://i.postimg.cc/Dfbg5PRg/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png",
-  description: "Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The prototype targets mobile devices and has never been publicly released.",
+  description: "Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The game targets mobile devices and has never been publicly released.",
   googlePlay: "#",
   steam: "#",
   itch: "#",
