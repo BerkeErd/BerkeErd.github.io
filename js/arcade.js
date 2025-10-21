@@ -308,7 +308,7 @@ const projectDetails = {
             cabinetColor: "#FFFFFF",
             neonColor: "#ffd97",
             turkish: false,   
-            inDevelopment: true
+            inDevelopment: false
     },
 	    "color-tubes": {
 	  name: "Color Tubes",
