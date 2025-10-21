@@ -293,11 +293,11 @@ const projectDetails = {
             "Cat-Race-Final": {
             name: "Purrfect Race",
             image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
-            description: "<p>This is the completed version of the Cat Race game. <br><span style='color: yellow; font-weight: bold;'> The Browser version remains an older prototype for demonstration purposes!</span></p>",
+            description: "<p>Cat Racing/Betting game with unique abilities.</p>",
             googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
             steam: "#",
-            itch: "#",
-            webGL: "https://i.simmer.io/@Beruke/cat-race-prediction",
+            itch: "https://beruke.itch.io/purrfect-race",
+            webGL: "https://itch.io/embed-upload/15307538?color=000000",
             youtube: "#",
             additionalImages: [
                 "https://play-lh.googleusercontent.com/l9dZExOYTfhmV6RX8gRjOZyCdvDW8SIMONm1vYm_ruOlc3huF47uUfJIezTEpFlDSA=w526-h296-rw",
