@@ -795,6 +795,10 @@ input:checked + .slider:before {
   border: 2px solid var(--primary-neon);
 }
 
+/* Ensure Bootstrap modal appears above navbar and custom overlays */
+.modal-backdrop { z-index: 2600 !important; }
+.modal { z-index: 2700 !important; }
+
 .dark-modal .modal-header {
   border-bottom: 1px solid var(--primary-neon);
 }

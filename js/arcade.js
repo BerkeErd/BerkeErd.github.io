@@ -390,15 +390,7 @@ const LINK_DEFS = [
   { key: "github",     icon: "fab fa-github",      label: "Source" }
 ];
 
-// ========== SES ÖĞELERİ ==========
-const arcadeSounds = {
-  select: new Audio('sounds/cabinet-select.mp3'),
-  buttonClick: new Audio('sounds/button-click.mp3'),
-  powerUp: new Audio('sounds/power-up.mp3')
-};
-
-// Sesler başlangıçta devre dışı
-let audioEnabled = false;
+// Sounds removed (assets not present)\r\n
 
 // ========== WEBGL ARKA PLAN ==========
 let scene, camera, renderer;
@@ -577,9 +569,6 @@ function filterCabinets() {
 
 // ========== KABİNET TIKLAMA İŞLEMİ ==========
 function handleCabinetClick() {
-  if (audioEnabled) {
-    arcadeSounds.select.play();
-  }
   
   // Tüm kabinetlerin aktif durumunu kaldır
   document.querySelectorAll('.arcade-cabinet').forEach(cab => {
@@ -599,7 +588,6 @@ function handleCabinetClick() {
 function showProjectDetails(project) {
   const detailsModal = document.querySelector('.game-details-modal');
   detailsModal.classList.add('active');
-  if (audioEnabled) arcadeSounds.powerUp.play();
 
   let statusMessage = '';
   if (project.inDevelopment) statusMessage = '<div class="game-status" style="background-color:#f39c12;">IN DEVELOPMENT</div>';
@@ -622,7 +610,12 @@ function showProjectDetails(project) {
 
   let youtubeEmbedHtml = '';
   if (project.youtube !== '#') {
-    youtubeEmbedHtml = `<div class="youtube-container"><iframe class="youtube-embed" src="${project.youtube}" frameborder="0" allowfullscreen></iframe></div>`;
+    let ytBase = project.youtube;
+    ytBase = ytBase.replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')
+                   .replace('youtube.com/embed/', 'www.youtube-nocookie.com/embed/');
+    const sep = ytBase.includes('?') ? '&' : '?';
+    const ytSrc = `${ytBase}${sep}rel=0&playsinline=1&modestbranding=1`;
+    youtubeEmbedHtml = `<div class="youtube-container"><iframe class="youtube-embed" src="${ytSrc}" title="${project.name} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
   }
 
   let additionalImagesHtml = '';
@@ -667,10 +660,6 @@ function showLightbox(imgSrc) {
   
   lightboxImg.src = imgSrc;
   lightbox.classList.add('active');
-  
-  if (audioEnabled) {
-    arcadeSounds.select.play();
-  }
 }
 
 // ========== FİLTRELEME FONKSİYONALİTESİ ==========
@@ -720,9 +709,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Filtre buton tıklamaları
   document.querySelectorAll('.arcade-btn[data-filter]').forEach(button => {
     button.addEventListener('click', function() {
-      if (audioEnabled) {
-        arcadeSounds.buttonClick.play();
-      }
       
       // Aktif sınıfını güncelle
       document.querySelectorAll('.arcade-btn[data-filter]').forEach(btn => {
@@ -738,9 +724,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Sadece İngilizce toggle
   document.getElementById('turkishToggle').addEventListener('change', function() {
-    if (audioEnabled) {
-      arcadeSounds.buttonClick.play();
-    }
     
     englishOnly = this.checked;
     filterCabinets();
@@ -748,9 +731,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Modal kapatma butonu
   document.querySelector('.modal-close-btn').addEventListener('click', function() {
-    if (audioEnabled) {
-      arcadeSounds.buttonClick.play();
-    }
     
     document.querySelector('.game-details-modal').classList.remove('active');
     
@@ -763,10 +743,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Lightbox kapatma butonu
   document.querySelector('.lightbox-close').addEventListener('click', function() {
     document.querySelector('.gallery-lightbox').classList.remove('active');
-    
-    if (audioEnabled) {
-      arcadeSounds.buttonClick.play();
-    }
   });
   
   // Lightbox'a tıklayarak kapatma
@@ -800,3 +776,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Ensure details overlay closes when game modal opens
+try {
+  $(function() {
+    $('#gameModal').on('show.bs.modal', function() {
+      const details = document.querySelector('.game-details-modal');
+      if (details) details.classList.remove('active');
+    });
+  });
+} catch (e) { /* jQuery might not be loaded yet in certain contexts */ }
+
+
