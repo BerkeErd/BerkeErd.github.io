@@ -327,9 +327,9 @@ const projectDetails = {
 	  neonColor: "#bf8234",
 	  turkish: false,
       jam: false,              
-      postJam: false,          
-      prototype: true,
-      remaster: false
+      postJam: false,   
+      remaster: false,
+      unpublished: true
 	},
 		"rps-online": {
   name: "Rock Paper Scissors Online",
@@ -362,7 +362,23 @@ const projectDetails = {
   neonColor: "#ff3366",
   turkish: false,
   unpublished: true
-}
+}//,
+// "Wizard-Games": {
+//   name: "Wizard Games",
+//   image: "",
+//   description: "",
+//   googlePlay: "#",
+//   steam: "#",
+//   itch: "#",
+//   webGL: "#",
+//   github: "",
+//   youtube: "#",
+//   additionalImages: [],
+//   cabinetColor: "#2d2d2d",
+//   neonColor: "#ff3366",
+//   turkish: false,
+//   unpublished: true
+// }
 
 
 };
