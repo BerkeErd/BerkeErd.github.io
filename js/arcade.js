@@ -543,6 +543,9 @@ function createArcadeCabinets() {
 
   document.querySelectorAll('.arcade-cabinet')
           .forEach(cab => cab.addEventListener('click', handleCabinetClick));
+
+  // After initial render, ensure section headers reflect content
+  updateSectionVisibility();
 }
 
 function filterCabinets() {
@@ -693,6 +696,24 @@ function filterCabinets() {
       cabinet.style.display = 'none';
     }
   });
+
+  // Hide section headers when their lists are empty (after filtering)
+  updateSectionVisibility();
+}
+
+// Hide LEGACY/UNPUBLISHED section blocks when empty
+function updateSectionVisibility() {
+  const toggleSection = (sectionSel, containerSel) => {
+    const section = document.querySelector(sectionSel);
+    const container = document.querySelector(containerSel);
+    if (!section || !container) return;
+    const hasVisible = Array.from(container.querySelectorAll('.arcade-cabinet'))
+      .some(el => el.style.display !== 'none');
+    section.style.display = hasVisible ? '' : 'none';
+  };
+
+  toggleSection('.legacy-section', '#legacy-machines');
+  toggleSection('.unpublished-section', '#unpublished-machines');
 }
 
 // ========== OLAY DİNLEYİCİLERİ ==========
