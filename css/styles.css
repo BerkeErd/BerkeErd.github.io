@@ -1,20 +1,20 @@
 :root {
-  /* Temel renkler */
-  --color-primary: #fe4c01;   /* Logonuzdaki turuncu renk */
-  --color-secondary: #caefe2; /* Logonuzdaki açık yeşil/mavi ton */
-  --color-accent: #000813;    /* Logonuzdaki koyu mavi/yeşil ton */
-  --color-background: #f0f0f1; /* Açık gri, genel arka plan için */
-  --color-text: #1a1a1a;      /* Koyu gri, metinler için */
-  --color-border: #ddd;       /* Kenarlık rengi */
-  --color-icon: #fe4c01;      /* İkon rengi */
-  --color-icon-hover: #000813;/* İkon hover rengi */
+  
+  --color-primary: #fe4c01;   
+  --color-secondary: #caefe2; 
+  --color-accent: #000813;    
+  --color-background: #f0f0f1; 
+  --color-text: #1a1a1a;      
+  --color-border: #ddd;       
+  --color-icon: #fe4c01;      
+  --color-icon-hover: #000813;
 }
 
 
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Yatay kaydırmayı engelle */
+  overflow-x: hidden; 
 }
 
 
@@ -51,19 +51,19 @@ html, body {
 
 
 .contact-form button[type="submit"] {
-  background-color: #ff6600; /* Turuncu renk */
-  color: white; /* Buton yazısı beyaz */
-  border: none; /* Kenarlık kaldırıldı */
-  margin-bottom: 20px; /* Butonun altına boşluk ekle */
+  background-color: #ff6600; 
+  color: white; 
+  border: none; 
+  margin-bottom: 20px; 
 }
 
 .contact-form button[type="submit"]:hover {
-  background-color: #cc5200; /* Üzerine gelindiğinde daha koyu turuncu */
+  background-color: #cc5200; 
 }
 
 .contact-form {
-  max-width: 50%; /* Formun maksimum genişliğini %50 olarak sınırla */
-  margin: auto; /* Formu ortala */
+  max-width: 50%; 
+  margin: auto; 
 }
 
 
@@ -229,18 +229,18 @@ html, body {
 .additional-images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Resimleri yatayda merkeze hizalar */
-    align-items: center; /* Resimleri dikeyde merkeze hizalar */
+    justify-content: center; 
+    align-items: center; 
     margin-top: 20px;
-    gap: 20px; /* Resimler arasında boşluk bırakır */
+    gap: 20px; 
 }
 
 .additional-images img {
     max-width: 400px;
     max-height: 400px;
-    width: auto; /* Orijinal en-boy oranını korur */
-    height: auto; /* Orijinal en-boy oranını korur */
-    object-fit: contain; /* Resmi boyutlandırırken oranı korur */
+    width: auto; 
+    height: auto; 
+    object-fit: contain; 
 }
 .main-image {
     max-width: 400px;

@@ -6,28 +6,28 @@
   <meta name="description" content="Portfolio site of Beruke Games">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Bootstrap CSS -->
+  
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
-  <!-- Font Awesome -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   
-  <!-- Google Fonts -->
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap">
   
-  <!-- Three.js -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   
-  <!-- GSAP for animations -->
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
   
-  <!-- Custom CSS -->
+  
   <link rel="stylesheet" href="css/arcade-styles.css">
   
-  <!-- Favicon -->
+  
   <link rel="icon" href="https://imgur.com/47wFN7x.png" type="image/png">
 
-  <!-- Google Analytics -->
+  
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH6CXG80EP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -37,11 +37,11 @@
   </script>
 </head>
 <body>
-  <!-- WebGL Background -->
+  
   <canvas id="bg-canvas"></canvas>
   <div class="scanlines"></div>
 
-  <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="index.html">Beruke Games</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,8 +68,8 @@
     </div>
   </nav>
 
-  <!-- About Section -->
-  <div class="arcade-container">
+  
+  <div class="arcade-container" style="visibility: hidden;">
     <div class="section-header text-center mt-5 pt-5">
       <h1 class="neon-text primary-neon">About Me</h1>
       <div class="section-underline"></div>
@@ -85,13 +85,13 @@
                 <div class="profile-glow"></div>
               </div>
               <h2 class="dev-name secondary-neon">Berke Erdeniz</h2>
-              <p class="dev-title">AI-First Game Developer & Founder of Beruke Games</p>
+              <p class="dev-title">Game Developer & Founder of Beruke Games</p>
             </div>
             <div class="col-lg-8">
               <div class="about-text">
-                <p>Greetings, fellow adventurer! I'm Berke Erdeniz, a game developer who unlocked the "Game Creation" skill tree way back when most kids were still learning basic spells. At just 9 years old, I activated my first game development ability, and the rest is epic history!</p>
-                <p>I graduated with a Software Engineering degree from Celal Bayar University, but my real leveling-up happened while diving into Unity tutorials and experimenting with every crazy idea I could think of. (Spoiler: some ideas worked like magic; others, not so much but that's half the fun, right?)</p>
-                <p>These days, I'm deeply immersed in generative AI, not just in game development but even in music! I've composed and published AI-driven violin tracks on platforms like Spotify, because blending technology and creativity is what I do best.</p>
+                <p>Hi, I'm Berke Erdeniz, an independent game developer and the founder of Beruke Games. My passion for game development started at the age of 9, and since then, I've been continuously learning and building interactive experiences.</p>
+                <p>I hold a degree in Software Engineering from Celal Bayar University. Over the years, I've specialized in Unity and C#, developing everything from puzzle games to mobile action titles. Rather than replicating existing trends, my goal is to experiment with fresh mechanics and discover creative ideas. I enjoy the technical challenges of game development just as much as the creative process.</p>
+                <p>Outside of coding, I also use generative AI to create music, and I have published several AI-driven tracks on platforms like Spotify.</p>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@
           <div class="vision-card">
             <h2 class="card-title primary-neon">My Vision</h2>
             <div class="card-content">
-              <p>To create games that are so fun and innovative, you'll be telling your grandkids about them (if you're not too busy still playing).</p>
+              <p>To build engaging games that focus on original ideas and enjoyable mechanics, offering players a unique and fun experience.</p>
             </div>
             <div class="card-glow"></div>
           </div>
@@ -112,7 +112,7 @@
           <div class="mission-card">
             <h2 class="card-title secondary-neon">My Mission</h2>
             <div class="card-content">
-              <p>To bring this vision to life by constantly experimenting with new ideas, embracing cutting-edge tools like Unity and generative AI, and pouring my passion into crafting experiences that spark joy, connection, and curiosity.</p>
+              <p>To continually grow as a developer by exploring new technologies, experimenting with creative concepts, and building projects that bring fresh ideas to life.</p>
             </div>
             <div class="card-glow"></div>
           </div>
@@ -121,7 +121,7 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  
   <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; 2023 Beruke Games. All rights reserved.</p>
@@ -145,28 +145,24 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
+  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
-  <!-- WebGL Background Script -->
+  
   <script>
-    // WebGL Background
     let scene, camera, renderer;
     let particles, particleSystem;
 
     function initWebGL() {
       const canvas = document.getElementById('bg-canvas');
       
-      // Create scene
       scene = new THREE.Scene();
       
-      // Create camera
       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
       camera.position.z = 50;
       
-      // Create renderer
       renderer = new THREE.WebGLRenderer({ 
         canvas: canvas, 
         antialias: true,
@@ -175,7 +171,6 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(window.devicePixelRatio);
       
-      // Create particles
       const particlesGeometry = new THREE.BufferGeometry();
       const particleCount = 300;
       
@@ -183,20 +178,16 @@
       const colorArray = new Float32Array(particleCount * 3);
       
       for (let i = 0; i < particleCount * 3; i += 3) {
-        // Positions
         positionArray[i] = (Math.random() - 0.5) * 100;
         positionArray[i + 1] = (Math.random() - 0.5) * 100;
         positionArray[i + 2] = (Math.random() - 0.5) * 100;
         
-        // Logo colors (orange and green)
         const colorType = Math.random();
         if (colorType < 0.5) {
-          // Orange/red tone
           colorArray[i] = Math.random() * 0.6 + 0.4; // R
           colorArray[i + 1] = Math.random() * 0.3; // G
           colorArray[i + 2] = Math.random() * 0.1; // B
         } else {
-          // Green/turquoise tone
           colorArray[i] = Math.random() * 0.1; // R
           colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
           colorArray[i + 2] = Math.random() * 0.4; // B
@@ -217,10 +208,8 @@
       particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
       scene.add(particleSystem);
       
-      // Handle window resize
       window.addEventListener('resize', onWindowResize);
       
-      // Start animation
       animate();
     }
 
@@ -233,19 +222,15 @@
     function animate() {
       requestAnimationFrame(animate);
       
-      // Rotate particles
       particleSystem.rotation.x += 0.0003;
       particleSystem.rotation.y += 0.0003;
       
-      // Render scene
       renderer.render(scene, camera);
     }
 
-    // Initialize on page load
     document.addEventListener('DOMContentLoaded', function() {
-      initWebGL();
+      initWebGL(); gsap.set('.arcade-container', { visibility: 'visible' });
       
-      // Add animations
       gsap.from('.profile-container', { opacity: 0, scale: 0.8, duration: 1, ease: 'power2.out' });
       gsap.from('.dev-name', { opacity: 0, y: 20, duration: 1, delay: 0.3, ease: 'power2.out' });
       gsap.from('.dev-title', { opacity: 0, y: 20, duration: 1, delay: 0.5, ease: 'power2.out' });

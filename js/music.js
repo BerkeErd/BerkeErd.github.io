@@ -1,6 +1,4 @@
-// Beruke Games Music Page - Arcade Theme
 
-// Müzik kataloğu verisi
 const musicCatalog = [
   {
     title: "Vortex of Solitude",
@@ -22,11 +20,9 @@ const musicCatalog = [
   }
 ];
 
-// Müzik kartlarını oluştur
 function renderMusicCatalog() {
   const musicCatalogElement = document.getElementById('musicCatalog');
   
-  // Başlık ekle
   const titleElement = document.createElement('div');
   titleElement.className = 'col-12 text-center mb-4';
   titleElement.innerHTML = `
@@ -35,7 +31,6 @@ function renderMusicCatalog() {
   `;
   musicCatalogElement.appendChild(titleElement);
   
-  // Görselleştirici ekle
   const visualizerElement = document.createElement('div');
   visualizerElement.className = 'col-12 mb-5';
   visualizerElement.innerHTML = `
@@ -54,10 +49,8 @@ function renderMusicCatalog() {
   `;
   musicCatalogElement.appendChild(visualizerElement);
   
-  // Görselleştirici animasyonu
   animateVisualizer();
   
-  // Müzik kartlarını ekle
   musicCatalog.forEach(track => {
     const cardColumn = document.createElement('div');
     cardColumn.className = 'col-md-4 mb-4';
@@ -79,10 +72,6 @@ function renderMusicCatalog() {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
             loading="lazy">
           </iframe>
-          <audio controls class="custom-audio-player w-100 mt-3">
-            <source src="${track.audioSrc}" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
           <div class="music-links mt-3 text-center">
             <a href="${track.youtubeLink}" class="btn btn-arcade youtube" target="_blank">
               <i class="fab fa-youtube"></i> YouTube
@@ -96,7 +85,6 @@ function renderMusicCatalog() {
   });
 }
 
-// Görselleştirici animasyonu
 function animateVisualizer() {
   const bars = document.querySelectorAll('.visualizer-bar');
   
@@ -108,13 +96,10 @@ function animateVisualizer() {
   setTimeout(animateVisualizer, 100);
 }
 
-// WebGL arka plan
 function setupBackground() {
-  // Canvas elementi var mı kontrol et
   const canvas = document.getElementById('bg-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
   
-  // Three.js kurulumu
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 50;
@@ -126,7 +111,6 @@ function setupBackground() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   
-  // Parçacıklar oluştur
   const particlesGeometry = new THREE.BufferGeometry();
   const particleCount = 300;
   
@@ -134,20 +118,16 @@ function setupBackground() {
   const colorArray = new Float32Array(particleCount * 3);
   
   for (let i = 0; i < particleCount * 3; i += 3) {
-    // Konumlar
     positionArray[i] = (Math.random() - 0.5) * 100;
     positionArray[i + 1] = (Math.random() - 0.5) * 100;
     positionArray[i + 2] = (Math.random() - 0.5) * 100;
     
-    // Renkler (turuncu ve mavi/yeşil)
     const colorType = Math.random();
     if (colorType < 0.5) {
-      // Turuncu/kırmızı ton
       colorArray[i] = Math.random() * 0.6 + 0.4; // R
       colorArray[i + 1] = Math.random() * 0.3; // G
       colorArray[i + 2] = Math.random() * 0.1; // B
     } else {
-      // Mavi/yeşil ton
       colorArray[i] = Math.random() * 0.1; // R
       colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
       colorArray[i + 2] = Math.random() * 0.4; // B
@@ -168,7 +148,6 @@ function setupBackground() {
   const particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
   scene.add(particleSystem);
   
-  // Animasyon fonksiyonu
   function animate() {
     requestAnimationFrame(animate);
     
@@ -178,22 +157,19 @@ function setupBackground() {
     renderer.render(scene, camera);
   }
   
-  // Pencere boyutu değiştiğinde
   window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
   });
   
-  // Animasyonu başlat
   animate();
 }
 
-// Stilleri enjekte et
 function injectArcadeStyles() {
   const styleElement = document.createElement('style');
   styleElement.textContent = `
-    /* Arcade Music Styles */
+    
     body {
       background-color: #0a151d; 
       color: white;
@@ -309,12 +285,6 @@ function injectArcadeStyles() {
       padding: 20px;
     }
     
-    .custom-audio-player {
-      border-radius: 20px;
-      background-color: rgba(15, 26, 34, 0.7);
-      border: 2px solid #00e5aa;
-    }
-    
     .btn-arcade {
       background-color: #ff0000;
       color: white;
@@ -366,18 +336,13 @@ function injectArcadeStyles() {
   document.head.appendChild(styleElement);
 }
 
-// Sayfa yüklendiğinde
-document.addEventListener('DOMContentLoaded', function() {
-  // Stilleri ekle
+document.addEventListener('DOMContentLoaded', function() { gsap.set('.arcade-container', { visibility: 'visible' });
   injectArcadeStyles();
   
-  // Müzik kataloğunu oluştur
   renderMusicCatalog();
   
-  // Arka planı kur (eğer Three.js varsa)
   setupBackground();
   
-  // Scanlines efekti ekle
   if (!document.querySelector('.scanlines')) {
     const scanlines = document.createElement('div');
     scanlines.className = 'scanlines';

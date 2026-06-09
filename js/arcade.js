@@ -1,4 +1,23 @@
 const projectDetails = {
+  "wizards-path": {
+    name: "Wizard's Path",
+    image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/6da6178c4218ffd12bd50fe343103ac22580410a/capsule_616x353.jpg",
+    description: "<strong>[COMING SOON]</strong> Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. Wishlist it now on Steam!",
+    googlePlay: "#",
+    steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: [],
+    cabinetColor: "#2a1e4a",
+    neonColor: "#ffcc00",
+    turkish: false,
+    comingSoon: true,
+    jam: false,              
+    postJam: false,          
+    prototype: false,
+    remaster: false
+  },
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
@@ -176,7 +195,7 @@ const projectDetails = {
   "junkman-Driver": {
     name: "Junkman Driver",
     image: "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOC5qcGc=/347x500/T9EE32.jpg",
-    description: "'Junkman Driver' is an engaging game that I developed with two beginner friends during a beginner-friendly game jam.",
+    description: "'Junkman Driver' is an engaging arcade game developed with two beginner friends during a game jam. You play as a garbage-collecting car on a mission to clean the streets. Attach wires to collect various objects, sell them to an alien at the garage for nitro upgrades, and outsmart the police chasing you by using your trash tether to knock them off your trail.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/junkman-driver",
@@ -230,7 +249,7 @@ const projectDetails = {
       "Dugum": {
         name: "Düğüm",
         image: "https://img.itch.zone/aW1nLzE2MjAzOTYxLmpwZWc=/347x500/rjbYQf.jpeg",
-        description: "Developed for Boğaziçi Game Jam 24 within 48 hours.",
+        description: "Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24. The game revolves around the theme of knots, where the trails you leave behind form complex patterns. You must guide your character to create these patterns while avoiding collisions with trails of the same color. Earning points requires strategic, quick movements and passing through different colored trails.",
         googlePlay: "#",
         steam: "#",
         itch: "https://beruke.itch.io/dm",
@@ -279,7 +298,7 @@ const projectDetails = {
         "flagRush": {
           name: "Flag Rush",
           image: "https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw",
-          description: "Race world flags in thrilling marble competitions!",
+          description: "Flag Rush is an entertaining marble racing simulation where you can sit back and watch marbles representing world flags compete on dynamic tracks. Aside from enjoying the thrilling races, the game features an in-depth editor allowing you to create your own custom levels and design your very own unique marbles.",
           googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.FlagRush",
           steam: "#",
           itch: "#",
@@ -293,7 +312,7 @@ const projectDetails = {
             "Cat-Race-Final": {
             name: "Purrfect Race",
             image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
-            description: "<p>Cat Racing/Betting game with unique abilities.</p>",
+            description: "<p>Purrfect Race is an exciting cat racing and betting game. Choose your favorite feline contender, utilize unique cat abilities to gain an edge, and place your bets to become the ultimate racing champion.</p>",
             googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
             steam: "#",
             itch: "https://beruke.itch.io/purrfect-race",
@@ -313,7 +332,7 @@ const projectDetails = {
 	    "color-tubes": {
 	  name: "Color Tubes",
 	  image: "https://play-lh.googleusercontent.com/lSHlU-yGz4fXL5JGj3Wm1Wl1xCJGcN9bofyBJdykSJgiAjTxndNQlHI_FCnTieQwGYs=w240-h480-rw",
-	  description: "Color Tubes is a fun and colorful puzzle game.",
+	  description: "Color Tubes is a fun and colorful puzzle game where players sort matching colors into designated tubes. As the levels progress, the puzzles become increasingly complex, testing your logic and problem-solving skills.",
 	  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.ColorTubes",
 	  steam: "#",
 	  itch: "#",
@@ -363,22 +382,6 @@ const projectDetails = {
   turkish: false,
   unpublished: true
 }//,
-// "Wizard-Games": {
-//   name: "Wizard Games",
-//   image: "",
-//   description: "",
-//   googlePlay: "#",
-//   steam: "#",
-//   itch: "#",
-//   webGL: "#",
-//   github: "",
-//   youtube: "#",
-//   additionalImages: [],
-//   cabinetColor: "#2d2d2d",
-//   neonColor: "#ff3366",
-//   turkish: false,
-//   unpublished: true
-// }
 
 
 };
@@ -390,9 +393,7 @@ const LINK_DEFS = [
   { key: "github",     icon: "fab fa-github",      label: "Source" }
 ];
 
-// Sounds removed (assets not present)\r\n
 
-// ========== WEBGL ARKA PLAN ==========
 let scene, camera, renderer;
 let particles, particleSystem;
 
@@ -414,14 +415,11 @@ function buildLinkButtons(game) {
 function initWebGL() {
   const canvas = document.getElementById('bg-canvas');
   
-  // Sahne oluştur
   scene = new THREE.Scene();
   
-  // Kamera oluştur
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 50;
   
-  // Renderer oluştur
   renderer = new THREE.WebGLRenderer({ 
     canvas: canvas, 
     antialias: true,
@@ -430,29 +428,23 @@ function initWebGL() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   
-  // Parçacıklar oluştur
   const particlesGeometry = new THREE.BufferGeometry();
   const particleCount = 300; // Performans için sayıyı ayarlayabilirsiniz
   
   const positionArray = new Float32Array(particleCount * 3);
   const colorArray = new Float32Array(particleCount * 3);
   
-  // WebGL arka plan için parçacık renkleri güncelleme
 for (let i = 0; i < particleCount * 3; i += 3) {
-  // Konumlar
   positionArray[i] = (Math.random() - 0.5) * 100;
   positionArray[i + 1] = (Math.random() - 0.5) * 100;
   positionArray[i + 2] = (Math.random() - 0.5) * 100;
   
-  // Logo renklerine uygun parçacıklar (turuncu ve yeşil)
   const colorType = Math.random();
   if (colorType < 0.5) {
-    // Turuncu/kırmızı ton
     colorArray[i] = Math.random() * 0.6 + 0.4; // R
     colorArray[i + 1] = Math.random() * 0.3; // G
     colorArray[i + 2] = Math.random() * 0.1; // B
   } else {
-    // Yeşil/turkuaz ton
     colorArray[i] = Math.random() * 0.1; // R
     colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
     colorArray[i + 2] = Math.random() * 0.4; // B
@@ -473,10 +465,8 @@ for (let i = 0; i < particleCount * 3; i += 3) {
   particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
   scene.add(particleSystem);
   
-  // Pencere boyutu değişiklikleri için listener
   window.addEventListener('resize', onWindowResize);
   
-  // Animasyonu başlat
   animate();
 }
 
@@ -489,15 +479,12 @@ function onWindowResize() {
 function animate() {
   requestAnimationFrame(animate);
   
-  // Parçacıkları döndür
   particleSystem.rotation.x += 0.0003;
   particleSystem.rotation.y += 0.0003;
   
-  // Sahneyi render et
   renderer.render(scene, camera);
 }
 
-// ========== ARCADE MAKİNELERİ OLUŞTURMA ==========
 function createArcadeCabinets() {
   const publishedContainer   = document.getElementById('arcade-machines');
   const unpublishedContainer = document.getElementById('unpublished-machines');
@@ -516,9 +503,10 @@ function createArcadeCabinets() {
     let badges = '';
     if (p.turkish)       badges += '<span class="cabinet-badge badge-turkish">TURKISH</span>';
     if (p.inDevelopment) badges += '<span class="cabinet-badge badge-dev">IN DEV</span>';
-    if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUB</span>';
-    if (p.legacy)        badges += '<span class="cabinet-badge badge-legacy">LEGACY</span>'; 
-    if (p.jam)       	badges += '<span class="cabinet-badge badge-jam">JAM</span>';
+      if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUB</span>';
+      if (p.legacy)        badges += '<span class="cabinet-badge badge-legacy">LEGACY</span>'; 
+      if (p.comingSoon)    badges += '<span class="cabinet-badge badge-comingsoon">COMING SOON</span>';
+      if (p.jam)       	badges += '<span class="cabinet-badge badge-jam">JAM</span>';
 	if (p.postJam)   	badges += '<span class="cabinet-badge badge-postjam">POST‑JAM</span>';
 	if (p.prototype) 	badges += '<span class="cabinet-badge badge-prototype">PROTOTYPE</span>';
 	if (p.remaster)  	badges += '<span class="cabinet-badge badge-remaster">REMIX</span>';
@@ -544,7 +532,6 @@ function createArcadeCabinets() {
   document.querySelectorAll('.arcade-cabinet')
           .forEach(cab => cab.addEventListener('click', handleCabinetClick));
 
-  // After initial render, ensure section headers reflect content
   updateSectionVisibility();
 }
 
@@ -570,24 +557,19 @@ function filterCabinets() {
   });
 }
 
-// ========== KABİNET TIKLAMA İŞLEMİ ==========
 function handleCabinetClick() {
   
-  // Tüm kabinetlerin aktif durumunu kaldır
   document.querySelectorAll('.arcade-cabinet').forEach(cab => {
     cab.classList.remove('active');
   });
   this.classList.add('active');
   
-  // Proje detaylarını al
   const projectId = this.getAttribute('data-project');
   const project = projectDetails[projectId];
   
-  // Proje detaylarını göster
   showProjectDetails(project);
 }
 
-// ========== PROJE DETAYLARINI GÖSTER ==========
 function showProjectDetails(project) {
   const detailsModal = document.querySelector('.game-details-modal');
   detailsModal.classList.add('active');
@@ -637,14 +619,11 @@ function showProjectDetails(project) {
 }
 
 
-// ========== ARKA PLAN RENKLERİNİ GÜNCELLE ==========
 function updateBackgroundColors(color) {
-  // Renkleri RGB'ye dönüştür
   const r = parseInt(color.substring(1, 3), 16) / 255;
   const g = parseInt(color.substring(3, 5), 16) / 255;
   const b = parseInt(color.substring(5, 7), 16) / 255;
   
-  // Parçacık renklerini güncelle
   if (particleSystem) {
     const colors = particleSystem.geometry.attributes.color.array;
     for (let i = 0; i < colors.length; i += 3) {
@@ -656,7 +635,6 @@ function updateBackgroundColors(color) {
   }
 }
 
-// ========== LIGHTBOX GÖSTER ==========
 function showLightbox(imgSrc) {
   const lightbox = document.querySelector('.gallery-lightbox');
   const lightboxImg = lightbox.querySelector('.lightbox-img');
@@ -665,7 +643,6 @@ function showLightbox(imgSrc) {
   lightbox.classList.add('active');
 }
 
-// ========== FİLTRELEME FONKSİYONALİTESİ ==========
 let currentFilter = 'all';
 let englishOnly = false;
 
@@ -674,20 +651,16 @@ function filterCabinets() {
     const projectId = cabinet.getAttribute('data-project');
     const project = projectDetails[projectId];
     
-    // Projenin filtreye uyup uymadığını kontrol et
     const matchesFilter = currentFilter === 'all' || 
       (currentFilter === 'mobile' && (project.mobile || project.googlePlay !== '#')) ||
       (currentFilter === 'pc' && (project.steam !== '#' || project.unpublished)) ||
       (currentFilter === 'web'    && (project.webGL !== '#' || (project.itch !== '#' && !project.mobile)));
     
-    // Projenin dil filtresine uyup uymadığını kontrol et
     const matchesLanguage = !englishOnly || !project.turkish;
     
-    // Kabineti göster veya gizle
     if (matchesFilter && matchesLanguage) {
       cabinet.style.display = 'block';
       
-      // Kabinet animasyonu
       gsap.fromTo(cabinet, 
         { opacity: 0, y: 20 }, 
         { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: Math.random() * 0.3 }
@@ -697,11 +670,9 @@ function filterCabinets() {
     }
   });
 
-  // Hide section headers when their lists are empty (after filtering)
   updateSectionVisibility();
 }
 
-// Hide LEGACY/UNPUBLISHED section blocks when empty
 function updateSectionVisibility() {
   const toggleSection = (sectionSel, containerSel) => {
     const section = document.querySelector(sectionSel);
@@ -716,64 +687,51 @@ function updateSectionVisibility() {
   toggleSection('.unpublished-section', '#unpublished-machines');
 }
 
-// ========== OLAY DİNLEYİCİLERİ ==========
 document.addEventListener('DOMContentLoaded', function() {
-  // WebGL arka planı başlat
   initWebGL();
   
-  // Arcade kabinetleri oluştur
-  createArcadeCabinets();
+  createArcadeCabinets(); gsap.set('.arcade-container', { visibility: 'visible' });
   
-  // İlk filtrelemeyi uygula
   filterCabinets();
   
-  // Filtre buton tıklamaları
   document.querySelectorAll('.arcade-btn[data-filter]').forEach(button => {
     button.addEventListener('click', function() {
       
-      // Aktif sınıfını güncelle
       document.querySelectorAll('.arcade-btn[data-filter]').forEach(btn => {
         btn.classList.remove('active');
       });
       this.classList.add('active');
       
-      // Filtreyi ayarla ve uygula
       currentFilter = this.getAttribute('data-filter');
       filterCabinets();
     });
   });
   
-  // Sadece İngilizce toggle
   document.getElementById('turkishToggle').addEventListener('change', function() {
     
     englishOnly = this.checked;
     filterCabinets();
   });
   
-  // Modal kapatma butonu
   document.querySelector('.modal-close-btn').addEventListener('click', function() {
     
     document.querySelector('.game-details-modal').classList.remove('active');
     
-    // Kabinetlerin aktif durumunu kaldır
     document.querySelectorAll('.arcade-cabinet').forEach(cab => {
       cab.classList.remove('active');
     });
   });
   
-  // Lightbox kapatma butonu
   document.querySelector('.lightbox-close').addEventListener('click', function() {
     document.querySelector('.gallery-lightbox').classList.remove('active');
   });
   
-  // Lightbox'a tıklayarak kapatma
   document.querySelector('.gallery-lightbox').addEventListener('click', function(e) {
     if (e.target === this) {
       this.classList.remove('active');
     }
   });
   
-  // WebGL oyun modalı
   $('#gameModal').on('show.bs.modal', function(event) {
     const button = $(event.relatedTarget);
     const gameUrl = button.data('webgl');
@@ -784,12 +742,10 @@ document.addEventListener('DOMContentLoaded', function() {
     modal.find('#gameIframe').attr('src', gameUrl);
   });
   
-  // Modal kapandığında iframe'i temizle
   $('#gameModal').on('hidden.bs.modal', function() {
     $(this).find('#gameIframe').attr('src', '');
   });
   
-  // ESC tuşuyla modalı kapatma
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
       document.querySelector('.game-details-modal').classList.remove('active');
@@ -798,7 +754,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Ensure details overlay closes when game modal opens
 try {
   $(function() {
     $('#gameModal').on('show.bs.modal', function() {
@@ -806,6 +761,6 @@ try {
       if (details) details.classList.remove('active');
     });
   });
-} catch (e) { /* jQuery might not be loaded yet in certain contexts */ }
+} catch (e) {  }
 
 

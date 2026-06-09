@@ -1,24 +1,24 @@
-/* =============== BERUKE GAMES ANA SAYFA STILI =============== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-  /* Logo renkleri */
-  --primary-neon: #fe4c01;    /* Turuncu/kırmızı ton */
-  --secondary-neon: #00e5aa;  /* Yeşil/turkuaz ton */
-  --accent-neon: #ffcc00;     /* Sarı/altın aksan */
-  --dark-bg: #0a151d;         /* Koyu arka plan */
-  --card-dark: #0f1a22;       /* Kart koyu renk */
-  --card-light: #172a35;      /* Kart açık renk */
   
-  /* Işıltı efektleri */
+  --primary-neon: #fe4c01;    
+  --secondary-neon: #00e5aa;  
+  --accent-neon: #ffcc00;     
+  --dark-bg: #0a151d;         
+  --card-dark: #0f1a22;       
+  --card-light: #172a35;      
+  
+  
   --primary-glow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary-neon), 
                   0 0 20px var(--primary-neon), 0 0 25px var(--primary-neon);
   --secondary-glow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--secondary-neon), 
                     0 0 20px var(--secondary-neon), 0 0 25px var(--secondary-neon);
 }
 
-/* ========== TEMEL STILLER ========== */
+
 body {
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-/* ========== NAVBAR STILI ========== */
+
 .navbar {
   background-color: rgba(10, 21, 29, 0.9) !important;
   border-bottom: 2px solid var(--primary-neon);
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: var(--primary-glow);
 }
 
-/* ========== WEBGL ARKA PLAN ========== */
+
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -92,14 +92,14 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.3;
 }
 
-/* ========== ANA KONTEYNER ========== */
+
 .main-container {
   padding-top: 70px;
   position: relative;
   overflow: hidden;
 }
 
-/* ========== HERO BÖLÜMÜ ========== */
+
 .hero-section {
   height: calc(100vh - 70px);
   display: flex;
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%) scale(1.1);
 }
 
-/* ========== ÖNE ÇIKAN OYUN BÖLÜMÜ ========== */
+
 .featured-section {
   padding: 80px 0;
   background: linear-gradient(to bottom, var(--dark-bg), #0c1c27);
@@ -505,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: 56.25%; 
   border-radius: 15px;
   overflow: hidden;
   border: 2px solid var(--primary-neon);
@@ -547,7 +547,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 15px rgba(254, 76, 1, 0.5);
 }
 
-/* ========== KOLEKSİYON TEASER BÖLÜMÜ ========== */
+
 .teaser-section {
   padding: 80px 0;
   background: linear-gradient(to bottom, #0c1c27, var(--dark-bg));
@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-/* ========== BAĞLANTI BÖLÜMÜ ========== */
+
 .connect-section {
   padding: 60px 0;
   background-color: var(--dark-bg);
@@ -722,7 +722,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 15px #1b2838;
 }
 
-/* ========== MODALLER ========== */
+
 .game-modal {
   background-color: var(--dark-bg);
   border: 2px solid var(--primary-neon);
@@ -819,7 +819,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--secondary-neon);
 }
 
-/* ========== EASTER EGG OYUNU ========== */
+
 .easter-egg-game {
   position: fixed;
   bottom: -100%;
@@ -868,7 +868,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-/* ========== FOOTER ========== */
+
 .site-footer {
   background-color: rgba(10, 21, 29, 0.9);
   border-top: 2px solid var(--primary-neon);
@@ -895,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
 }
 
-/* ========== ANİMASYONLAR ========== */
+
 @keyframes pulse-glow {
   0% {
     opacity: 0.5;
@@ -1040,7 +1040,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ========== RESPONSIVE AYARLAR ========== */
+
 @media (max-width: 992px) {
   .primary-text {
     font-size: 1.8rem;

@@ -1,26 +1,26 @@
-/* =============== ARCADE STYLES =============== */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
-  /* Logodaki renkler */
-  --primary-neon: #fe4c01;    /* Turuncu/kırmızı ton */
-  --secondary-neon: #00e5aa;  /* Yeşil/turkuaz ton */
-  --accent-neon: #ffcc00;     /* Sarı/altın aksan */
-  --arcade-dark: #0a151d;     /* Koyu arka plan */
-  --arcade-floor: #0a1520;    /* Zemin rengi */
-  --cabinet-dark: #0f1a22;    /* Kabinet koyu renk */
-  --cabinet-light: #172a35;   /* Kabinet açık renk */
   
-  /* Işıltı efektleri */
+  --primary-neon: #fe4c01;    
+  --secondary-neon: #00e5aa;  
+  --accent-neon: #ffcc00;     
+  --arcade-dark: #0a151d;     
+  --arcade-floor: #0a1520;    
+  --cabinet-dark: #0f1a22;    
+  --cabinet-light: #172a35;   
+  
+  
   --primary-glow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary-neon), 
                   0 0 20px var(--primary-neon), 0 0 25px var(--primary-neon);
   --secondary-glow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--secondary-neon), 
                     0 0 20px var(--secondary-neon), 0 0 25px var(--secondary-neon);
 }
 
-/* ========== TEMEL STILLER ========== */
+
 body {
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ========== NAVBAR ========== */
+
 .navbar {
   background-color: rgba(10, 6, 18, 0.9) !important;
   border-bottom: 2px solid var(--primary-neon);
@@ -60,7 +60,7 @@ body {
   text-shadow: var(--primary-glow);
 }
 
-/* ========== WEBGL ARKA PLAN ========== */
+
 #bg-canvas {
   position: fixed;
   top: 0;
@@ -88,7 +88,7 @@ body {
   opacity: 0.3;
 }
 
-/* ========== ARCADE KONTEYNER ========== */
+
 .arcade-container {
   width: 100%;
   min-height: 100vh;
@@ -97,7 +97,7 @@ body {
   overflow: hidden;
 }
 
-/* ========== ARCADE BAŞLIK ========== */
+
 .arcade-marquee {
   width: 100%;
   text-align: center;
@@ -128,7 +128,7 @@ body {
   text-shadow: var(--secondary-glow);
 }
 
-/* ========== KONTROL PANELİ ========== */
+
 .control-panel {
   width: 80%;
   max-width: 1000px;
@@ -287,7 +287,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* ========== ARCADE ZEMİNİ ========== */
+
 .arcade-floor {
   width: 100%;
   position: relative;
@@ -300,7 +300,7 @@ input:checked + .slider:before {
   perspective-origin: center center;
 }
 
-/* ========== ARCADE MAKİNELERİ ========== */
+
 .arcade-machines {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -523,7 +523,7 @@ input:checked + .slider:before {
   box-shadow: 0 0 5px #7f8c8d;
 }
 
-/* ========== OYUN DETAY MODALI ========== */
+
 .game-details-modal {
   position: fixed;
   top: 0;
@@ -600,7 +600,7 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
-/* ========== OYUN İÇERİĞİ ========== */
+
 .game-header {
   text-align: center;
   margin-bottom: 30px;
@@ -747,7 +747,7 @@ input:checked + .slider:before {
   border: 2px solid var(--accent-neon);
 }
 
-/* ========== LİGHTBOX ========== */
+
 .gallery-lightbox {
   position: fixed;
   top: 0;
@@ -789,13 +789,13 @@ input:checked + .slider:before {
   text-shadow: 0 0 10px var(--primary-neon);
 }
 
-/* ========== WEBGL OYUN MODALI ========== */
+
 .dark-modal {
   background-color: var(--arcade-dark);
   border: 2px solid var(--primary-neon);
 }
 
-/* Ensure Bootstrap modal appears above navbar and custom overlays */
+
 .modal-backdrop { z-index: 2600 !important; }
 .modal { z-index: 2700 !important; }
 
@@ -812,7 +812,7 @@ input:checked + .slider:before {
   color: var(--primary-neon);
 }
 
-/* ========== ANİMASYONLAR ========== */
+
 @keyframes neon-flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     text-shadow: var(--primary-glow);
@@ -851,10 +851,10 @@ input:checked + .slider:before {
   }
 }
 
-/* ========== RESPONSIVE AYARLAR ========== */
-/* ========== RESPONSIVE AYARLAR ========== */
 
-/* Büyük tablet & küçük masaüstü (1200px'e kadar) */
+
+
+
 @media (max-width: 1200px) {
   .arcade-marquee h1, .logo-text {
     font-size: 2.5rem;
@@ -882,7 +882,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Tablet (992px'e kadar) */
+
 @media (max-width: 992px) {
   .arcade-marquee h1, .logo-text {
     font-size: 2rem;
@@ -926,7 +926,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Geniş Telefon & Dar Tablet (768px'e kadar) */
+
 @media (max-width: 768px) {
   .arcade-container {
     padding-top: 60px;
@@ -996,7 +996,7 @@ input:checked + .slider:before {
     font-size: 1.8rem;
   }
   
-  /* WebGL Oyun Modalı düzenleme */
+  
   .modal-dialog.modal-xl {
     margin: 80px 10px 10px;
   }
@@ -1006,7 +1006,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Mobil (576px'e kadar) */
+
 @media (max-width: 576px) {
   .arcade-marquee h1, .logo-text {
     font-size: 1.3rem;
@@ -1064,7 +1064,7 @@ input:checked + .slider:before {
   }
 }
 
-/* Çok Küçük Mobil (400px'e kadar) */
+
 @media (max-width: 400px) {
   .arcade-marquee h1, .logo-text {
     font-size: 1.1rem;
@@ -1090,15 +1090,15 @@ input:checked + .slider:before {
   }
 }
 
-/* WebGL Oyun Modalı Düzeltmesi */
+
 .modal-dialog.modal-xl {
-  margin-top: 80px; /* Navbar'dan uzaklaştır */
+  margin-top: 80px; 
 }
 
 .dark-modal .modal-header {
-  padding: 15px 50px 15px 15px; /* Kapatma butonu için yer aç */
+  padding: 15px 50px 15px 15px; 
   position: relative;
-  z-index: 2050; /* Navbar'ın z-index'i 2000 */
+  z-index: 2050; 
 }
 
 .dark-modal .close {
@@ -1126,14 +1126,14 @@ input:checked + .slider:before {
   transform: scale(1.1);
 }
 
-/* Modal içerik düzeltmesi */
+
 .modal-content.dark-modal {
   background-color: var(--arcade-dark);
   border: 2px solid var(--primary-neon);
   box-shadow: 0 0 20px rgba(254, 76, 1, 0.5);
 }
 
-/* Logo Stili */
+
 .logo-container {
   position: relative;
   padding: 20px 0;
@@ -1180,6 +1180,7 @@ input:checked + .slider:before {
 .badge-postjam    { background:#b97ff5; color:#000; }
 .badge-prototype  { background:#7f8c8d; color:#000; }
 .badge-remaster   { background:#3498db; color:#fff; }
+.badge-comingsoon { background:#2ecc71; color:#000; box-shadow: 0 0 5px #2ecc71; }
 
 
 @media (max-width: 768px) {
