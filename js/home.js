@@ -176,6 +176,21 @@ function initSnakeGame() {
   document.querySelector('.main-logo').addEventListener('click', function() {
     launchSnakeGame();
   });
+
+  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+  let konamiIndex = 0;
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === konamiCode[konamiIndex] || e.key.toLowerCase() === konamiCode[konamiIndex].toLowerCase()) {
+      konamiIndex++;
+      if (konamiIndex === konamiCode.length) {
+        launchSnakeGame();
+        konamiIndex = 0;
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  });
 }
 
 function launchSnakeGame() {
