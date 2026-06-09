@@ -1243,3 +1243,171 @@ h1, h2, h3, h4, h5, h6 {
     height: 250px;
   }
 }
+/* Web Arcade (Instant Play) Styles */
+.web-arcade-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.web-arcade-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.web-arcade-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.web-arcade-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.web-arcade-card {
+  flex: 0 0 320px;
+  height: 200px;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.web-arcade-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.web-arcade-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 21, 29, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.play-now-btn {
+  background: rgba(0, 229, 170, 0.2);
+  color: #fff;
+  border: 2px solid var(--secondary-neon);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--secondary-neon);
+  box-shadow: 0 0 20px rgba(0, 229, 170, 0.4);
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.web-arcade-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(10, 21, 29, 0.95) 0%, rgba(10, 21, 29, 0.5) 60%, transparent 100%);
+  padding: 15px 15px 10px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.web-arcade-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.web-arcade-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--secondary-neon);
+  box-shadow: 0 15px 35px rgba(0, 229, 170, 0.3);
+}
+
+.web-arcade-card:hover img {
+  transform: scale(1.1);
+}
+
+.web-arcade-card:hover .web-arcade-overlay {
+  opacity: 1;
+}
+
+.web-arcade-card:hover .play-now-btn {
+  transform: translateY(0);
+  background: var(--secondary-neon);
+  color: var(--dark-bg);
+  box-shadow: 0 0 30px var(--secondary-neon);
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: rgba(10, 21, 29, 0.8);
+  border: 2px solid var(--primary-neon, #00e5aa);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.carousel-nav-btn:hover {
+  background: var(--primary-neon, #00e5aa);
+  color: #000;
+  box-shadow: 0 0 20px var(--primary-neon, #00e5aa);
+}
+
+.carousel-nav-btn.prev-btn {
+  left: 10px;
+}
+
+.carousel-nav-btn.next-btn {
+  right: 10px;
+}
+
+/* Make carousel clearly draggable */
+.web-arcade-carousel {
+  cursor: grab;
+  /* Slightly fade edges to indicate scrollability */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.web-arcade-carousel:active {
+  cursor: grabbing;
+}
+
+/* Prevent image dragging while carousel drag */
+.web-arcade-card img {
+  pointer-events: none;
+}

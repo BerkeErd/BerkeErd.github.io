@@ -610,3 +610,76 @@ document.addEventListener('DOMContentLoaded', function() {
     gsap.set(element, { opacity: 0, y: 30 });
   });
 });
+
+// Web Arcade Logic
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.web-arcade-card');
+  const iframe = document.getElementById('instantPlayIframe');
+  const modalTitle = document.querySelector('#instantPlayModal .modal-title');
+  
+  cards.forEach(card => {
+    card.addEventListener('click', function() {
+      const url = this.getAttribute('data-webgl');
+      const name = this.getAttribute('data-name');
+      
+      if (url && iframe) {
+        iframe.src = url;
+        if (modalTitle) modalTitle.textContent = name;
+        $('#instantPlayModal').modal('show');
+      }
+    });
+  });
+  
+
+  // Drag to scroll logic & Arrows
+  const carousel = document.querySelector('.web-arcade-carousel');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  if (carousel) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      carousel.classList.add('active');
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+      isDown = false;
+      carousel.classList.remove('active');
+    });
+    
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+      carousel.classList.remove('active');
+    });
+    
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll-fast
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: -340, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carousel.scrollBy({ left: 340, behavior: 'smooth' });
+      });
+    }
+  }
+
+  // Clear iframe on close
+  $('#instantPlayModal').on('hidden.bs.modal', function () {
+    if (iframe) {
+      iframe.src = '';
+    }
+  });
+});

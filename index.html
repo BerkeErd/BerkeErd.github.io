@@ -162,6 +162,84 @@
     </section>
 
     
+    
+    <section id="web-arcade" class="web-arcade-section">
+      <div class="section-header">
+        <h2 class="glitch-text" data-text="Instant Play">Instant Play</h2>
+        <div class="section-underline"></div>
+        <p class="section-subtitle">Play our web games instantly in your browser!</p>
+      </div>
+      
+      <div class="web-arcade-carousel-wrapper">
+        <button class="carousel-nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        <div class="web-arcade-carousel">
+          
+          <div class="web-arcade-card" data-webgl="https://itch.io/embed-upload/8532900?color=0c0c0c" data-name="Stick Slasher">
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140" alt="Stick Slasher">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>Stick Slasher</h4>
+            </div>
+          </div>
+          
+          <div class="web-arcade-card" data-webgl="https://itch.io/embed-upload/13434525?color=04001d" data-name="MystiCloned">
+            <img src="https://cdn.magarajam.com/media/1700396006525672552436520.png" alt="MystiCloned">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>MystiCloned</h4>
+            </div>
+          </div>
+          
+          <div class="web-arcade-card" data-webgl="https://itch.io/embed-upload/15307538?color=000000" data-name="Purrfect Race">
+            <img src="https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw" alt="Purrfect Race">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>Purrfect Race</h4>
+            </div>
+          </div>
+          
+          <div class="web-arcade-card" data-webgl="https://itch.io/embed-upload/13434631?color=000000" data-name="Junkman Driver">
+            <img src="https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDg0MC5qcGc=/original/8H6mrX.jpg" alt="Junkman Driver">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>Junkman Driver</h4>
+            </div>
+          </div>
+          
+          <div class="web-arcade-card" data-webgl="https://itch.io/embed-upload/13434563?color=000000" data-name="RGB Square">
+            <img src="https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png" alt="RGB Square">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>RGB Square</h4>
+            </div>
+          </div>
+          
+          <div class="web-arcade-card" data-webgl="https://i.simmer.io/@Beruke/potion-mutation" data-name="Potion Mutation">
+            <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation">
+            <div class="web-arcade-overlay">
+              <div class="play-now-btn"><i class="fas fa-play"></i> PLAY NOW</div>
+            </div>
+            <div class="web-arcade-info">
+              <h4>Potion Mutation</h4>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
     <section id="collection-teaser" class="teaser-section">
       <div class="section-header">
         <h2 class="glitch-text" data-text="Game Collection">Game Collection</h2>
@@ -271,6 +349,24 @@
   </div>
 
   
+  
+  <div class="modal fade" id="instantPlayModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content dark-modal" style="background: rgba(10,21,29,0.95); backdrop-filter: blur(15px); border: 2px solid var(--primary-neon);">
+        <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+          <h5 class="modal-title" style="font-family: 'Press Start 2P', monospace; font-size: 1rem; color: white; text-shadow: 0 0 10px var(--primary-neon);">Game Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white; opacity: 1; text-shadow: 0 0 5px red;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="padding: 0;">
+          <iframe id="instantPlayIframe" style="width: 100%; height: 75vh; border: none; display: block;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div id="footer-container"></div>
 
   
