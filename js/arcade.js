@@ -217,7 +217,7 @@ const projectDetails = {
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/potion-mutation",
-    webGL: "https://i.simmer.io/@Beruke/potion-mutation",
+    webGL: "https://itch.io/embed-upload/9613551?color=0f0f0f",
     youtube: "#",
     additionalImages: [],
     cabinetColor: "#FFFFFF",
