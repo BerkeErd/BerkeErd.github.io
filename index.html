@@ -35,6 +35,13 @@
     gtag('js', new Date());
     gtag('config', 'G-NH6CXG80EP');
   </script>
+
+  <meta property="og:title" content="Beruke Games - Interactive Game Studio">
+  <meta property="og:description" content="Creative indie game studio crafting unique gaming experiences. Play our original retro and modern games!">
+  <meta property="og:image" content="https://imgur.com/47wFN7x.png">
+  <meta property="og:url" content="https://berkeerd.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
   
@@ -42,31 +49,7 @@
   <div class="scanlines"></div>
 
   
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html">Beruke Games</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="arcade-games.html">Games</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="music.html">Music</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar-container"></div>
 
   
   <div class="main-container" style="visibility: hidden;">
@@ -185,34 +168,38 @@
         <div class="section-underline"></div>
       </div>
       
+      
       <div class="teaser-container">
         <div class="game-preview-grid">
           
-          <div class="mini-preview">
-            <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic">
+          <a href="arcade-games.html#mystiCloned" class="mini-preview" style="display:block; text-decoration:none; color:inherit;">
+            <img src="https://cdn.magarajam.com/media/1700396006525672552436520.png" alt="MystiCloned">
             <div class="preview-info">
-              <h4>TimeLoop Traffic</h4>
+              <h4>MystiCloned</h4>
             </div>
-          </div>
-          <div class="mini-preview">
-            <img src="https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png" alt="RGB Square">
+          </a>
+          <a href="arcade-games.html#wizards-path" class="mini-preview" style="display:block; text-decoration:none; color:inherit;">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/6da6178c4218ffd12bd50fe343103ac22580410a/capsule_616x353.jpg" alt="Wizard's Path">
             <div class="preview-info">
-              <h4>RGB Square</h4>
+              <h4>Wizard's Path</h4>
             </div>
-          </div>
-          <div class="mini-preview">
-            <img src="https://play-lh.googleusercontent.com/6A-AFPByB7Ik_X_R9_P-Om81fBn5jHf9L4pOgOryq_xqTCxmSbHDubuouEIz9xfSiwQ=w416-h235-rw" alt="Ability Runner">
+          </a>
+          <a href="arcade-games.html#flagRush" class="mini-preview" style="display:block; text-decoration:none; color:inherit;">
+            <img src="https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw" alt="Flag Rush">
             <div class="preview-info">
-              <h4>Ability Runner</h4>
+              <h4>Flag Rush</h4>
             </div>
-          </div>
-          <div class="mini-preview">
-            <img src="https://play-lh.googleusercontent.com/I1aPImKuxw9oku1aRV5Tug06Fm9kSw1wFS29uZnG5NtE78fJ6sqdK4AvEcolG1h32oQ=w416-h235-rw" alt="Bubble Pass">
+          </a>
+          <a href="arcade-games.html#Cat-Race-Final" class="mini-preview" style="display:block; text-decoration:none; color:inherit;">
+            <img src="https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw" alt="Purrfect Race">
             <div class="preview-info">
-              <h4>Bubble Pass</h4>
+              <h4>Purrfect Race</h4>
             </div>
-          </div>
+          </a>
+          
         </div>
+      </div>
+
         
         <div class="arcade-teaser">
           <h3>Discover the Full Arcade</h3>
@@ -226,27 +213,7 @@
     </section>
     
     
-    <section id="connect" class="connect-section">
-      <div class="connect-container">
-        <div class="social-media">
-          <h3>Connect With Us</h3>
-          <div class="social-icons">
-            <a href="#" class="social-icon twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon discord">
-              <i class="fab fa-discord"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCBRLT-ayrIoC6mfW4YCGCoA" class="social-icon youtube">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://store.steampowered.com/search/?developer=Beruke%20Games" class="social-icon steam">
-              <i class="fab fa-steam"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    
   </div>
 
   
@@ -304,17 +271,7 @@
   </div>
 
   
-  <footer class="site-footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="https://imgur.com/47wFN7x.png" alt="Beruke Games Logo" width="40">
-        <span>Beruke Games</span>
-      </div>
-      <div class="footer-copyright">
-        <p>&copy; 2023 Beruke Games. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -332,5 +289,6 @@
     agent-id="e6a86080-d562-4aca-8cc4-e13cbd74429e"
     language-code="en">
   </df-messenger>
+  <script src="js/components.js"></script>
 </body>
 </html>

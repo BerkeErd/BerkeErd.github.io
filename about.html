@@ -35,6 +35,13 @@
     gtag('js', new Date());
     gtag('config', 'G-NH6CXG80EP');
   </script>
+
+  <meta property="og:title" content="Beruke Games - Interactive Game Studio">
+  <meta property="og:description" content="Creative indie game studio crafting unique gaming experiences. Play our original retro and modern games!">
+  <meta property="og:image" content="https://imgur.com/47wFN7x.png">
+  <meta property="og:url" content="https://berkeerd.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
   
@@ -42,31 +49,7 @@
   <div class="scanlines"></div>
 
   
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html">Beruke Games</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="about.html">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="arcade-games.html">Games</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="music.html">Music</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar-container"></div>
 
   
   <div class="arcade-container" style="visibility: hidden;">
@@ -122,28 +105,7 @@
   </div>
 
   
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; 2023 Beruke Games. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="https://github.com/BerkeErd" target="_blank" class="social-icon">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/berkeerdeniz/" target="_blank" class="social-icon">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCBRLT-ayrIoC6mfW4YCGCoA" target="_blank" class="social-icon">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://open.spotify.com/intl-tr/artist/3wf6hYGGdJ4p1SgWYQx9q6?si=02ff344f890e46f7" target="_blank" class="social-icon">
-          <i class="fab fa-spotify"></i>
-        </a>
-        <a href="https://beruke.itch.io/" target="_blank" class="social-icon">
-          <i class="fab fa-itch-io"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -417,5 +379,6 @@ gsap.to('.mission-card', { opacity: 1, x: 0, duration: 1, delay: 1, ease: 'power
       }
     }
   </style>
+  <script src="js/components.js"></script>
 </body>
 </html>

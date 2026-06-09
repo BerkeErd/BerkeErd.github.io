@@ -764,3 +764,18 @@ try {
 } catch (e) {  }
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1); // remove #
+      // Find case-insensitive key
+      const keys = Object.keys(projectDetails);
+      const matchedKey = keys.find(k => k.toLowerCase() === hash.toLowerCase());
+      if (matchedKey && projectDetails[matchedKey]) {
+        showProjectDetails(projectDetails[matchedKey]);
+      }
+    }
+  }, 500); // Wait a bit for cabinets to render just in case
+});
+

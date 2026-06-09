@@ -35,6 +35,13 @@
     gtag('js', new Date());
     gtag('config', 'G-NH6CXG80EP');
   </script>
+
+  <meta property="og:title" content="Beruke Games - Interactive Game Studio">
+  <meta property="og:description" content="Creative indie game studio crafting unique gaming experiences. Play our original retro and modern games!">
+  <meta property="og:image" content="https://imgur.com/47wFN7x.png">
+  <meta property="og:url" content="https://berkeerd.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+
 </head>
 <body>
   
@@ -42,31 +49,7 @@
   <div class="scanlines"></div>
 
   
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand" href="index.html">Beruke Games</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="arcade-games.html">Games</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="contact.html">Contact Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="music.html">Music</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar-container"></div>
 
   
   <div class="arcade-container" style="visibility: hidden;">
@@ -117,11 +100,7 @@
   </div>
 
   
-  <footer class="site-footer">
-    <div class="footer-content">
-      <p>&copy; 2023 Beruke Games. All rights reserved.</p>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
   
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -473,5 +452,6 @@
       }
     }
   </style>
+  <script src="js/components.js"></script>
 </body>
 </html>
