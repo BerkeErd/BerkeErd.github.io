@@ -412,6 +412,27 @@ function buildLinkButtons(game) {
   return frag;
 }
 
+function slugifyGamePage(value) {
+  return value
+    .replace(/[ğĞ]/g, 'g')
+    .replace(/[üÜ]/g, 'u')
+    .replace(/[şŞ]/g, 's')
+    .replace(/[ıİ]/g, 'i')
+    .replace(/[öÖ]/g, 'o')
+    .replace(/[çÇ]/g, 'c')
+    .replace(/['’]/g, '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function getGamePageUrl(game) {
+  return `games/${slugifyGamePage(game.name)}.html`;
+}
+
 function initWebGL() {
   const canvas = document.getElementById('bg-canvas');
   
@@ -608,7 +629,7 @@ function showProjectDetails(project) {
     additionalImagesHtml = `<h3 class="gallery-title secondary-neon">Gallery</h3><div class="game-gallery">${project.additionalImages.map((img,i)=>`<div class="gallery-image-container"><img src="${img}" alt="Screenshot ${i+1}" class="gallery-image" data-full="${img}"></div>`).join('')}</div>`;
   }
 
-  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><img src="${project.image}" alt="${project.name}" class="game-main-image">${youtubeEmbedHtml}</div><div class="game-info"><div class="game-description"><p>${project.description}</p></div><div class="game-links"></div></div></div>${additionalImagesHtml}`;
+  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info"><div class="game-description"><p>${project.description}</p></div><div class="game-links"></div></div></div>${additionalImagesHtml}`;
 
   document.getElementById('game-details-content').innerHTML = detailsHTML;
   document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);

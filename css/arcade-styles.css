@@ -639,6 +639,31 @@ input:checked + .slider:before {
   display: block;
 }
 
+.game-main-image-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.game-main-image-link .game-main-image {
+  margin-bottom: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.game-main-image-link:hover .game-main-image,
+.game-main-image-link:focus-visible .game-main-image {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(0, 229, 170, 0.55);
+}
+
+.game-main-image-link:focus-visible {
+  outline: 3px solid var(--secondary-neon);
+  outline-offset: 4px;
+}
+
 .game-description {
   line-height: 1.8;
   font-size: 1rem;

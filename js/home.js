@@ -134,6 +134,10 @@ function initMediaControls() {
   const playBtn = document.querySelector('.play-btn');
   const screenshotBtn = document.querySelector('.screenshot-btn');
   const videoContainer = document.querySelector('.video-container');
+
+  if (!playBtn || !screenshotBtn) {
+    return;
+  }
   
   screenshotBtn.addEventListener('click', function() {
     playBtn.classList.remove('active');
@@ -169,6 +173,33 @@ function initMediaControls() {
     currentScreenshot = (currentScreenshot - 1 + screenshots.length) % screenshots.length;
     screenshots[currentScreenshot].classList.add('active');
   });
+}
+
+function initFeaturedDemoFrame() {
+  const frame = document.querySelector('.featured-demo-frame');
+  if (!frame) return;
+
+  const baseWidth = 960;
+  const baseHeight = 640;
+
+  const updateFrameSize = () => {
+    const width = frame.clientWidth;
+    if (!width) return;
+
+    const scale = Math.min(1, width / baseWidth);
+    frame.style.setProperty('--demo-scale', scale.toFixed(4));
+    frame.style.height = `${Math.round(baseHeight * scale)}px`;
+  };
+
+  updateFrameSize();
+
+  if ('ResizeObserver' in window) {
+    const observer = new ResizeObserver(updateFrameSize);
+    observer.observe(frame);
+    frame.featuredDemoResizeObserver = observer;
+  } else {
+    window.addEventListener('resize', updateFrameSize);
+  }
 }
 
 
@@ -601,6 +632,8 @@ document.addEventListener('DOMContentLoaded', function() {
   gsap.set('.main-container', { visibility: 'visible' }); initScrollAnimations();
   
   initMediaControls();
+
+  initFeaturedDemoFrame();
   
   initEasterEgg();
   
