@@ -141,9 +141,15 @@
         
         <div class="feature-media">
           <div class="video-container featured-demo-frame">
-            <div class="featured-demo-scale">
-              <iframe src="https://itch.io/embed-upload/17920362?color=000000" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <button class="featured-demo-poster" type="button" data-toggle="modal" data-target="#gameModal" aria-label="Play Wizard's Path demo">
+              <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/6da6178c4218ffd12bd50fe343103ac22580410a/capsule_616x353.jpg" alt="Wizard's Path demo preview">
+              <span class="featured-demo-overlay">
+                <span class="featured-demo-play">
+                  <i class="fas fa-play"></i>
+                  <span>Play Demo</span>
+                </span>
+              </span>
+            </button>
           </div>
           <div class="media-controls">
             <a href="https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/" class="media-btn active" target="_blank" rel="noopener noreferrer">
@@ -307,7 +313,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <iframe src="https://itch.io/embed-upload/17920362?color=000000" style="width:100%;height:640px;border:0" allowfullscreen></iframe>
+          <iframe id="featuredGameIframe" data-src="https://itch.io/embed-upload/17920362?color=000000" style="width:100%;height:640px;border:0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

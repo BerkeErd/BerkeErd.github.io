@@ -202,6 +202,24 @@ function initFeaturedDemoFrame() {
   }
 }
 
+function initFeaturedDemoModal() {
+  const iframe = document.getElementById('featuredGameIframe');
+  if (!iframe || typeof $ === 'undefined') return;
+
+  const demoUrl = iframe.getAttribute('data-src');
+  const modal = $('#gameModal');
+
+  modal.on('shown.bs.modal', function() {
+    if (!iframe.getAttribute('src')) {
+      iframe.setAttribute('src', demoUrl);
+    }
+  });
+
+  modal.on('hidden.bs.modal', function() {
+    iframe.removeAttribute('src');
+  });
+}
+
 
 function initSnakeGame() {
   document.querySelector('.main-logo').addEventListener('click', function() {
@@ -634,6 +652,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initMediaControls();
 
   initFeaturedDemoFrame();
+
+  initFeaturedDemoModal();
   
   initEasterEgg();
   
