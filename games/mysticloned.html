@@ -35,8 +35,8 @@
   },
   "applicationCategory": "Game",
   "gamePlatform": [
-    "Itch.io",
-    "Play in Browser"
+    "itch.io",
+    "Web"
   ]
 }</script>
 </head>
@@ -57,12 +57,21 @@
       <div>
         <h1>MystiCloned</h1>
         <p class="game-hook">Developed in 72 hours for Magara Jam 2023, this game is a 2D Puzzle where you solve various puzzles by creating clones.</p>
-        <div class="tag-list">
-          <span>Itch.io</span>
-          <span>Play in Browser</span>
-          <span>Game Jam</span>
-          <span>Puzzle</span>
+        <div class="tag-groups">
+        <div class="tag-row">
+          <span class="tag-row-label">Project</span>
+          <div class="tag-list">
+            <span>Game Jam Project</span>
+          </div>
         </div>
+        <div class="tag-row">
+          <span class="tag-row-label">Availability</span>
+          <div class="tag-list">
+            <span>Playable</span>
+            <span>Web</span>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="hero-art">
         <img src="https://cdn.magarajam.com/content/1700659987242751483734888.jpeg" alt="MystiCloned key art">
@@ -72,13 +81,14 @@
     <section class="game-section" aria-labelledby="about-heading">
       <h2 id="about-heading">About The Game</h2>
       <p>Developed in 72 hours for Magara Jam 2023, this game is a 2D Puzzle where you solve various puzzles by creating clones. You can swap places with your clones or freeze them to navigate through the challenges.</p>
+
     </section>
 
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
 
     <div class="media-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/eSFObQB12pw?rel=0&amp;playsinline=1&amp;modestbranding=1" title="MystiCloned trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/eSFObQB12pw?rel=0&amp;playsinline=1&amp;modestbranding=1" title="MystiCloned trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </section>
 
@@ -86,9 +96,9 @@
       <h2 id="screenshots-heading">Screenshots</h2>
 
     <div class="screenshot-grid">
-      <img src="https://cdn.magarajam.com/content/1700659987242751483734888.jpeg" alt="MystiCloned screenshot 1">
-      <img src="https://cdn.magarajam.com/media/1700396006525672552436520.png" alt="MystiCloned screenshot 2">
-      <img src="https://cdn.magarajam.com/media/1700396008438161531669868.png" alt="MystiCloned screenshot 3">
+      <img src="https://cdn.magarajam.com/content/1700659987242751483734888.jpeg" alt="MystiCloned screenshot 1" loading="lazy">
+      <img src="https://cdn.magarajam.com/media/1700396006525672552436520.png" alt="MystiCloned screenshot 2" loading="lazy">
+      <img src="https://cdn.magarajam.com/media/1700396008438161531669868.png" alt="MystiCloned screenshot 3" loading="lazy">
     </div>
     </section>
 
@@ -107,7 +117,7 @@
         <ul class="press-list">
           <li><strong>Developer / Publisher</strong> Beruke Games</li>
           <li><strong>Status</strong> Released</li>
-          <li><strong>Platforms</strong> Itch.io, Play in Browser</li>
+          <li><strong>Platforms</strong> itch.io, Web</li>
           <li><strong>Press contact</strong> <a class="platform-link" href="../contact.html">Contact Beruke Games</a></li>
         </ul>
       </div>
@@ -119,13 +129,13 @@
     <div class="similar-grid">
 
         <article class="similar-game-card">
-          <h3><a href="potion-mutation.html">Potion Mutation</a></h3>
-          <p>Developed for ScoreSpace Jam #28 within 3 days on the theme &#39;Mutation&#39;, this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic.</p>
+          <h3><a href="dugum.html">Düğüm</a></h3>
+          <p>Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24.</p>
         </article>
 
         <article class="similar-game-card">
-          <h3><a href="dugum.html">Düğüm</a></h3>
-          <p>Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24.</p>
+          <h3><a href="potion-mutation.html">Potion Mutation</a></h3>
+          <p>Developed for ScoreSpace Jam #28 within 3 days on the theme &#39;Mutation&#39;, this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic.</p>
         </article>
 
         <article class="similar-game-card">
@@ -137,7 +147,8 @@
   </main>
 
   <footer class="game-page-footer">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+    <p>&copy; <span id="footer-year">2026</span> Beruke Games. All rights reserved.</p>
   </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

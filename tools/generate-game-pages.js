@@ -5,14 +5,23 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const SITE_URL = 'https://berkeerd.github.io';
 const TODAY = new Date().toISOString().slice(0, 10);
+const YEAR = new Date().getFullYear();
 
 const LINK_DEFS = [
   { key: 'googlePlay', label: 'Google Play' },
   { key: 'steam', label: 'Steam' },
   { key: 'itch', label: 'Itch.io' },
   { key: 'webGL', label: 'Play in Browser' },
-  { key: 'github', label: 'Source' },
+  { key: 'github', label: 'Source Code' },
 ];
+
+const PLATFORM_NAME = {
+  googlePlay: 'Google Play',
+  steam: 'Steam',
+  itch: 'itch.io',
+  webGL: 'Web',
+  github: 'Source',
+};
 
 function readProjectDetails() {
   const arcadeJs = fs.readFileSync(path.join(ROOT, 'js', 'arcade.js'), 'utf8');
@@ -33,7 +42,7 @@ function slugify(value) {
     .replace(/[çÇ]/g, 'c')
     .replace(/['’]/g, '')
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, '-')
@@ -93,42 +102,30 @@ function pageUrl(slug) {
   return `${SITE_URL}/games/${slug}.html`;
 }
 
-function statusLabel(game) {
-  if (game.comingSoon) return 'Coming soon';
-  if (game.inDevelopment) return 'In development';
-  if (game.unpublished) return 'Unpublished';
-  if (game.legacy) return 'Legacy release';
-  return 'Released';
-}
-
 function platformLinks(game) {
   return LINK_DEFS
     .filter(({ key }) => game[key] && game[key] !== '#')
-    .map(({ key, label }) => ({ key, label, url: game[key] }));
+    .map(({ key, label }) => ({
+      key,
+      label,
+      url: game[key],
+      note: (game.linkNotes && game.linkNotes[key]) || '',
+    }));
 }
 
 function platformNames(game) {
-  const names = platformLinks(game).map((link) => link.label);
-  if (game.mobile && !names.includes('Google Play')) names.push('Mobile');
-  if (!names.length && game.unpublished) names.push('Unpublished prototype');
-  return names;
+  const names = platformLinks(game)
+    .map((link) => PLATFORM_NAME[link.key])
+    .filter(Boolean);
+  return Array.from(new Set(names));
 }
 
+// Lightweight tag set, used only for the "Similar Games" matching (not rendered).
 function deriveTags(game) {
   const tags = new Set();
+  (game.categories || []).forEach((c) => tags.add(`cat:${c}`));
+  (game.typeBadges || []).forEach((b) => tags.add(b));
   const text = `${game.name} ${stripHtml(game.description)}`.toLowerCase();
-
-  platformNames(game).forEach((name) => tags.add(name));
-  if (game.comingSoon) tags.add('Coming Soon');
-  if (game.inDevelopment) tags.add('In Development');
-  if (game.unpublished) tags.add('Unpublished');
-  if (game.legacy) tags.add('Legacy');
-  if (game.jam) tags.add('Game Jam');
-  if (game.postJam) tags.add('Post-Jam');
-  if (game.prototype) tags.add('Prototype');
-  if (game.remaster) tags.add('Remix');
-  if (game.turkish) tags.add('Turkish');
-
   [
     ['puzzle', 'Puzzle'],
     ['racing', 'Racing'],
@@ -140,17 +137,17 @@ function deriveTags(game) {
     ['roguelite', 'Action Roguelite'],
     ['spell', 'Magic'],
     ['mage', 'Magic'],
+    ['fighting', 'Fighting'],
     ['multiplayer', 'Multiplayer'],
     ['websocket', 'Multiplayer'],
-    ['arcade', 'Arcade'],
+    ['word', 'Word'],
     ['music', 'Music'],
     ['instrument', 'Music'],
-    ['simulator', 'Simulation'],
-    ['simulation', 'Simulation'],
+    ['driving', 'Driving'],
+    ['car', 'Driving'],
   ].forEach(([needle, tag]) => {
     if (text.includes(needle)) tags.add(tag);
   });
-
   return Array.from(tags);
 }
 
@@ -174,7 +171,7 @@ function trailerEmbed(game) {
   if (!game.youtube || game.youtube === '#') {
     return `
       <div class="media-frame">
-        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} artwork">
+        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} artwork" loading="lazy">
       </div>
       <p>Trailer is not available yet. The artwork above is provided for press and store reference.</p>`;
   }
@@ -186,7 +183,7 @@ function trailerEmbed(game) {
   const src = `${base}${sep}rel=0&playsinline=1&modestbranding=1`;
   return `
     <div class="media-frame">
-      <iframe src="${escapeHtml(src)}" title="${escapeHtml(game.name)} trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="${escapeHtml(src)}" title="${escapeHtml(game.name)} trailer" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>`;
 }
 
@@ -206,19 +203,62 @@ function jsonLd(game) {
   return JSON.stringify(data, null, 2).replace(/</g, '\\u003c');
 }
 
+function renderBadgeGroups(game) {
+  const typeBadges = game.typeBadges || [];
+  const accessBadges = game.accessBadges || [];
+  const rows = [];
+  if (typeBadges.length) {
+    rows.push(`
+        <div class="tag-row">
+          <span class="tag-row-label">Project</span>
+          <div class="tag-list">
+            ${typeBadges.map((b) => `<span>${escapeHtml(b)}</span>`).join('\n            ')}
+          </div>
+        </div>`);
+  }
+  if (accessBadges.length) {
+    rows.push(`
+        <div class="tag-row">
+          <span class="tag-row-label">Availability</span>
+          <div class="tag-list">
+            ${accessBadges.map((b) => `<span>${escapeHtml(b)}</span>`).join('\n            ')}
+          </div>
+        </div>`);
+  }
+  if (game.turkish) {
+    rows.push(`
+        <div class="tag-row">
+          <span class="tag-row-label">Language</span>
+          <div class="tag-list"><span>Turkish</span></div>
+        </div>`);
+  }
+  if (!rows.length) return '';
+  return `<div class="tag-groups">${rows.join('')}
+      </div>`;
+}
+
+function renderExtraSections(game) {
+  if (!game.extraSections || !game.extraSections.length) return '';
+  return game.extraSections.map((section, index) => `
+    <section class="game-section game-subsection" aria-labelledby="extra-${index}-heading">
+      <h2 id="extra-${index}-heading">${escapeHtml(section.title)}</h2>
+      <p>${escapeHtml(section.text)}</p>
+    </section>`).join('\n');
+}
+
 function renderPlatformLinks(game) {
   const links = platformLinks(game);
-  if (!links.length) return '<p>No public platform link is available yet.</p>';
+  if (!links.length) return '<p>No public build link is available for this project.</p>';
   return `
     <ul class="platform-list">
-      ${links.map((link) => `<li><a class="platform-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a></li>`).join('\n      ')}
+      ${links.map((link) => `<li><a class="platform-link" href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>${link.note ? `<span class="platform-note">${escapeHtml(link.note)}</span>` : ''}</li>`).join('\n      ')}
     </ul>`;
 }
 
 function renderScreenshots(game) {
   return `
     <div class="screenshot-grid">
-      ${game.images.map((img, index) => `<img src="${escapeHtml(gamePageAsset(img))}" alt="${escapeHtml(game.name)} screenshot ${index + 1}">`).join('\n      ')}
+      ${game.images.map((img, index) => `<img src="${escapeHtml(gamePageAsset(img))}" alt="${escapeHtml(game.name)} screenshot ${index + 1}" loading="lazy">`).join('\n      ')}
     </div>`;
 }
 
@@ -235,8 +275,10 @@ function renderSimilar(current, games) {
 
 function renderGamePage(game, games) {
   const platforms = platformNames(game);
-  const pressPlatforms = platforms.length ? platforms.join(', ') : 'Not announced';
-  const tags = game.tags.slice(0, 7);
+  const pressPlatforms = platforms.length ? platforms.join(', ') : 'Not distributed';
+  const distributionNote = game.distributionNote
+    ? `<p class="distribution-note">${escapeHtml(game.distributionNote)}</p>`
+    : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -273,9 +315,7 @@ function renderGamePage(game, games) {
       <div>
         <h1>${escapeHtml(game.name)}</h1>
         <p class="game-hook">${escapeHtml(game.hook)}</p>
-        <div class="tag-list">
-          ${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join('\n          ')}
-        </div>
+        ${renderBadgeGroups(game)}
       </div>
       <div class="hero-art">
         <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} key art">
@@ -285,8 +325,9 @@ function renderGamePage(game, games) {
     <section class="game-section" aria-labelledby="about-heading">
       <h2 id="about-heading">About The Game</h2>
       <p>${escapeHtml(game.descriptionText)}</p>
+      ${distributionNote}
     </section>
-
+${renderExtraSections(game)}
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
       ${trailerEmbed(game)}
@@ -307,7 +348,7 @@ function renderGamePage(game, games) {
       <div class="press-panel">
         <ul class="press-list">
           <li><strong>Developer / Publisher</strong> Beruke Games</li>
-          <li><strong>Status</strong> ${escapeHtml(statusLabel(game))}</li>
+          <li><strong>Status</strong> ${escapeHtml(game.status || 'Released')}</li>
           <li><strong>Platforms</strong> ${escapeHtml(pressPlatforms)}</li>
           <li><strong>Press contact</strong> <a class="platform-link" href="../contact.html">Contact Beruke Games</a></li>
         </ul>
@@ -321,8 +362,9 @@ function renderGamePage(game, games) {
   </main>
 
   <footer class="game-page-footer">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+    <p>&copy; <span id="footer-year">${YEAR}</span> Beruke Games. All rights reserved.</p>
   </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 `;
@@ -367,7 +409,7 @@ function renderGamesIndex(games) {
     <div class="seo-game-grid">
       ${games.map((game) => `
       <article class="seo-game-card">
-        <a href="${escapeHtml(game.slug)}.html"><img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)}"></a>
+        <a href="${escapeHtml(game.slug)}.html"><img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)}" loading="lazy"></a>
         <div class="seo-game-card-content">
           <h2><a href="${escapeHtml(game.slug)}.html">${escapeHtml(game.name)}</a></h2>
           <p>${escapeHtml(game.hook)}</p>
@@ -375,6 +417,10 @@ function renderGamesIndex(games) {
       </article>`).join('\n      ')}
     </div>
   </main>
+  <footer class="game-page-footer">
+    <p>&copy; <span id="footer-year">${YEAR}</span> Beruke Games. All rights reserved.</p>
+  </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 `;
@@ -401,14 +447,14 @@ ${urls.map((url) => `  <url>
 function main() {
   const rawProjects = readProjectDetails();
   const games = Object.entries(rawProjects).map(([key, game]) => {
-    const slug = slugify(game.name || key);
+    const slug = game.slugOverride || slugify(game.name || key);
     const images = [game.image, ...(game.additionalImages || [])].filter(Boolean);
     const descriptionText = stripHtml(game.description);
     return {
       key,
       slug,
       ...game,
-      hook: firstSentence(game.description),
+      hook: game.hookOverride ? firstSentence(game.hookOverride) : firstSentence(game.description),
       descriptionText,
       images: images.length ? images : [game.image],
     };

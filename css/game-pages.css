@@ -205,6 +205,58 @@
   margin-top: 18px;
 }
 
+.tag-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag-row .tag-list {
+  margin-top: 0;
+}
+
+.tag-row-label {
+  min-width: 92px;
+  color: #8fa3ab;
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.distribution-note {
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border-left: 3px solid #7f8c8d;
+  background: rgba(127, 140, 141, 0.14);
+  color: #cfd8dc;
+  font-style: italic;
+}
+
+.game-subsection h2 {
+  font-size: 1.1rem;
+}
+
+.platform-note {
+  display: block;
+  margin-top: 4px;
+  color: #9fb0b7;
+  font-size: 0.82rem;
+}
+
+.platform-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .hero-art {
   overflow: hidden;
   border: 2px solid var(--primary-neon, #fe4c01);

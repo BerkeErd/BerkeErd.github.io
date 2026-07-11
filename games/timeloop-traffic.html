@@ -56,10 +56,20 @@
       <div>
         <h1>TimeLoop Traffic</h1>
         <p class="game-hook">TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023.</p>
-        <div class="tag-list">
-          <span>Google Play</span>
-          <span>Prototype</span>
+        <div class="tag-groups">
+        <div class="tag-row">
+          <span class="tag-row-label">Project</span>
+          <div class="tag-list">
+            <span>Released Game</span>
+          </div>
         </div>
+        <div class="tag-row">
+          <span class="tag-row-label">Availability</span>
+          <div class="tag-list">
+            <span>Google Play</span>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="hero-art">
         <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic key art">
@@ -69,13 +79,14 @@
     <section class="game-section" aria-labelledby="about-heading">
       <h2 id="about-heading">About The Game</h2>
       <p>TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars. The game includes a leaderboard system powered by PlayFab SDK.</p>
+
     </section>
 
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
 
       <div class="media-frame">
-        <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic artwork">
+        <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic artwork" loading="lazy">
       </div>
       <p>Trailer is not available yet. The artwork above is provided for press and store reference.</p>
     </section>
@@ -84,9 +95,9 @@
       <h2 id="screenshots-heading">Screenshots</h2>
 
     <div class="screenshot-grid">
-      <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic screenshot 1">
-      <img src="https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw" alt="TimeLoop Traffic screenshot 2">
-      <img src="https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw" alt="TimeLoop Traffic screenshot 3">
+      <img src="https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw" alt="TimeLoop Traffic screenshot 1" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw" alt="TimeLoop Traffic screenshot 2" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw" alt="TimeLoop Traffic screenshot 3" loading="lazy">
     </div>
     </section>
 
@@ -116,25 +127,26 @@
     <div class="similar-grid">
 
         <article class="similar-game-card">
-          <h3><a href="bilgi-kat.html">Bilgi Kat</a></h3>
-          <p>Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool.</p>
+          <h3><a href="purrfect-race.html">Purrfect Race</a></h3>
+          <p>Purrfect Race is a cat racing and betting game.</p>
         </article>
 
         <article class="similar-game-card">
-          <h3><a href="color-tubes.html">Color Tubes</a></h3>
-          <p>Color Tubes is a fun and colorful puzzle game where players sort matching colors into designated tubes.</p>
+          <h3><a href="sesli-sorulu-milyonlar.html">Sesli Sorulu Milyonlar</a></h3>
+          <p>Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020.</p>
         </article>
 
         <article class="similar-game-card">
-          <h3><a href="flag-rush.html">Flag Rush</a></h3>
-          <p>Flag Rush is an entertaining marble racing simulation where you can sit back and watch marbles representing world flags compete on dynamic tracks.</p>
+          <h3><a href="simple-kalimba.html">Simple Kalimba</a></h3>
+          <p>Simple Kalimba is an Instrumental Simulator game built for Mobile platforms, featuring basic graphics, released on Jan 10, 2021.</p>
         </article>
     </div>
     </section>
   </main>
 
   <footer class="game-page-footer">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+    <p>&copy; <span id="footer-year">2026</span> Beruke Games. All rights reserved.</p>
   </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -33,8 +33,8 @@
   },
   "applicationCategory": "Game",
   "gamePlatform": [
-    "Itch.io",
-    "Play in Browser"
+    "itch.io",
+    "Web"
   ]
 }</script>
 </head>
@@ -55,12 +55,22 @@
       <div>
         <h1>Potion Mutation</h1>
         <p class="game-hook">Developed for ScoreSpace Jam #28 within 3 days on the theme &#39;Mutation&#39;, this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic.</p>
-        <div class="tag-list">
-          <span>Itch.io</span>
-          <span>Play in Browser</span>
-          <span>Game Jam</span>
-          <span>Puzzle</span>
+        <div class="tag-groups">
+        <div class="tag-row">
+          <span class="tag-row-label">Project</span>
+          <div class="tag-list">
+            <span>Game Jam Project</span>
+            <span>Team Project</span>
+          </div>
         </div>
+        <div class="tag-row">
+          <span class="tag-row-label">Availability</span>
+          <div class="tag-list">
+            <span>Playable</span>
+            <span>Web</span>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="hero-art">
         <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation key art">
@@ -70,13 +80,14 @@
     <section class="game-section" aria-labelledby="about-heading">
       <h2 id="about-heading">About The Game</h2>
       <p>Developed for ScoreSpace Jam #28 within 3 days on the theme &#39;Mutation&#39;, this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it&#39;s a type of puzzle game where strategic use of potions determines success. The game incorporates a leaderboard system using LootLocker SDK</p>
+
     </section>
 
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
 
       <div class="media-frame">
-        <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation artwork">
+        <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation artwork" loading="lazy">
       </div>
       <p>Trailer is not available yet. The artwork above is provided for press and store reference.</p>
     </section>
@@ -85,7 +96,7 @@
       <h2 id="screenshots-heading">Screenshots</h2>
 
     <div class="screenshot-grid">
-      <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation screenshot 1">
+      <img src="https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png" alt="Potion Mutation screenshot 1" loading="lazy">
     </div>
     </section>
 
@@ -104,7 +115,7 @@
         <ul class="press-list">
           <li><strong>Developer / Publisher</strong> Beruke Games</li>
           <li><strong>Status</strong> Released</li>
-          <li><strong>Platforms</strong> Itch.io, Play in Browser</li>
+          <li><strong>Platforms</strong> itch.io, Web</li>
           <li><strong>Press contact</strong> <a class="platform-link" href="../contact.html">Contact Beruke Games</a></li>
         </ul>
       </div>
@@ -116,11 +127,6 @@
     <div class="similar-grid">
 
         <article class="similar-game-card">
-          <h3><a href="mysticloned.html">MystiCloned</a></h3>
-          <p>Developed in 72 hours for Magara Jam 2023, this game is a 2D Puzzle where you solve various puzzles by creating clones.</p>
-        </article>
-
-        <article class="similar-game-card">
           <h3><a href="dugum.html">Düğüm</a></h3>
           <p>Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24.</p>
         </article>
@@ -129,12 +135,18 @@
           <h3><a href="junkman-driver.html">Junkman Driver</a></h3>
           <p>&#39;Junkman Driver&#39; is an engaging arcade game developed with two beginner friends during a game jam.</p>
         </article>
+
+        <article class="similar-game-card">
+          <h3><a href="mysticloned.html">MystiCloned</a></h3>
+          <p>Developed in 72 hours for Magara Jam 2023, this game is a 2D Puzzle where you solve various puzzles by creating clones.</p>
+        </article>
     </div>
     </section>
   </main>
 
   <footer class="game-page-footer">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+    <p>&copy; <span id="footer-year">2026</span> Beruke Games. All rights reserved.</p>
   </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

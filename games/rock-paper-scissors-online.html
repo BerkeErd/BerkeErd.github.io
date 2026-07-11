@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scissors Online - Beruke Games</title>
-  <meta name="description" content="This project shows how to build a multiplayer game using WebSockets with Unity WebGL.">
+  <meta name="description" content="An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="https://berkeerd.github.io/games/rock-paper-scissors-online.html">
   <meta property="og:title" content="Rock Paper Scissors Online - Beruke Games">
-  <meta property="og:description" content="This project shows how to build a multiplayer game using WebSockets with Unity WebGL.">
+  <meta property="og:description" content="An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express.">
   <meta property="og:image" content="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png">
   <meta property="og:url" content="https://berkeerd.github.io/games/rock-paper-scissors-online.html">
   <meta name="twitter:card" content="summary_large_image">
@@ -18,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "VideoGame",
   "name": "Rock Paper Scissors Online",
-  "description": "This project shows how to build a multiplayer game using WebSockets with Unity WebGL.",
+  "description": "An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express.",
   "image": [
     "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png"
   ],
@@ -53,12 +53,23 @@
     <section class="game-page-hero">
       <div>
         <h1>Rock Paper Scissors Online</h1>
-        <p class="game-hook">This project shows how to build a multiplayer game using WebSockets with Unity WebGL.</p>
-        <div class="tag-list">
-          <span>Source</span>
-          <span>Unpublished</span>
-          <span>Multiplayer</span>
+        <p class="game-hook">An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express.</p>
+        <div class="tag-groups">
+        <div class="tag-row">
+          <span class="tag-row-label">Project</span>
+          <div class="tag-list">
+            <span>Offline Multiplayer Prototype</span>
+            <span>WebSocket Experiment</span>
+          </div>
         </div>
+        <div class="tag-row">
+          <span class="tag-row-label">Availability</span>
+          <div class="tag-list">
+            <span>Backend Retired</span>
+            <span>Source Available</span>
+          </div>
+        </div>
+      </div>
       </div>
       <div class="hero-art">
         <img src="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png" alt="Rock Paper Scissors Online key art">
@@ -67,14 +78,15 @@
 
     <section class="game-section" aria-labelledby="about-heading">
       <h2 id="about-heading">About The Game</h2>
-      <p>This project shows how to build a multiplayer game using WebSockets with Unity WebGL. It uses the NativeWebSocket package to let the game talk directly to a Node.js and Express server on Glitch. The server handles things like player connections, making game rooms with join codes, and keeping the game state the same for both players. The game has a very simple design on purpose. The goal is to build the main multiplayer system, not to make the game look good. It includes features like finding other players, sending moves in real time, and showing the results. There might be small sync problems since it&#39;s still early in development. This project is mostly a way to learn how browser-based multiplayer games can work with WebSockets. Note: Glitch will shut down all project hosting and user profiles on July 8, 2025. The backend server for this demo will go offline then, so the game is currently unpublished.</p>
+      <p>An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express. Players could create rooms, join through room codes, and synchronize match state through a lightweight backend. This early networking experiment later informed the experimental online co-op beta in Stick Slasher.</p>
+      <p class="distribution-note">The original backend was hosted on Glitch and is no longer available, so the playable online version has been retired.</p>
     </section>
 
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
 
       <div class="media-frame">
-        <img src="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png" alt="Rock Paper Scissors Online artwork">
+        <img src="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png" alt="Rock Paper Scissors Online artwork" loading="lazy">
       </div>
       <p>Trailer is not available yet. The artwork above is provided for press and store reference.</p>
     </section>
@@ -83,7 +95,7 @@
       <h2 id="screenshots-heading">Screenshots</h2>
 
     <div class="screenshot-grid">
-      <img src="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png" alt="Rock Paper Scissors Online screenshot 1">
+      <img src="https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png" alt="Rock Paper Scissors Online screenshot 1" loading="lazy">
     </div>
     </section>
 
@@ -91,7 +103,7 @@
       <h2 id="platforms-heading">Platform Links</h2>
 
     <ul class="platform-list">
-      <li><a class="platform-link" href="https://github.com/BerkeErd/TasKagitMakas" target="_blank" rel="noopener noreferrer">Source</a></li>
+      <li><a class="platform-link" href="https://github.com/BerkeErd/TasKagitMakas" target="_blank" rel="noopener noreferrer">Source Code</a><span class="platform-note">Client and server source code</span></li>
     </ul>
     </section>
 
@@ -100,7 +112,7 @@
       <div class="press-panel">
         <ul class="press-list">
           <li><strong>Developer / Publisher</strong> Beruke Games</li>
-          <li><strong>Status</strong> Unpublished</li>
+          <li><strong>Status</strong> Retired Prototype</li>
           <li><strong>Platforms</strong> Source</li>
           <li><strong>Press contact</strong> <a class="platform-link" href="../contact.html">Contact Beruke Games</a></li>
         </ul>
@@ -113,25 +125,26 @@
     <div class="similar-grid">
 
         <article class="similar-game-card">
-          <h3><a href="bus-game.html">Bus Game</a></h3>
-          <p>Bus Game is a puzzle game inspired by the original Bus Jam, featuring a robust Level Editor for game designers.</p>
+          <h3><a href="ability-runner.html">Ability Runner</a></h3>
+          <p>Ability Runner - Evolve is a 2D endless runner with Turkish and English language support, developed with Unity for mobile and released on Jan 12, 2022.</p>
         </article>
 
         <article class="similar-game-card">
-          <h3><a href="punch-up.html">Punch-Up</a></h3>
-          <p>Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend.</p>
+          <h3><a href="bilgi-kat.html">Bilgi Kat</a></h3>
+          <p>A community-driven Turkish trivia project spanning 45 categories with a dynamic difficulty system.</p>
         </article>
 
         <article class="similar-game-card">
-          <h3><a href="color-tubes.html">Color Tubes</a></h3>
-          <p>Color Tubes is a fun and colorful puzzle game where players sort matching colors into designated tubes.</p>
+          <h3><a href="bubble-pass.html">Bubble Pass</a></h3>
+          <p>Bubble Pass is a color-matching arcade game built for mobile with Unity, released on Jun 14, 2022.</p>
         </article>
     </div>
     </section>
   </main>
 
   <footer class="game-page-footer">
-    <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+    <p>&copy; <span id="footer-year">2026</span> Beruke Games. All rights reserved.</p>
   </footer>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

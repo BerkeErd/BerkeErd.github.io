@@ -1535,3 +1535,105 @@ h1, h2, h3, h4, h5, h6 {
 .web-arcade-card img {
   pointer-events: none;
 }
+
+/* Secondary featured games (Flag Rush, Stick Slasher) */
+.featured-secondary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 44px auto 0;
+  padding: 0 20px;
+}
+
+.featured-mini {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 26, 34, 0.6);
+  border: 2px solid var(--secondary-neon);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-mini:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(0, 229, 170, 0.35);
+}
+
+.featured-mini-img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.featured-mini-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px;
+}
+
+.featured-mini-body h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+}
+
+.featured-mini-body p {
+  flex: 1;
+  margin: 0;
+  color: #c4d3d8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.featured-mini-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.featured-mini-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid var(--secondary-neon);
+  border-radius: 22px;
+  background: rgba(0, 229, 170, 0.1);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.featured-mini-actions a.primary {
+  background: var(--secondary-neon);
+  color: #04121a;
+}
+
+.featured-mini-actions a:hover {
+  background: var(--secondary-neon);
+  color: #04121a;
+}
+
+.archive-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--primary-neon);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.72rem;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+.archive-explore-link:hover {
+  color: var(--primary-neon);
+  text-decoration: none;
+  text-shadow: var(--primary-glow);
+}

@@ -1,8 +1,15 @@
+// Central game data for Beruke Games.
+// categories: featured | released | playable | jam | archive.
+//   Arcade filters use featured / jam / archive directly; the "Play in Browser"
+//   and "Mobile" filters are derived from live webGL / googlePlay links.
+//   released / playable are kept as metadata (also feeds Similar Games matching).
+// typeBadges: project type / history badges, accessBadges: build & playability badges.
+// status: press-facing status label. order: display order (lower = earlier).
 const projectDetails = {
   "wizards-path": {
     name: "Wizard's Path",
     image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/6da6178c4218ffd12bd50fe343103ac22580410a/capsule_616x353.jpg",
-    description: "<strong>[COMING SOON]</strong> Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. Wishlist it now on Steam!",
+    description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. Currently in development - wishlist it now on Steam and try the free demo in your browser.",
     googlePlay: "#",
     steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
     itch: "https://beruke.itch.io/wizards-path-trial",
@@ -12,16 +19,44 @@ const projectDetails = {
     cabinetColor: "#2a1e4a",
     neonColor: "#ffcc00",
     turkish: false,
-    comingSoon: true,
-    jam: false,              
-    postJam: false,          
-    prototype: false,
-    remaster: false
+    categories: ["featured", "playable"],
+    typeBadges: ["Featured Game", "In Development"],
+    accessBadges: ["Demo Available", "Steam Wishlist"],
+    status: "In Development",
+    order: 1,
+    linkNotes: {
+      steam: "Wishlist on Steam",
+      itch: "Free demo on itch.io",
+      webGL: "Play the demo in your browser"
+    }
+  },
+  "flagRush": {
+    name: "Flag Rush",
+    image: "https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw",
+    description: "Flag Rush is an entertaining marble racing simulation where you can sit back and watch marbles representing world flags compete on dynamic tracks. Aside from enjoying the thrilling races, the game features an in-depth editor allowing you to create your own custom levels and design your very own unique marbles.",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.FlagRush",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: ["https://play-lh.googleusercontent.com/D1YdIXqXmUcHKm2w8twGTkwoe_Whbe_fGuqCfdMkxzlMZdJAfkM6xUNLGlytVwT9AvY=w2560-h1440-rw", "https://play-lh.googleusercontent.com/pffpS8KyFyOCXngUg7Uovb4CBl0Wr_NywHp_G-a3G1xHVh_3u1HuDvXP7A8IMWQMmcU=w2560-h1440-rw"],
+    cabinetColor: "#000000",
+    neonColor: "#FFFFFF",
+    turkish: false,
+    categories: ["featured", "released", "playable"],
+    typeBadges: ["Featured Game", "Released"],
+    accessBadges: ["Google Play"],
+    status: "Released",
+    order: 2,
+    linkNotes: {
+      googlePlay: "Android version on Google Play"
+    }
   },
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
-    description: "Originally developed for Mağara Jam #4 in 3 days using Unity Engine, this game was initially built for PC platform. Later on, it has been developed further and ported for WebGL and Mobile platforms. Released on Feb 21, 2022. After creating the mobile and WebGL versions, I further developed the game by adding new weapons, enemies, and released it on the Steam platform. The game is also among the most beloved stickman games on various websites. It's a game where we try to survive by cutting down stickmen coming from all directions or allowing them to escape. The Steam version features support for over 20 languages, achievements, leaderboards with country information, a sandbox mode, and new weapons and enemies. The mobile version uses PlayFab SDK for leaderboards, while the Steam version utilizes Steamworks SDK for leaderboards and achievements.",
+    description: "Stick Slasher is a chaotic physics-based 2D fighting game where every swing can disarm, dismember, or send enemies flying. Survive increasingly dangerous waves, show mercy to defeated enemies, and compete for high scores across multiple platforms. Stick Slasher began as a three-day game jam project for Mağara Jam #4 and was gradually expanded with new enemies, weapons, platforms, achievements, leaderboards, localization, sandbox features, and an experimental online co-op beta. The Steam version supports over 20 languages, achievements, country leaderboards, and a sandbox mode. The mobile version uses the PlayFab SDK for leaderboards, while the Steam version uses the Steamworks SDK.",
+    hookOverride: "Stick Slasher is a chaotic physics-based 2D fighting game where every swing can disarm, dismember, or send enemies flying. Survive increasingly dangerous waves, show mercy to defeated enemies, and compete for high scores across multiple platforms.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
@@ -31,10 +66,28 @@ const projectDetails = {
     cabinetColor: "#F1F1F1",
     neonColor: "#00ff39",
     turkish: false,
-      jam: true,              
-      postJam: true,          
-      prototype: false,
-      remaster: false
+    categories: ["featured", "released", "playable", "jam"],
+    typeBadges: ["Featured Game", "Released", "Originally Created for Mağara Jam #4"],
+    cardTypeBadges: ["Featured Game", "Released"],
+    accessBadges: ["Steam", "Android", "Web"],
+    status: "Released",
+    order: 3,
+    linkNotes: {
+      steam: "Full PC release and experimental co-op beta",
+      googlePlay: "Android version",
+      itch: "Browser and downloadable versions",
+      webGL: "Free browser version"
+    },
+    extraSections: [
+      {
+        title: "Experimental Online Co-op Beta",
+        text: "The Steam version also includes an optional experimental two-player online co-op beta. This mode was created as a networking learning project and is still being tested. Synchronization problems, connection issues, visual inconsistencies, bugs, and incomplete localization may occur. The original single-player mode remains the primary and most polished way to play Stick Slasher."
+      },
+      {
+        title: "Development Notes",
+        text: "The experimental networking implementation was developed through an AI-assisted workflow involving research, prototyping, integration, debugging, and manual testing."
+      }
+    ]
   },
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
@@ -48,12 +101,17 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/emxtrseac2hPQv4wlS0wtbleLRea5rF1aqg4Y8P-UhJ4OMdg8E99_QkO-6uZDgajw-0=w2560-h1440-rw", "https://play-lh.googleusercontent.com/Zy0kebYkz72gwV6zMgrlOOd1hUeWQp4-rU_VjBE4Rx07R9CjjXRByhlK2ivNSzPOJw=w2560-h1440-rw"],
     cabinetColor: "#F1F1F1",
     neonColor: "#6000bf",
-    turkish: true
+    turkish: true,
+    categories: ["released", "playable"],
+    typeBadges: ["Released Game"],
+    accessBadges: ["Google Play"],
+    status: "Released",
+    order: 22
   },
   "ability-runner": {
     name: "Ability Runner",
     image: "https://img.itch.zone/aW1nLzIyMzA5NDUwLnBuZw==/original/1ftlpm.png",
-    description: "Ability Runner - Evolve is an unique 2D Endless Runner style video game with language support for Turkish and English, developed using Unity Engine for Mobile platforms, released on Jan 12, 2022. It is a special game where characters have their own unique passive abilities, and additionally, during the game, you can choose one of the special and different abilities at each level to develop the character and continue running.",
+    description: "Ability Runner - Evolve is a 2D endless runner with Turkish and English language support, developed with Unity for mobile and released on Jan 12, 2022. Each character has a unique passive ability, and during a run you pick one of several special abilities at each level to evolve your character and keep running. The game was later retired from Google Play; an archived Android build remains available on itch.io.",
     googlePlay: "#",
     steam: "#",
     itch: "https://berukegameslegacy.itch.io/ability-runner-evolve-android-mobile-game",
@@ -63,14 +121,21 @@ const projectDetails = {
     cabinetColor: "#000000",
     neonColor: "#ddf8ff",
     turkish: false,
-    legacy: true,     
-	mobile: true   
+    categories: ["archive"],
+    typeBadges: ["Retired Release"],
+    accessBadges: ["Build Archived"],
+    status: "Retired Release",
+    order: 60,
+    distributionNote: "No longer distributed on Google Play. An archived Android build is preserved on itch.io.",
+    linkNotes: {
+      itch: "Archived Android build"
+    }
   },
   "patlat-bi-kelime": {
     name: "Patlat Bi Kelime",
     image: "https://play-lh.googleusercontent.com/2gU4ecNsL31uBwAMGGdgJ89uBQSU8_N-PKqxfgwXxHlIRHvZye8PQAki-Lp7JL18CcU=w240-h480-rw",
-    description: "Patlat Bi Kelime is a Word Typing game built for Mobile platforms using Unity Engine, released on May 16, 2022. Inspired by jklm.fun, I wanted to create a Turkish version of this game.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PatlatBiKelime",
+    description: "A timed Turkish word game built around finding valid words before a bomb fuse reaches its end. Built with Unity and released on May 16, 2022, inspired by jklm.fun. No longer publicly distributed.",
+    googlePlay: "#",
     steam: "#",
     itch: "#",
     webGL: "#",
@@ -78,12 +143,18 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/93OOOSOGiqF123bhBgSBCHFUI897XxfRlyGehJGOKhm7mkHgYfcH9cA4jTCbfmDfzqBO=w526-h296-rw", "https://play-lh.googleusercontent.com/apNCK561KuakiNvY2BUBCTfs8ZMLFWenjjnbA4Y8512lg__e1ylB-wKASAgB8f43_Q=w526-h296-rw"],
     cabinetColor: "#F1F1F1",
     neonColor: "#ffffff",
-    turkish: true
+    turkish: true,
+    categories: ["archive"],
+    typeBadges: ["Retired Mobile Release", "Word Game"],
+    accessBadges: ["No Longer Distributed"],
+    status: "Retired Mobile Release",
+    order: 67,
+    distributionNote: "This project is no longer publicly distributed."
   },
   "bubble-pass": {
     name: "Bubble Pass",
     image: "https://img.itch.zone/aW1nLzIyMzA5NDQ1LnBuZw==/original/Z49S39.png",
-    description: "Bubble Pass is a unique game built for Mobile platforms using Unity Engine, released on Jun 14, 2022. It is a unique game where you try to change the color of the bottom of the cup according to the color of the falling balls, allowing the colors to pass through. The game features a leaderboard system implemented using PlayFab SDK.",
+    description: "Bubble Pass is a color-matching arcade game built for mobile with Unity, released on Jun 14, 2022. You change the color of the bottom of the cup to match the falling balls so they can pass through, with a PlayFab-powered leaderboard. The game was later retired from Google Play; an archived Android build remains available on itch.io.",
     googlePlay: "#",
     steam: "#",
     itch: "https://berukegameslegacy.itch.io/ability-runner",
@@ -93,8 +164,15 @@ const projectDetails = {
     cabinetColor: "#000000",
     neonColor: "#1ab5f2",
     turkish: false,
-    legacy: true,     
-	mobile: true   
+    categories: ["archive"],
+    typeBadges: ["Retired Release"],
+    accessBadges: ["Build Archived"],
+    status: "Retired Release",
+    order: 61,
+    distributionNote: "No longer distributed on Google Play. An archived Android build is preserved on itch.io.",
+    linkNotes: {
+      itch: "Archived Android build"
+    }
   },
   "simple-kalimba": {
     name: "Simple Kalimba",
@@ -108,13 +186,18 @@ const projectDetails = {
     additionalImages: ["https://play-lh.googleusercontent.com/m6uyZFaL8DQ1D84Ef_uOHdjS-rcZblI8EmYN1jcZiDCAu63nOYxkoZwjJ2lCWcvW0joo=w2560-h1440-rw", "https://play-lh.googleusercontent.com/woU8BqnyI-Pg2YtnhXTUAqqbmgCJ5nesVATWqO9NYs3gEQuh-3fE2G4jucPmygC1qnRV=w2560-h1440-rw"],
     cabinetColor: "#F1F1F1",
     neonColor: "#8e2b08",
-    turkish: false
+    turkish: false,
+    categories: ["released", "playable"],
+    typeBadges: ["Released Game"],
+    accessBadges: ["Google Play"],
+    status: "Released",
+    order: 24
   },
   "bilgi-kat": {
     name: "Bilgi Kat",
     image: "https://play-lh.googleusercontent.com/iCqe_1nUIeHO1x0qx0nc929_qAXL_PqH-H1-vPv2TKxNWhPOtaxeNH2YsnlO8Uo1IyE=w416-h235-rw",
-    description: "Bilgi Kat is a trivia game that challenges players across 45 categories with a dynamic question pool. Questions are fetched from a Firebase Firestore database, ensuring a robust and scalable content management system. Players are not only consumers but also contributors; they can submit their own questions and, upon reaching a certain level, gain the privilege to approve new questions submitted by others. This community-driven approach, powered by Firestore, ensures a constant influx of new content, keeping the game engaging. Released on Aug 24, 2023, Bilgi Kat combines knowledge with interactive gameplay to create a continuously evolving trivia adventure. The game contains only Turkish questions.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.BilgiKat",
+    description: "A community-driven Turkish trivia project spanning 45 categories with a dynamic difficulty system. Questions were served from a Firebase Firestore backend, and players could submit their own questions and, after reaching a certain level, approve submissions from others - a lightweight moderation and content pipeline. The project also tracked per-player statistics and included an in-app question editor. Released on Aug 24, 2023. Online and community-dependent features are no longer maintained.",
+    googlePlay: "#",
     steam: "#",
     itch: "#",
     webGL: "#",
@@ -123,8 +206,13 @@ const projectDetails = {
     cabinetColor: "#000000",
     neonColor: "#f7ac1d",
     turkish: true,
-    legacy: false,     
-	mobile: true   
+    categories: ["archive"],
+    typeBadges: ["Retired Mobile Release", "Trivia System Experiment", "Community Features"],
+    cardTypeBadges: ["Trivia System Experiment"],
+    accessBadges: ["Build Unavailable", "Backend Retired"],
+    status: "Retired Mobile Release",
+    order: 58,
+    distributionNote: "No longer publicly distributed. Online and community-dependent features are no longer maintained."
   },
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
@@ -139,7 +227,11 @@ const projectDetails = {
     cabinetColor: "#000000",
     neonColor: "#F1F1F1",
     turkish: false,
-    prototype: true
+    categories: ["released", "playable"],
+    typeBadges: ["Released Game"],
+    accessBadges: ["Google Play"],
+    status: "Released",
+    order: 21
   },
   "rgb-square": {
     name: "RGB Square",
@@ -150,19 +242,20 @@ const projectDetails = {
     itch: "https://beruke.itch.io/rgb-square",
     webGL: "https://itch.io/embed-upload/13434563?color=000000",
     youtube: "#",
-    additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png","https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/original/0e0AfX.png"],
+    additionalImages: ["https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTczOC5wbmc=/original/sLLGu6.png", "https://img.itch.zone/aW1hZ2UvMjEyMzY2Ni8xMzk3OTc1MC5wbmc=/original/0e0AfX.png"],
     cabinetColor: "#000000",
     neonColor: "#FFFFFF",
     turkish: false,
-      jam: true,              
-      postJam: true,          
-      prototype: false,
-      remaster: false
+    categories: ["jam", "playable"],
+    typeBadges: ["Game Jam Project", "Post-Jam Update"],
+    accessBadges: ["Playable", "Web"],
+    status: "Released",
+    order: 40
   },
   "suburban-racer": {
     name: "Suburban Drift Racer",
     image: "https://play-lh.googleusercontent.com/QiAYXXRSvlb4qzs4InPUn3xS3AclCFi-S1asAsvz6e8aHs70_xP9Sl5oJAINoEvfFqzA=w416-h235-rw",
-    description: "Suburban Drift Racer is a captivating 3D car driving game set in scenic suburban landscapes. Navigate challenging roads, drift to earn rewards, and customize your car for the ultimate racing experience. Released on 29 September 2023. In this game, which is my first 3D game, there are modes for freely roaming around the city and progressing on a straight road.",
+    description: "My first completed 3D driving project, created as an early experiment with vehicle controls, cameras, environments, and mobile deployment. It was briefly released before being retired.",
     googlePlay: "#",
     steam: "#",
     itch: "#",
@@ -172,7 +265,12 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#9acde1",
     turkish: false,
-    unpublished: true
+    categories: ["archive"],
+    typeBadges: ["Retired Release", "First 3D Project"],
+    accessBadges: ["Build Unavailable"],
+    status: "Retired Release",
+    order: 62,
+    distributionNote: "This project is no longer publicly distributed."
   },
   "mystiCloned": {
     name: "MystiCloned",
@@ -187,10 +285,11 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#caa8ff",
     turkish: false,
-      jam: true,              
-      postJam: false,          
-      prototype: false,
-      remaster: false
+    categories: ["jam", "playable"],
+    typeBadges: ["Game Jam Project"],
+    accessBadges: ["Playable", "Web"],
+    status: "Released",
+    order: 41
   },
   "junkman-Driver": {
     name: "Junkman Driver",
@@ -205,14 +304,15 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#ab000a",
     turkish: false,
-      jam: true,              
-      postJam: false,          
-      prototype: false,
-      remaster: false
+    categories: ["jam", "playable"],
+    typeBadges: ["Game Jam Project", "Team Project"],
+    accessBadges: ["Playable", "Web"],
+    status: "Released",
+    order: 42
   },
   "potion-mutation": {
     name: "Potion Mutation",
-    image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png",   
+    image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png",
     description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success. The game incorporates a leaderboard system using LootLocker SDK",
     googlePlay: "#",
     steam: "#",
@@ -223,15 +323,16 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#c7fb00",
     turkish: false,
-      jam: true,              
-      postJam: false,          
-      prototype: false,
-      remaster: false
+    categories: ["jam", "playable"],
+    typeBadges: ["Game Jam Project", "Team Project"],
+    accessBadges: ["Playable", "Web"],
+    status: "Released",
+    order: 43
   },
   "Koy-Lideri": {
     name: "Köy Lideri",
     image: "https://img.itch.zone/aW1nLzE1MTQ2MjIwLnBuZw==/315x250%23c/DYARIg.png",
-    description: "Köy Lideri is a prototype designed to test the capabilities of artificial intelligence within the Unity game engine. The game serves as a platform to explore and demonstrate the advanced functionalities and potential of AI in game development. Players take on the role of a village leader, with AI-driven elements significantly influencing the gameplay and decision-making processes. This project is a testament to the evolving intersection of AI technology and interactive gaming. It only supports Turkish.",
+    description: "A technical prototype built to test AI-driven gameplay systems inside Unity. You play as a village leader whose decisions are shaped by AI-generated responses and events. Playable in the browser on itch.io; Turkish only.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/ky-lideri-yapay-zeka-oyunu",
@@ -241,158 +342,202 @@ const projectDetails = {
     cabinetColor: "#FFFFFF",
     neonColor: "#ff90fa",
     turkish: true,
-      jam: false,              
-      postJam: false,          
-      prototype: true,
-      remaster: false
-    },
-      "Dugum": {
-        name: "Düğüm",
-        image: "https://img.itch.zone/aW1nLzE2MjAzOTYxLmpwZWc=/347x500/rjbYQf.jpeg",
-        description: "Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24. The game revolves around the theme of knots, where the trails you leave behind form complex patterns. You must guide your character to create these patterns while avoiding collisions with trails of the same color. Earning points requires strategic, quick movements and passing through different colored trails.",
-        googlePlay: "#",
-        steam: "#",
-        itch: "https://beruke.itch.io/dm",
-        webGL: "#",
-        youtube: "#",
-        additionalImages: [],
-        cabinetColor: "#000000",
-        neonColor: "#FFFFFF",
-        turkish: false,
-	      jam: true,              
-	      postJam: false,          
-	      prototype: false,
-	      remaster: false
-        },
-        "bus-game": {
-          name: "Bus Game", 
-          image: "images/BusGame/Gameplay2.jpg",
-          description: "Bus Game is a puzzle game inspired by the original Bus Jam, featuring a robust Level Editor for game designers. While players enjoy solving challenging puzzles, the Unity-based Level Editor allows developers to create diverse levels by customizing cell colors, passenger placements, tunnel positions and directions, game duration, and board size. The editor includes a random cell color fill option and maintains color balance based on the 3-passenger-per-bus rule. This combination of engaging gameplay for players and powerful design tools for developers makes Bus Jam Clone a versatile and enjoyable puzzle experience.",
-          googlePlay: "#",
-          steam: "#",
-          itch: "#",
-          webGL: "#",
-          youtube: "#",
-          github: "https://github.com/BerkeErd/BJC",
-          additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg",],
-          cabinetColor: "#FFFFFF",
-          neonColor: "#ffffff",
-          turkish: false,
-          unpublished: true
-
-        },
-        "fluxeon": {
-          name: "Fluxeon",
-          image: "https://play-lh.googleusercontent.com/dvLaGTiXKK0fawZxNMeTjApjAU6BqE6Kn1bdUJivh-7cPN1motBOXRxH7pOMSot6NLQ=w240-h480-rw",
-          description: "Fluxeon is an addictive one-touch gravity-flipping game that challenges players' reflexes and timing. Players control a square, tapping to rise and releasing to fall, aiming to land on moving platforms for points. The game features increasing difficulty with faster speeds and shrinking platforms as players progress. With its simple controls, dynamic gameplay, and minimalist graphics, Fluxeon offers a unique twist on classic platformer games, suitable for both quick sessions and extended play. The game integrates Google Play Games SDK for leaderboards, allowing players to compete globally.",
-          googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.Fluxeon",
-          steam: "#",
-          itch: "#",
-          webGL: "#",
-          youtube: "#",
-          additionalImages: ["https://play-lh.googleusercontent.com/OX4DIClkyuh8K01SHJ2RxzHlKGUjqEmEjBWroLYON9apF0PkZxg31NS0BgK4pMiShG3R=w2560-h1440-rw","https://play-lh.googleusercontent.com/BlOYSPkY4XxXicT32dITNs6n1bxkNOc6wtvII2N1WubyTQ8IB359v3NjMEXNb8GZC4L8=w2560-h1440-rw"],
-          cabinetColor: "#000000",
-          neonColor: "#c4c2e7",
-          turkish: false
-        },
-        "flagRush": {
-          name: "Flag Rush",
-          image: "https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw",
-          description: "Flag Rush is an entertaining marble racing simulation where you can sit back and watch marbles representing world flags compete on dynamic tracks. Aside from enjoying the thrilling races, the game features an in-depth editor allowing you to create your own custom levels and design your very own unique marbles.",
-          googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.FlagRush",
-          steam: "#",
-          itch: "#",
-          webGL: "#",
-          youtube: "#",
-          additionalImages: ["https://play-lh.googleusercontent.com/D1YdIXqXmUcHKm2w8twGTkwoe_Whbe_fGuqCfdMkxzlMZdJAfkM6xUNLGlytVwT9AvY=w2560-h1440-rw","https://play-lh.googleusercontent.com/pffpS8KyFyOCXngUg7Uovb4CBl0Wr_NywHp_G-a3G1xHVh_3u1HuDvXP7A8IMWQMmcU=w2560-h1440-rw"],
-          cabinetColor: "#000000",
-          neonColor: "#FFFFFF",
-          turkish: false
-        },
-            "Cat-Race-Final": {
-            name: "Purrfect Race",
-            image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
-            description: "<p>Purrfect Race is an exciting cat racing and betting game. Choose your favorite feline contender, utilize unique cat abilities to gain an edge, and place your bets to become the ultimate racing champion.</p>",
-            googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
-            steam: "#",
-            itch: "https://beruke.itch.io/purrfect-race",
-            webGL: "https://itch.io/embed-upload/15307538?color=000000",
-            youtube: "#",
-            additionalImages: [
-                "https://play-lh.googleusercontent.com/l9dZExOYTfhmV6RX8gRjOZyCdvDW8SIMONm1vYm_ruOlc3huF47uUfJIezTEpFlDSA=w526-h296-rw",
-                "https://play-lh.googleusercontent.com/ODtOQMZ0lLzLtxAvU8gJCnrml47HGzRQWbZz54ds3_6MoDeyCiwKZb7a80DhfJPUZw=w526-h296-rw",
-                "https://play-lh.googleusercontent.com/nAgpru9ajX9Us2Ey7mCmHXk19XW2DDRZdtF0OV-wT0QEkFxpubtLZN9sPZFAk-NV1N8t=w526-h296-rw",
-                "https://play-lh.googleusercontent.com/kh4VejqPvnbRVPk0szXlHFJtJLkJa5eE_V6icsHrQMfn1oDuYzxRT3KQOJJHIow3W8s=w526-h296-rw"
-            ],
-            cabinetColor: "#FFFFFF",
-            neonColor: "#ffd97",
-            turkish: false,   
-            inDevelopment: false
-    },
-	    "color-tubes": {
-	  name: "Color Tubes",
-	  image: "https://play-lh.googleusercontent.com/lSHlU-yGz4fXL5JGj3Wm1Wl1xCJGcN9bofyBJdykSJgiAjTxndNQlHI_FCnTieQwGYs=w240-h480-rw",
-	  description: "Color Tubes is a fun and colorful puzzle game where players sort matching colors into designated tubes. As the levels progress, the puzzles become increasingly complex, testing your logic and problem-solving skills.",
-	  googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.ColorTubes",
-	  steam: "#",
-	  itch: "#",
-	  webGL: "#",
-	  youtube: "#",
-	  additionalImages: [
-	    "https://play-lh.googleusercontent.com/9zuG9fI28C76GCB3o6zQXM1QkMB8NHbJobCtzRqQLwzRT5gAJxYiOdtDaJDWCR2KMA=w2560-h1440-rw",
-	    "https://play-lh.googleusercontent.com/2PRtTS2TCenNXLbI6U2ZAqLhlhWaZ0LSw-8MzUwVMf-VFiio1B85dmwYgXAXl3AdGRhQ=w2560-h1440-rw"
-	  ],
-	  cabinetColor: "#8fb3c5",
-	  neonColor: "#bf8234",
-	  turkish: false,
-      jam: false,              
-      postJam: false,   
-      remaster: false,
-      unpublished: true
-	},
-		"rps-online": {
-  name: "Rock Paper Scissors Online",
-  image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
-  description: "This project shows how to build a multiplayer game using WebSockets with Unity WebGL. It uses the NativeWebSocket package to let the game talk directly to a Node.js and Express server on Glitch. The server handles things like player connections, making game rooms with join codes, and keeping the game state the same for both players. The game has a very simple design on purpose. The goal is to build the main multiplayer system, not to make the game look good. It includes features like finding other players, sending moves in real time, and showing the results. There might be small sync problems since it's still early in development. This project is mostly a way to learn how browser-based multiplayer games can work with WebSockets.<br><span style=\"color:red;font-weight:bold;\">Note: Glitch will shut down all project hosting and user profiles on July&nbsp;8,&nbsp;2025. The backend server for this demo will go offline then, so the game is currently unpublished.</span>",
-  googlePlay: "#",
-  steam: "#",
-  itch: "#",
-  webGL: "#",
-  github: "https://github.com/BerkeErd/TasKagitMakas",
-  youtube: "#",
-  additionalImages: [],
-  cabinetColor: "#bf8234",
-  neonColor: "#ffd600",
-  turkish: false,
-  unpublished: true
-},
-"punch-up": {
-  name: "Punch-Up",
-  image: "https://i.postimg.cc/Dfbg5PRg/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png",
-  description: "Punch-Up is a 2D pixel-art beat ’em up created as a school project with a friend. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The game targets mobile devices and has never been publicly released.",
-  googlePlay: "#",
-  steam: "#",
-  itch: "#",
-  webGL: "#",
-  github: "https://github.com/BerkeErd/Unity-Game-School-Project",
-  youtube: "#",
-  additionalImages: [],
-  cabinetColor: "#2d2d2d",
-  neonColor: "#ff3366",
-  turkish: false,
-  unpublished: true
-}//,
-
-
+    categories: ["archive", "playable"],
+    typeBadges: ["Technical Prototype"],
+    accessBadges: ["Playable"],
+    status: "Technical Prototype",
+    order: 63,
+    linkNotes: {
+      itch: "Playable in the browser on itch.io"
+    }
+  },
+  "Dugum": {
+    name: "Düğüm",
+    image: "https://img.itch.zone/aW1nLzE2MjAzOTYxLmpwZWc=/347x500/rjbYQf.jpeg",
+    description: "Düğüm is a puzzle game developed in 48 hours for Boğaziçi Game Jam 24. The game revolves around the theme of knots, where the trails you leave behind form complex patterns. You must guide your character to create these patterns while avoiding collisions with trails of the same color. Earning points requires strategic, quick movements and passing through different colored trails.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "https://beruke.itch.io/dm",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: [],
+    cabinetColor: "#000000",
+    neonColor: "#FFFFFF",
+    turkish: false,
+    categories: ["jam", "playable"],
+    typeBadges: ["Game Jam Project"],
+    accessBadges: ["Playable"],
+    status: "Released",
+    order: 44,
+    linkNotes: {
+      itch: "Playable in the browser on itch.io"
+    }
+  },
+  "bus-game": {
+    name: "Bus Puzzle Prototype & Level Editor",
+    slugOverride: "bus-game",
+    image: "images/BusGame/Gameplay2.jpg",
+    description: "A recruitment assignment focused on recreating a bus puzzle gameplay loop and building a custom Unity level editor. The editor supports board configuration, passenger and bus placement, tunnel setup, color assignment, direction controls, timing rules, and automatic level preparation. The main value of this project is the custom Unity editor tooling and the technical implementation behind it.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    github: "https://github.com/BerkeErd/BJC",
+    additionalImages: ["images/BusGame/LevelEditor2.jpg", "images/BusGame/LevelEditor.jpg"],
+    cabinetColor: "#FFFFFF",
+    neonColor: "#ffffff",
+    turkish: false,
+    categories: ["archive"],
+    typeBadges: ["Technical Prototype", "Recruitment Assignment", "Custom Level Editor"],
+    cardTypeBadges: ["Technical Prototype", "Recruitment Assignment"],
+    accessBadges: ["Source Available"],
+    status: "Technical Case Study",
+    order: 55,
+    detailCta: "View Case Study",
+    linkNotes: {
+      github: "Unity project and level editor source"
+    }
+  },
+  "fluxeon": {
+    name: "Fluxeon",
+    image: "https://play-lh.googleusercontent.com/dvLaGTiXKK0fawZxNMeTjApjAU6BqE6Kn1bdUJivh-7cPN1motBOXRxH7pOMSot6NLQ=w240-h480-rw",
+    description: "A one-touch, gravity-flipping arcade experiment: tap to rise, release to fall, and land on moving platforms for points as speeds increase and platforms shrink. Built with a minimalist visual style and a Google Play Games leaderboard. No longer publicly distributed.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: ["https://play-lh.googleusercontent.com/OX4DIClkyuh8K01SHJ2RxzHlKGUjqEmEjBWroLYON9apF0PkZxg31NS0BgK4pMiShG3R=w2560-h1440-rw", "https://play-lh.googleusercontent.com/BlOYSPkY4XxXicT32dITNs6n1bxkNOc6wtvII2N1WubyTQ8IB359v3NjMEXNb8GZC4L8=w2560-h1440-rw"],
+    cabinetColor: "#000000",
+    neonColor: "#c4c2e7",
+    turkish: false,
+    categories: ["archive"],
+    typeBadges: ["Retired Mobile Release", "Arcade Experiment"],
+    cardTypeBadges: ["Arcade Experiment"],
+    accessBadges: ["No Public Build"],
+    status: "Retired Mobile Release",
+    order: 59,
+    distributionNote: "No longer publicly distributed."
+  },
+  "Cat-Race-Final": {
+    name: "Purrfect Race",
+    image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
+    description: "Purrfect Race is a cat racing and betting game. Choose your favorite feline contender, use each cat's unique ability to gain an edge, and place your bets to climb the standings.",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
+    steam: "#",
+    itch: "https://beruke.itch.io/purrfect-race",
+    webGL: "https://itch.io/embed-upload/15307538?color=000000",
+    youtube: "#",
+    additionalImages: [
+      "https://play-lh.googleusercontent.com/l9dZExOYTfhmV6RX8gRjOZyCdvDW8SIMONm1vYm_ruOlc3huF47uUfJIezTEpFlDSA=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/ODtOQMZ0lLzLtxAvU8gJCnrml47HGzRQWbZz54ds3_6MoDeyCiwKZb7a80DhfJPUZw=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/nAgpru9ajX9Us2Ey7mCmHXk19XW2DDRZdtF0OV-wT0QEkFxpubtLZN9sPZFAk-NV1N8t=w526-h296-rw",
+      "https://play-lh.googleusercontent.com/kh4VejqPvnbRVPk0szXlHFJtJLkJa5eE_V6icsHrQMfn1oDuYzxRT3KQOJJHIow3W8s=w526-h296-rw"
+    ],
+    cabinetColor: "#FFFFFF",
+    neonColor: "#ffd97",
+    turkish: false,
+    categories: ["released", "playable"],
+    typeBadges: ["Released Game"],
+    accessBadges: ["Google Play", "Web"],
+    status: "Released",
+    order: 21
+  },
+  "color-tubes": {
+    name: "Color Tubes",
+    image: "https://play-lh.googleusercontent.com/lSHlU-yGz4fXL5JGj3Wm1Wl1xCJGcN9bofyBJdykSJgiAjTxndNQlHI_FCnTieQwGYs=w240-h480-rw",
+    description: "An original mobile puzzle prototype developed for a mobile publisher test. The project reached a playable release and market-testing stage, but development was discontinued after the initial test period.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    youtube: "#",
+    additionalImages: [
+      "https://play-lh.googleusercontent.com/9zuG9fI28C76GCB3o6zQXM1QkMB8NHbJobCtzRqQLwzRT5gAJxYiOdtDaJDWCR2KMA=w2560-h1440-rw",
+      "https://play-lh.googleusercontent.com/2PRtTS2TCenNXLbI6U2ZAqLhlhWaZ0LSw-8MzUwVMf-VFiio1B85dmwYgXAXl3AdGRhQ=w2560-h1440-rw"
+    ],
+    cabinetColor: "#8fb3c5",
+    neonColor: "#bf8234",
+    turkish: false,
+    categories: ["archive"],
+    typeBadges: ["Retired Publisher Prototype", "Mobile Puzzle"],
+    cardTypeBadges: ["Publisher Prototype"],
+    accessBadges: ["Build Unavailable"],
+    status: "Retired Publisher Prototype",
+    order: 64,
+    distributionNote: "This project is no longer publicly distributed."
+  },
+  "rps-online": {
+    name: "Rock Paper Scissors Online",
+    image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
+    description: "An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express. Players could create rooms, join through room codes, and synchronize match state through a lightweight backend. This early networking experiment later informed the experimental online co-op beta in Stick Slasher.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    github: "https://github.com/BerkeErd/TasKagitMakas",
+    youtube: "#",
+    additionalImages: [],
+    cabinetColor: "#bf8234",
+    neonColor: "#ffd600",
+    turkish: false,
+    categories: ["archive"],
+    typeBadges: ["Offline Multiplayer Prototype", "WebSocket Experiment"],
+    cardTypeBadges: ["WebSocket Experiment"],
+    accessBadges: ["Backend Retired", "Source Available"],
+    status: "Retired Prototype",
+    order: 65,
+    distributionNote: "The original backend was hosted on Glitch and is no longer available, so the playable online version has been retired.",
+    detailCta: "View Development Notes",
+    linkNotes: {
+      github: "Client and server source code"
+    }
+  },
+  "punch-up": {
+    name: "Punch-Up",
+    image: "https://i.postimg.cc/Dfbg5PRg/241207447-f66728bf-8988-4520-90b1-05d6fac290c9.png",
+    description: "An unreleased student project developed collaboratively as a pixel-art fighting and progression experiment. The project explored character combat, rewards, upgrades, and working as part of a small development team. Your fighter earns cash by knocking out enemies, then spends it on upgrading strength, speed and special moves. The game targets mobile devices and has never been publicly released.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    github: "https://github.com/BerkeErd/Unity-Game-School-Project",
+    youtube: "#",
+    additionalImages: [],
+    cabinetColor: "#2d2d2d",
+    neonColor: "#ff3366",
+    turkish: false,
+    categories: ["archive"],
+    typeBadges: ["Unreleased Student Project", "Team Project"],
+    cardTypeBadges: ["Student Project", "Team Project"],
+    accessBadges: ["No Public Build", "Source Available"],
+    status: "Unreleased Student Project",
+    order: 66,
+    linkNotes: {
+      github: "Project source code"
+    }
+  }
 };
 
 const LINK_DEFS = [
   { key: "googlePlay", icon: "fab fa-google-play", label: "Google Play" },
   { key: "steam",      icon: "fab fa-steam",       label: "Steam" },
   { key: "itch",       icon: "fab fa-itch-io",     label: "Itch.io" },
-  { key: "github",     icon: "fab fa-github",      label: "Source" }
+  { key: "github",     icon: "fab fa-github",      label: "Source Code" }
 ];
 
+const STATUS_COLORS = {
+  "In Development": "#f39c12",
+  "Released": "#27ae60",
+  "Retired Release": "#7f8c8d",
+  "Retired Mobile Release": "#7f8c8d",
+  "Retired Publisher Prototype": "#7f8c8d",
+  "Retired Prototype": "#7f8c8d",
+  "Technical Prototype": "#5d6d7e",
+  "Technical Case Study": "#2980b9",
+  "Unreleased Student Project": "#8e44ad"
+};
 
 let scene, camera, renderer;
 let particles, particleSystem;
@@ -406,7 +551,9 @@ function buildLinkButtons(game) {
     a.target = '_blank';
     a.rel = 'noopener';
     a.className = 'game-link-btn btn btn-outline-light m-1';
+    const note = game.linkNotes && game.linkNotes[key];
     a.innerHTML = `<i class="${icon} mr-1"></i> ${label}`;
+    if (note) a.title = note;
     frag.appendChild(a);
   });
   return frag;
@@ -422,7 +569,7 @@ function slugifyGamePage(value) {
     .replace(/[çÇ]/g, 'c')
     .replace(/['’]/g, '')
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
     .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, '-')
@@ -430,51 +577,88 @@ function slugifyGamePage(value) {
 }
 
 function getGamePageUrl(game) {
-  return `games/${slugifyGamePage(game.name)}.html`;
+  return `games/${game.slugOverride || slugifyGamePage(game.name)}.html`;
+}
+
+function badgeClass(text, group) {
+  const t = text.toLowerCase();
+  if (t.includes('featured')) return 'badge-featured';
+  if (t.includes('in development')) return 'badge-dev';
+  if (t.includes('retired')) return 'badge-retired';
+  if (t.includes('unreleased') || t.includes('student')) return 'badge-student';
+  if (t.includes('jam')) return 'badge-jam';
+  if (t.includes('prototype') || t.includes('recruitment') || t.includes('experiment')) return 'badge-prototype';
+  if (t.includes('unavailable') || t.includes('no public') || t.includes('backend') ||
+      t.includes('archived') || t.includes('distributed')) return 'badge-muted';
+  if (t.includes('released')) return 'badge-released';
+  return group === 'access' ? 'badge-access' : 'badge-type';
+}
+
+// One short badge per card keeps the arcade grid minimal.
+function primaryCardBadge(p) {
+  const cats = p.categories || [];
+  if (cats.includes('featured')) return { text: 'Featured', cls: 'badge-featured' };
+  if (cats.includes('archive')) {
+    const s = (p.status || '').toLowerCase();
+    if (s.includes('student')) return { text: 'Student Project', cls: 'badge-student' };
+    if (s.includes('case study')) return { text: 'Case Study', cls: 'badge-type' };
+    if (s.includes('prototype')) return { text: 'Prototype', cls: 'badge-prototype' };
+    if (s.includes('retired')) return { text: 'Retired', cls: 'badge-retired' };
+    return { text: 'Archive', cls: 'badge-muted' };
+  }
+  if (cats.includes('jam')) return { text: 'Game Jam', cls: 'badge-jam' };
+  if (cats.includes('released')) return { text: 'Released', cls: 'badge-released' };
+  return null;
+}
+
+function buildCabinetBadges(p) {
+  const primary = primaryCardBadge(p);
+  if (!primary) return '';
+  return `<span class="cabinet-badge ${primary.cls}">${primary.text.toUpperCase()}</span>`;
 }
 
 function initWebGL() {
   const canvas = document.getElementById('bg-canvas');
-  
+
   scene = new THREE.Scene();
-  
+
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.z = 50;
-  
-  renderer = new THREE.WebGLRenderer({ 
-    canvas: canvas, 
+
+  renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
     antialias: true,
-    alpha: true 
+    alpha: true
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
-  
+
   const particlesGeometry = new THREE.BufferGeometry();
   const particleCount = 300; // Performans için sayıyı ayarlayabilirsiniz
-  
+
   const positionArray = new Float32Array(particleCount * 3);
   const colorArray = new Float32Array(particleCount * 3);
-  
-for (let i = 0; i < particleCount * 3; i += 3) {
-  positionArray[i] = (Math.random() - 0.5) * 100;
-  positionArray[i + 1] = (Math.random() - 0.5) * 100;
-  positionArray[i + 2] = (Math.random() - 0.5) * 100;
-  
-  const colorType = Math.random();
-  if (colorType < 0.5) {
-    colorArray[i] = Math.random() * 0.6 + 0.4; // R
-    colorArray[i + 1] = Math.random() * 0.3; // G
-    colorArray[i + 2] = Math.random() * 0.1; // B
-  } else {
-    colorArray[i] = Math.random() * 0.1; // R
-    colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
-    colorArray[i + 2] = Math.random() * 0.4; // B
+
+  for (let i = 0; i < particleCount * 3; i += 3) {
+    positionArray[i] = (Math.random() - 0.5) * 100;
+    positionArray[i + 1] = (Math.random() - 0.5) * 100;
+    positionArray[i + 2] = (Math.random() - 0.5) * 100;
+
+    const colorType = Math.random();
+    if (colorType < 0.5) {
+      colorArray[i] = Math.random() * 0.6 + 0.4; // R
+      colorArray[i + 1] = Math.random() * 0.3; // G
+      colorArray[i + 2] = Math.random() * 0.1; // B
+    } else {
+      colorArray[i] = Math.random() * 0.1; // R
+      colorArray[i + 1] = Math.random() * 0.6 + 0.4; // G
+      colorArray[i + 2] = Math.random() * 0.4; // B
+    }
   }
-}
-  
+
   particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positionArray, 3));
   particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colorArray, 3));
-  
+
   const particlesMaterial = new THREE.PointsMaterial({
     size: 0.3,
     transparent: true,
@@ -482,12 +666,12 @@ for (let i = 0; i < particleCount * 3; i += 3) {
     vertexColors: true,
     blending: THREE.AdditiveBlending
   });
-  
+
   particleSystem = new THREE.Points(particlesGeometry, particlesMaterial);
   scene.add(particleSystem);
-  
+
   window.addEventListener('resize', onWindowResize);
-  
+
   animate();
 }
 
@@ -499,169 +683,67 @@ function onWindowResize() {
 
 function animate() {
   requestAnimationFrame(animate);
-  
+
   particleSystem.rotation.x += 0.0003;
   particleSystem.rotation.y += 0.0003;
-  
+
   renderer.render(scene, camera);
 }
 
 function createArcadeCabinets() {
-  const publishedContainer   = document.getElementById('arcade-machines');
-  const unpublishedContainer = document.getElementById('unpublished-machines');
-  const legacyContainer      = document.getElementById('legacy-machines');
+  const mainContainer = document.getElementById('arcade-machines');
+  const archiveContainer = document.getElementById('archive-machines');
 
-  publishedContainer.innerHTML   = '';
-  unpublishedContainer.innerHTML = '';
-  legacyContainer.innerHTML      = '';
+  mainContainer.innerHTML = '';
+  archiveContainer.innerHTML = '';
 
-  Object.entries(projectDetails).forEach(([key, p]) => {
-    const target = p.unpublished
-                  ? unpublishedContainer          // UNPUBLISHED
-                  : (p.legacy ? legacyContainer   // LEGACY
-                              : publishedContainer); // NORMAL
+  const entries = Object.entries(projectDetails)
+    .sort((a, b) => (a[1].order || 99) - (b[1].order || 99));
 
-    let badges = '';
-    if (p.turkish)       badges += '<span class="cabinet-badge badge-turkish">TURKISH</span>';
-    if (p.inDevelopment) badges += '<span class="cabinet-badge badge-dev">IN DEV</span>';
-      if (p.unpublished)   badges += '<span class="cabinet-badge badge-unpublished">UNPUB</span>';
-      if (p.legacy)        badges += '<span class="cabinet-badge badge-legacy">LEGACY</span>'; 
-      if (p.comingSoon)    badges += '<span class="cabinet-badge badge-comingsoon">COMING SOON</span>';
-      if (p.jam)       	badges += '<span class="cabinet-badge badge-jam">JAM</span>';
-	if (p.postJam)   	badges += '<span class="cabinet-badge badge-postjam">POST‑JAM</span>';
-	if (p.prototype) 	badges += '<span class="cabinet-badge badge-prototype">PROTOTYPE</span>';
-	if (p.remaster)  	badges += '<span class="cabinet-badge badge-remaster">REMIX</span>';
+  entries.forEach(([key, p]) => {
+    const isArchive = (p.categories || []).includes('archive');
+    const target = isArchive ? archiveContainer : mainContainer;
+    const badges = buildCabinetBadges(p);
+    const pageUrl = getGamePageUrl(p);
+    const cta = p.detailCta || 'View Project';
 
+    const controlsHtml = isArchive
+      ? `<a class="view-project-link" href="${pageUrl}">${cta} <i class="fas fa-arrow-right"></i></a>`
+      : `<div class="cabinet-controls">
+            <div class="joystick"></div>
+            <div class="buttons-array"><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div></div>
+          </div>`;
 
     target.insertAdjacentHTML('beforeend', `
-      <div class="arcade-cabinet" data-project="${key}">
+      <div class="arcade-cabinet${isArchive ? ' archive-cabinet' : ''}" data-project="${key}" tabindex="0" role="button" aria-label="Open details for ${p.name}">
         <div class="cabinet-body">
           <div class="cabinet-badges">${badges}</div>
           <div class="cabinet-screen">
-            <img src="${p.image}" alt="${p.name}" class="screen-content">
+            <img src="${p.image}" alt="${p.name} artwork" class="screen-content" loading="lazy">
             <div class="screen-glare"></div>
           </div>
           <div class="cabinet-header"><h3 style="color:${p.neonColor}">${p.name}</h3></div>
-          <div class="cabinet-controls">
-            <div class="joystick"></div>
-            <div class="buttons-array"><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div><div class="arcade-button"></div></div>
-          </div>
+          ${controlsHtml}
         </div>
       </div>`);
   });
 
-  document.querySelectorAll('.arcade-cabinet')
-          .forEach(cab => cab.addEventListener('click', handleCabinetClick));
+  document.querySelectorAll('.arcade-cabinet').forEach(cab => {
+    cab.addEventListener('click', handleCabinetClick);
+    cab.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        handleCabinetClick.call(this);
+      }
+    });
+  });
+
+  // Let the View Project links navigate without opening the modal.
+  document.querySelectorAll('.view-project-link').forEach(link => {
+    link.addEventListener('click', event => event.stopPropagation());
+  });
 
   updateSectionVisibility();
-}
-
-function filterCabinets() {
-  document.querySelectorAll('#arcade-machines .arcade-cabinet').forEach(cabinet => {
-    const id      = cabinet.getAttribute('data-project');
-    const project = projectDetails[id];
-
-    const matchesFilter =
-      currentFilter === 'all' ||
-      (currentFilter === 'mobile' && (project.mobile || project.googlePlay !== '#')) ||
-      (currentFilter === 'pc'     && project.steam      !== '#') ||
-      (currentFilter === 'web'    && (project.webGL !== '#' || (project.itch !== '#' && !project.mobile)));
-
-    const matchesLang = !englishOnly || !project.turkish;
-    cabinet.style.display = (matchesFilter && matchesLang) ? 'block' : 'none';
-  });
-
-  document.querySelectorAll('#unpublished-machines .arcade-cabinet').forEach(cabinet => {
-    const id      = cabinet.getAttribute('data-project');
-    const project = projectDetails[id];
-    cabinet.style.display = (!englishOnly || !project.turkish) ? 'block' : 'none';
-  });
-}
-
-function handleCabinetClick() {
-  
-  document.querySelectorAll('.arcade-cabinet').forEach(cab => {
-    cab.classList.remove('active');
-  });
-  this.classList.add('active');
-  
-  const projectId = this.getAttribute('data-project');
-  const project = projectDetails[projectId];
-  
-  showProjectDetails(project);
-}
-
-function showProjectDetails(project) {
-  const detailsModal = document.querySelector('.game-details-modal');
-  detailsModal.classList.add('active');
-
-  let statusMessage = '';
-  if (project.inDevelopment) statusMessage = '<div class="game-status" style="background-color:#f39c12;">IN DEVELOPMENT</div>';
-  else if (project.unpublished) statusMessage = '<div class="game-status" style="background-color:#7f8c8d;">UNPUBLISHED</div>';
-
-  const linksContainer = document.createElement('div');
-  linksContainer.className = 'game-links d-flex flex-wrap';
-  linksContainer.appendChild(buildLinkButtons(project));
-
-  if (!project.unpublished && project.webGL !== '#') {
-    const playBtn = document.createElement('button');
-    playBtn.className = 'game-link-btn btn btn-success m-1';
-    playBtn.dataset.toggle = 'modal';
-    playBtn.dataset.target = '#gameModal';
-    playBtn.dataset.webgl = project.webGL;
-    playBtn.dataset.name = project.name;
-    playBtn.innerHTML = '<i class="fas fa-gamepad mr-1"></i> Play in Browser';
-    linksContainer.appendChild(playBtn);
-  }
-
-  let youtubeEmbedHtml = '';
-  if (project.youtube !== '#') {
-    let ytBase = project.youtube;
-    ytBase = ytBase.replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')
-                   .replace('youtube.com/embed/', 'www.youtube-nocookie.com/embed/');
-    const sep = ytBase.includes('?') ? '&' : '?';
-    const ytSrc = `${ytBase}${sep}rel=0&playsinline=1&modestbranding=1`;
-    youtubeEmbedHtml = `<div class="youtube-container"><iframe class="youtube-embed" src="${ytSrc}" title="${project.name} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
-  }
-
-  let additionalImagesHtml = '';
-  if (project.additionalImages && project.additionalImages.length) {
-    additionalImagesHtml = `<h3 class="gallery-title secondary-neon">Gallery</h3><div class="game-gallery">${project.additionalImages.map((img,i)=>`<div class="gallery-image-container"><img src="${img}" alt="Screenshot ${i+1}" class="gallery-image" data-full="${img}"></div>`).join('')}</div>`;
-  }
-
-  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info"><div class="game-description"><p>${project.description}</p></div><div class="game-links"></div></div></div>${additionalImagesHtml}`;
-
-  document.getElementById('game-details-content').innerHTML = detailsHTML;
-  document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);
-
-  updateBackgroundColors(project.neonColor);
-
-  document.querySelectorAll('.gallery-image').forEach(img => img.addEventListener('click', () => showLightbox(img.dataset.full)));
-}
-
-
-function updateBackgroundColors(color) {
-  const r = parseInt(color.substring(1, 3), 16) / 255;
-  const g = parseInt(color.substring(3, 5), 16) / 255;
-  const b = parseInt(color.substring(5, 7), 16) / 255;
-  
-  if (particleSystem) {
-    const colors = particleSystem.geometry.attributes.color.array;
-    for (let i = 0; i < colors.length; i += 3) {
-      colors[i] = r * (Math.random() * 0.5 + 0.5);
-      colors[i + 1] = g * (Math.random() * 0.5 + 0.5);
-      colors[i + 2] = b * (Math.random() * 0.5 + 0.5);
-    }
-    particleSystem.geometry.attributes.color.needsUpdate = true;
-  }
-}
-
-function showLightbox(imgSrc) {
-  const lightbox = document.querySelector('.gallery-lightbox');
-  const lightboxImg = lightbox.querySelector('.lightbox-img');
-  
-  lightboxImg.src = imgSrc;
-  lightbox.classList.add('active');
 }
 
 let currentFilter = 'all';
@@ -671,19 +753,22 @@ function filterCabinets() {
   document.querySelectorAll('.arcade-cabinet').forEach(cabinet => {
     const projectId = cabinet.getAttribute('data-project');
     const project = projectDetails[projectId];
-    
-    const matchesFilter = currentFilter === 'all' || 
-      (currentFilter === 'mobile' && (project.mobile || project.googlePlay !== '#')) ||
-      (currentFilter === 'pc' && (project.steam !== '#' || project.unpublished)) ||
-      (currentFilter === 'web'    && (project.webGL !== '#' || (project.itch !== '#' && !project.mobile)));
-    
+    const categories = project.categories || [];
+
+    // "web" and "mobile" are intent filters derived from live links;
+    // the rest match the categories array (featured / jam / archive).
+    const matchesFilter =
+      currentFilter === 'all' ||
+      (currentFilter === 'web' && project.webGL !== '#') ||
+      (currentFilter === 'mobile' && project.googlePlay !== '#') ||
+      categories.includes(currentFilter);
     const matchesLanguage = !englishOnly || !project.turkish;
-    
+
     if (matchesFilter && matchesLanguage) {
       cabinet.style.display = 'block';
-      
-      gsap.fromTo(cabinet, 
-        { opacity: 0, y: 20 }, 
+
+      gsap.fromTo(cabinet,
+        { opacity: 0, y: 20 },
         { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: Math.random() * 0.3 }
       );
     } else {
@@ -704,69 +789,181 @@ function updateSectionVisibility() {
     section.style.display = hasVisible ? '' : 'none';
   };
 
-  toggleSection('.legacy-section', '#legacy-machines');
-  toggleSection('.unpublished-section', '#unpublished-machines');
+  toggleSection('.arcade-floor', '#arcade-machines');
+  toggleSection('.archive-section', '#archive-machines');
+}
+
+function handleCabinetClick() {
+
+  document.querySelectorAll('.arcade-cabinet').forEach(cab => {
+    cab.classList.remove('active');
+  });
+  this.classList.add('active');
+
+  const projectId = this.getAttribute('data-project');
+  const project = projectDetails[projectId];
+
+  showProjectDetails(project);
+}
+
+function showProjectDetails(project) {
+  const detailsModal = document.querySelector('.game-details-modal');
+  detailsModal.classList.add('active');
+
+  // Only short, high-signal statuses get the header pill; archive projects
+  // already communicate their state through the badge rows below.
+  let statusMessage = '';
+  if (project.status === 'In Development' || project.status === 'Released') {
+    const color = STATUS_COLORS[project.status] || '#7f8c8d';
+    statusMessage = `<div class="game-status" style="background-color:${color};">${project.status.toUpperCase()}</div>`;
+  }
+
+  let badgeRows = '';
+  const typeBadges = project.typeBadges || [];
+  const accessBadges = project.accessBadges || [];
+  if (typeBadges.length || accessBadges.length) {
+    const typeHtml = typeBadges.map(text => `<span class="modal-badge ${badgeClass(text, 'type')}">${text}</span>`).join('');
+    const accessHtml = accessBadges.map(text => `<span class="modal-badge ${badgeClass(text, 'access')}">${text}</span>`).join('');
+    badgeRows = `<div class="modal-badge-rows">
+      ${typeHtml ? `<div class="modal-badge-row"><span class="modal-badge-label">Project</span>${typeHtml}</div>` : ''}
+      ${accessHtml ? `<div class="modal-badge-row"><span class="modal-badge-label">Availability</span>${accessHtml}</div>` : ''}
+    </div>`;
+  }
+
+  const distributionNote = project.distributionNote
+    ? `<p class="distribution-note">${project.distributionNote}</p>`
+    : '';
+
+  const linksContainer = document.createElement('div');
+  linksContainer.className = 'game-links d-flex flex-wrap';
+  linksContainer.appendChild(buildLinkButtons(project));
+
+  if (project.webGL !== '#') {
+    const playBtn = document.createElement('button');
+    playBtn.className = 'game-link-btn btn btn-success m-1';
+    playBtn.dataset.toggle = 'modal';
+    playBtn.dataset.target = '#gameModal';
+    playBtn.dataset.webgl = project.webGL;
+    playBtn.dataset.name = project.name;
+    playBtn.innerHTML = '<i class="fas fa-gamepad mr-1"></i> Play in Browser';
+    linksContainer.appendChild(playBtn);
+  }
+
+  const pageLink = document.createElement('a');
+  pageLink.href = getGamePageUrl(project);
+  pageLink.className = 'game-link-btn btn btn-outline-light m-1';
+  pageLink.innerHTML = `<i class="fas fa-file-alt mr-1"></i> ${project.detailCta || 'View Project'}`;
+  linksContainer.appendChild(pageLink);
+
+  let youtubeEmbedHtml = '';
+  if (project.youtube !== '#') {
+    let ytBase = project.youtube;
+    ytBase = ytBase.replace('www.youtube.com/embed/', 'www.youtube-nocookie.com/embed/')
+                   .replace('youtube.com/embed/', 'www.youtube-nocookie.com/embed/');
+    const sep = ytBase.includes('?') ? '&' : '?';
+    const ytSrc = `${ytBase}${sep}rel=0&playsinline=1&modestbranding=1`;
+    youtubeEmbedHtml = `<div class="youtube-container"><iframe class="youtube-embed" src="${ytSrc}" title="${project.name} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>`;
+  }
+
+  let additionalImagesHtml = '';
+  if (project.additionalImages && project.additionalImages.length) {
+    additionalImagesHtml = `<h3 class="gallery-title secondary-neon">Gallery</h3><div class="game-gallery">${project.additionalImages.map((img,i)=>`<div class="gallery-image-container"><img src="${img}" alt="${project.name} screenshot ${i+1}" class="gallery-image" data-full="${img}" loading="lazy"></div>`).join('')}</div>`;
+  }
+
+  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info">${badgeRows}<div class="game-description"><p>${project.description}</p></div>${distributionNote}<div class="game-links"></div></div></div>${additionalImagesHtml}`;
+
+  document.getElementById('game-details-content').innerHTML = detailsHTML;
+  document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);
+
+  updateBackgroundColors(project.neonColor);
+
+  document.querySelectorAll('.gallery-image').forEach(img => img.addEventListener('click', () => showLightbox(img.dataset.full)));
+}
+
+
+function updateBackgroundColors(color) {
+  const r = parseInt(color.substring(1, 3), 16) / 255;
+  const g = parseInt(color.substring(3, 5), 16) / 255;
+  const b = parseInt(color.substring(5, 7), 16) / 255;
+
+  if (particleSystem) {
+    const colors = particleSystem.geometry.attributes.color.array;
+    for (let i = 0; i < colors.length; i += 3) {
+      colors[i] = r * (Math.random() * 0.5 + 0.5);
+      colors[i + 1] = g * (Math.random() * 0.5 + 0.5);
+      colors[i + 2] = b * (Math.random() * 0.5 + 0.5);
+    }
+    particleSystem.geometry.attributes.color.needsUpdate = true;
+  }
+}
+
+function showLightbox(imgSrc) {
+  const lightbox = document.querySelector('.gallery-lightbox');
+  const lightboxImg = lightbox.querySelector('.lightbox-img');
+
+  lightboxImg.src = imgSrc;
+  lightbox.classList.add('active');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   initWebGL();
-  
+
   createArcadeCabinets(); gsap.set('.arcade-container', { visibility: 'visible' });
-  
+
   filterCabinets();
-  
+
   document.querySelectorAll('.arcade-btn[data-filter]').forEach(button => {
     button.addEventListener('click', function() {
-      
+
       document.querySelectorAll('.arcade-btn[data-filter]').forEach(btn => {
         btn.classList.remove('active');
       });
       this.classList.add('active');
-      
+
       currentFilter = this.getAttribute('data-filter');
       filterCabinets();
     });
   });
-  
+
   document.getElementById('turkishToggle').addEventListener('change', function() {
-    
+
     englishOnly = this.checked;
     filterCabinets();
   });
-  
+
   document.querySelector('.modal-close-btn').addEventListener('click', function() {
-    
+
     document.querySelector('.game-details-modal').classList.remove('active');
-    
+
     document.querySelectorAll('.arcade-cabinet').forEach(cab => {
       cab.classList.remove('active');
     });
   });
-  
+
   document.querySelector('.lightbox-close').addEventListener('click', function() {
     document.querySelector('.gallery-lightbox').classList.remove('active');
   });
-  
+
   document.querySelector('.gallery-lightbox').addEventListener('click', function(e) {
     if (e.target === this) {
       this.classList.remove('active');
     }
   });
-  
+
   $('#gameModal').on('show.bs.modal', function(event) {
     const button = $(event.relatedTarget);
     const gameUrl = button.data('webgl');
     const gameName = button.data('name');
-    
+
     const modal = $(this);
     modal.find('.modal-title').text(gameName);
     modal.find('#gameIframe').attr('src', gameUrl);
   });
-  
+
   $('#gameModal').on('hidden.bs.modal', function() {
     $(this).find('#gameIframe').attr('src', '');
   });
-  
+
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
       document.querySelector('.game-details-modal').classList.remove('active');
@@ -799,4 +996,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 500); // Wait a bit for cabinets to render just in case
 });
-

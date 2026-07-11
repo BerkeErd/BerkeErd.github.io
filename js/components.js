@@ -119,7 +119,7 @@ function renderFooter() {
           <span>Beruke Games</span>
         </div>
         <div class="footer-copyright">
-          <p>&copy; 2023 Beruke Games. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} Beruke Games. All rights reserved.</p>
         </div>
         <div class="components-social-icons">
           <a href="https://github.com/BerkeErd" target="_blank" class="components-social-icon">
