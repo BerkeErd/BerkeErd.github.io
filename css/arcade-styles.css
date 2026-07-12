@@ -493,10 +493,12 @@ input:checked + .slider:before {
 .cabinet-badges {
   position: absolute;
   top: 10px;
+  left: 10px;
   right: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  align-items: flex-end;
   z-index: 5;
 }
 
@@ -1208,10 +1210,18 @@ input:checked + .slider:before {
 .badge-type       { background:#b3541e; color:#fff; }
 .badge-access     { background:#0e7c66; color:#fff; }
 
-/* Single short badge per card - keep it on one line */
+/* At most two short badges per card. */
 .cabinet-badge {
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
   line-height: 1.35;
+}
+
+.featured-cabinet .cabinet-body {
+  border-color: rgba(255, 204, 0, 0.85);
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.24), 0 10px 24px rgba(0, 0, 0, 0.75);
 }
 
 /* Keyboard focus for cabinets */
@@ -1320,6 +1330,28 @@ input:checked + .slider:before {
   background: rgba(127, 140, 141, 0.12);
   color: #cfd8dc;
   font-style: italic;
+}
+
+.modal-extra-sections {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.modal-extra-section {
+  padding: 14px 16px;
+  border-left: 3px solid var(--secondary-neon, #00e5aa);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.modal-extra-section h3 {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--secondary-neon, #00e5aa);
+}
+
+.modal-extra-section p {
+  margin: 0;
 }
 
 

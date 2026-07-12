@@ -13,15 +13,16 @@ const projectDetails = {
     googlePlay: "#",
     steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
     itch: "https://beruke.itch.io/wizards-path-trial",
-    webGL: "https://itch.io/embed-upload/17902594?color=000000",
+    webGL: "https://itch.io/embed-upload/17920362?color=000000",
     youtube: "#",
     additionalImages: [],
     cabinetColor: "#2a1e4a",
     neonColor: "#ffcc00",
     turkish: false,
     categories: ["featured", "playable"],
-    typeBadges: ["Featured Game", "In Development"],
-    accessBadges: ["Demo Available", "Steam Wishlist"],
+    typeBadges: ["Featured Game", "In Development", "Action Roguelite"],
+    cardTypeBadges: ["Featured", "Web Demo"],
+    accessBadges: ["Free Web Demo", "Steam Wishlist"],
     status: "In Development",
     order: 1,
     linkNotes: {
@@ -33,7 +34,7 @@ const projectDetails = {
   "flagRush": {
     name: "Flag Rush",
     image: "https://play-lh.googleusercontent.com/UroCXQ6nWrh9_eCaLsJi_ASxTW-FraCEfbM_ywGCLgyAKApSDGrhegkqLyj-KYH7Wsg=w240-h480-rw",
-    description: "Flag Rush is an entertaining marble racing simulation where you can sit back and watch marbles representing world flags compete on dynamic tracks. Aside from enjoying the thrilling races, the game features an in-depth editor allowing you to create your own custom levels and design your very own unique marbles.",
+    description: "Choose a country flag—or create a racer from any image—then watch it compete in marble races, elimination rounds, endless survival, and football tournaments.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.FlagRush",
     steam: "#",
     itch: "#",
@@ -44,8 +45,9 @@ const projectDetails = {
     neonColor: "#FFFFFF",
     turkish: false,
     categories: ["featured", "released", "playable"],
-    typeBadges: ["Featured Game", "Released"],
-    accessBadges: ["Google Play"],
+    typeBadges: ["Featured Game", "Marble Racing Simulation", "Tournament Simulator", "Custom Racers"],
+    cardTypeBadges: ["Featured", "10K+ Downloads"],
+    accessBadges: ["Google Play", "10K+ Downloads"],
     status: "Released",
     order: 2,
     linkNotes: {
@@ -55,11 +57,12 @@ const projectDetails = {
   "stick-slasher": {
     name: "Stick Slasher",
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/header.jpg?t=1693580140",
-    description: "Stick Slasher is a chaotic physics-based 2D fighting game where every swing can disarm, dismember, or send enemies flying. Survive increasingly dangerous waves, show mercy to defeated enemies, and compete for high scores across multiple platforms. Stick Slasher began as a three-day game jam project for Mağara Jam #4 and was gradually expanded with new enemies, weapons, platforms, achievements, leaderboards, localization, sandbox features, and an experimental online co-op beta. The Steam version supports over 20 languages, achievements, country leaderboards, and a sandbox mode. The mobile version uses the PlayFab SDK for leaderboards, while the Steam version uses the Steamworks SDK.",
+    description: "Stick Slasher is a chaotic physics-based 2D fighting game where every swing can disarm, dismember, or send enemies flying.",
     hookOverride: "Stick Slasher is a chaotic physics-based 2D fighting game where every swing can disarm, dismember, or send enemies flying. Survive increasingly dangerous waves, show mercy to defeated enemies, and compete for high scores across multiple platforms.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.StickSlasher",
     steam: "https://store.steampowered.com/app/2549950/Stick_Slasher/",
     itch: "https://beruke.itch.io/sslasher",
+    playgama: "https://playgama.com/game/stick-slasher",
     webGL: "https://itch.io/embed-upload/8532900?color=0c0c0c",
     youtube: "https://www.youtube.com/embed/MSdYlAcypdM",
     additionalImages: ["https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_a11d221e03480e3dc92c0ad651c20c05af3c1600.600x338.jpg?t=1693580140", "https://cdn.cloudflare.steamstatic.com/steam/apps/2549950/ss_466284956c1f1507911b6d83b427114172437fbc.600x338.jpg?t=1693580140"],
@@ -67,32 +70,29 @@ const projectDetails = {
     neonColor: "#00ff39",
     turkish: false,
     categories: ["featured", "released", "playable", "jam"],
-    typeBadges: ["Featured Game", "Released", "Originally Created for Mağara Jam #4"],
-    cardTypeBadges: ["Featured Game", "Released"],
-    accessBadges: ["Steam", "Android", "Web"],
+    typeBadges: ["Physics Fighter", "Originally Created for Mağara Jam #4"],
+    cardTypeBadges: ["Featured", "10K+ Downloads"],
+    accessBadges: ["Steam", "Android", "Web", "Playgama", "10K+ Android Downloads"],
     status: "Released",
     order: 3,
     linkNotes: {
       steam: "Full PC release and experimental co-op beta",
       googlePlay: "Android version",
       itch: "Browser and downloadable versions",
-      webGL: "Free browser version"
+      webGL: "Free browser version",
+      playgama: "Play in browser on Playgama"
     },
     extraSections: [
       {
         title: "Experimental Online Co-op Beta",
-        text: "The Steam version also includes an optional experimental two-player online co-op beta. This mode was created as a networking learning project and is still being tested. Synchronization problems, connection issues, visual inconsistencies, bugs, and incomplete localization may occur. The original single-player mode remains the primary and most polished way to play Stick Slasher."
-      },
-      {
-        title: "Development Notes",
-        text: "The experimental networking implementation was developed through an AI-assisted workflow involving research, prototyping, integration, debugging, and manual testing."
+        text: "Steam only. The Steam version includes an optional experimental two-player online co-op beta. It is still being tested, so synchronization problems, connection issues, visual inconsistencies, bugs, and incomplete localization may occur. The original single-player mode remains the primary and most polished way to play Stick Slasher."
       }
     ]
   },
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
-    description: "Sesli Sorular ile Milyoner is a trivia game built for Mobile platforms using Unity Engine, released on Dec 25, 2020. It is a game that applies all the rules and details of the real competition exactly, and it only supports Turkish.",
+    description: "A Turkish trivia game featuring voiced questions, music and sound-based rounds, and four different lifelines.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SesliSoruMilyoner2021",
     steam: "#",
     itch: "#",
@@ -103,8 +103,9 @@ const projectDetails = {
     neonColor: "#6000bf",
     turkish: true,
     categories: ["released", "playable"],
-    typeBadges: ["Released Game"],
-    accessBadges: ["Google Play"],
+    typeBadges: ["Turkish Trivia", "Audio Questions"],
+    cardTypeBadges: ["Released", "10K+ Downloads"],
+    accessBadges: ["Turkish Only", "Google Play", "10K+ Downloads"],
     status: "Released",
     order: 22
   },
@@ -122,8 +123,9 @@ const projectDetails = {
     neonColor: "#ddf8ff",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Retired Release"],
-    accessBadges: ["Build Archived"],
+    typeBadges: ["Retired Release", "2D Endless Runner", "Ability Drafting"],
+    cardTypeBadges: ["Retired", "Ability Drafting"],
+    accessBadges: ["Archived Android Build"],
     status: "Retired Release",
     order: 60,
     distributionNote: "No longer distributed on Google Play. An archived Android build is preserved on itch.io.",
@@ -146,7 +148,8 @@ const projectDetails = {
     turkish: true,
     categories: ["archive"],
     typeBadges: ["Retired Mobile Release", "Word Game"],
-    accessBadges: ["No Longer Distributed"],
+    cardTypeBadges: ["Retired", "Word Game"],
+    accessBadges: ["Turkish Only", "No Longer Distributed"],
     status: "Retired Mobile Release",
     order: 67,
     distributionNote: "This project is no longer publicly distributed."
@@ -165,8 +168,9 @@ const projectDetails = {
     neonColor: "#1ab5f2",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Retired Release"],
-    accessBadges: ["Build Archived"],
+    typeBadges: ["Retired Release", "Color-Matching Arcade", "PlayFab Leaderboard"],
+    cardTypeBadges: ["Retired", "Color Matching"],
+    accessBadges: ["Archived Android Build"],
     status: "Retired Release",
     order: 61,
     distributionNote: "No longer distributed on Google Play. An archived Android build is preserved on itch.io.",
@@ -177,7 +181,7 @@ const projectDetails = {
   "simple-kalimba": {
     name: "Simple Kalimba",
     image: "https://play-lh.googleusercontent.com/fNIUcRC5siSf1VH5CSRmJLmhCC3fzbSXNqa_ePOsQieCotMTa66llKgDHalKS3UEqZg=w416-h235-rw",
-    description: "Simple Kalimba is an Instrumental Simulator game built for Mobile platforms, featuring basic graphics, released on Jan 10, 2021.",
+    description: "A lightweight 17-key kalimba simulator featuring real kalimba sounds and simple color customization options.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.Beruke.SimpleKalimba",
     steam: "#",
     itch: "#",
@@ -188,8 +192,9 @@ const projectDetails = {
     neonColor: "#8e2b08",
     turkish: false,
     categories: ["released", "playable"],
-    typeBadges: ["Released Game"],
-    accessBadges: ["Google Play"],
+    typeBadges: ["Music Tool", "Instrument Simulator", "17 Keys"],
+    cardTypeBadges: ["Released", "10K+ Downloads"],
+    accessBadges: ["Google Play", "10K+ Downloads"],
     status: "Released",
     order: 24
   },
@@ -207,8 +212,8 @@ const projectDetails = {
     neonColor: "#f7ac1d",
     turkish: true,
     categories: ["archive"],
-    typeBadges: ["Retired Mobile Release", "Trivia System Experiment", "Community Features"],
-    cardTypeBadges: ["Trivia System Experiment"],
+    typeBadges: ["Retired Mobile Release", "Trivia System Experiment", "Community Features", "Firebase Firestore", "Moderation Pipeline", "In-App Question Editor"],
+    cardTypeBadges: ["Retired", "Trivia System"],
     accessBadges: ["Build Unavailable", "Backend Retired"],
     status: "Retired Mobile Release",
     order: 58,
@@ -217,7 +222,7 @@ const projectDetails = {
   "timeloop-traffic": {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
-    description: "TimeLoop, a game developed using Unity Engine, was released on Aug 26, 2023. In this 2D top-down graphic game, we try to go from a certain point to another. Each time we reach the point, we repeat the process with another car, but our previous state also repeats its previous movements on the same map, creating traffic made up of our own cars. The game includes a leaderboard system powered by PlayFab SDK.",
+    description: "Every completed route creates a clone that repeats your previous drive, gradually filling the city with traffic made from your own past runs.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
     steam: "#",
     itch: "#",
@@ -228,15 +233,16 @@ const projectDetails = {
     neonColor: "#F1F1F1",
     turkish: false,
     categories: ["released", "playable"],
-    typeBadges: ["Released Game"],
+    typeBadges: ["Time-Loop System", "Past-Action Cloning", "Traffic Strategy", "PlayFab Leaderboard"],
+    cardTypeBadges: ["Released", "Past-Action Cloning"],
     accessBadges: ["Google Play"],
     status: "Released",
-    order: 21
+    order: 23
   },
   "rgb-square": {
     name: "RGB Square",
     image: "https://img.itch.zone/aW1nLzEyNTE0NTgwLnBuZw==/315x250%23c/Z1jLbC.png",
-    description: "Developed in just 2 days for ScoreSpace Jam #26, RGB Square is a unique Unity game that ranked 9th for 'Theme' and 14th overall among 147 entries. Released on Sep 8, 2023. I continued to develop this game by adding extra features; in this game, the main stats of our character, such as speed and health, are determined by the ratio of primary colors on the character. We use random colors passing by to adjust our character's stats to our desired balance. Additionally, we can gain abilities based on the color we have on us. There are also black-colored enemies that absorb our colors, introducing a strategic element to managing our character's colors and abilities. The game features a leaderboard system implemented using LootLocker SDK.",
+    description: "Balance red, green, and blue to reshape your character’s stats and abilities while color-draining enemies force you to adapt.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/rgb-square",
@@ -247,8 +253,9 @@ const projectDetails = {
     neonColor: "#FFFFFF",
     turkish: false,
     categories: ["jam", "playable"],
-    typeBadges: ["Game Jam Project", "Post-Jam Update"],
-    accessBadges: ["Playable", "Web"],
+    typeBadges: ["Game Jam Project", "Post-Jam Update", "9th in Theme", "14th Overall / 147", "LootLocker Leaderboard"],
+    cardTypeBadges: ["Game Jam", "14th / 147"],
+    accessBadges: ["Playable Web"],
     status: "Released",
     order: 40
   },
@@ -267,7 +274,8 @@ const projectDetails = {
     turkish: false,
     categories: ["archive"],
     typeBadges: ["Retired Release", "First 3D Project"],
-    accessBadges: ["Build Unavailable"],
+    cardTypeBadges: ["Retired", "First 3D Project"],
+    accessBadges: ["Mobile Experiment", "Build Unavailable"],
     status: "Retired Release",
     order: 62,
     distributionNote: "This project is no longer publicly distributed."
@@ -286,15 +294,16 @@ const projectDetails = {
     neonColor: "#caa8ff",
     turkish: false,
     categories: ["jam", "playable"],
-    typeBadges: ["Game Jam Project"],
-    accessBadges: ["Playable", "Web"],
+    typeBadges: ["Game Jam Project", "72-Hour Jam", "Clone Puzzle"],
+    cardTypeBadges: ["Game Jam", "Clone Puzzle"],
+    accessBadges: ["Playable Web"],
     status: "Released",
     order: 41
   },
   "junkman-Driver": {
     name: "Junkman Driver",
     image: "https://img.itch.zone/aW1hZ2UvMjQ2OTgzMi8xNDc4NDgzOC5qcGc=/347x500/T9EE32.jpg",
-    description: "'Junkman Driver' is an engaging arcade game developed with two beginner friends during a game jam. You play as a garbage-collecting car on a mission to clean the streets. Attach wires to collect various objects, sell them to an alien at the garage for nitro upgrades, and outsmart the police chasing you by using your trash tether to knock them off your trail.",
+    description: "Drive a garbage-collecting car, tether scrap behind you, sell it for nitro, and swing the load into pursuing police.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/junkman-driver",
@@ -305,15 +314,16 @@ const projectDetails = {
     neonColor: "#ab000a",
     turkish: false,
     categories: ["jam", "playable"],
-    typeBadges: ["Game Jam Project", "Team Project"],
-    accessBadges: ["Playable", "Web"],
+    typeBadges: ["Game Jam Project", "Team Project", "Tether Physics", "Arcade Driving"],
+    cardTypeBadges: ["Game Jam", "Tether Driving"],
+    accessBadges: ["Playable Web"],
     status: "Released",
     order: 42
   },
   "potion-mutation": {
     name: "Potion Mutation",
     image: "https://img.itch.zone/aW1nLzE0ODU2ODg4LnBuZw==/315x250%23c/4kcdSm.png",
-    description: "Developed for ScoreSpace Jam #28 within 3 days on the theme 'Mutation', this game, which I developed with a friend who had just started game development, features a unique gameplay mechanic. We try to help our chosen creature pass levels by throwing potions at it, which adjust its elemental defenses and stats. Essentially, it's a type of puzzle game where strategic use of potions determines success. The game incorporates a leaderboard system using LootLocker SDK",
+    description: "A three-day elemental puzzle where thrown potions mutate a creature’s stats and defenses, helping it survive hazards it could not pass before.",
     googlePlay: "#",
     steam: "#",
     itch: "https://beruke.itch.io/potion-mutation",
@@ -324,8 +334,9 @@ const projectDetails = {
     neonColor: "#c7fb00",
     turkish: false,
     categories: ["jam", "playable"],
-    typeBadges: ["Game Jam Project", "Team Project"],
-    accessBadges: ["Playable", "Web"],
+    typeBadges: ["Game Jam Project", "Team Project", "Elemental Puzzle", "LootLocker Leaderboard"],
+    cardTypeBadges: ["Game Jam", "Elemental Puzzle"],
+    accessBadges: ["Playable Web"],
     status: "Released",
     order: 43
   },
@@ -343,8 +354,10 @@ const projectDetails = {
     neonColor: "#ff90fa",
     turkish: true,
     categories: ["archive", "playable"],
-    typeBadges: ["Technical Prototype"],
-    accessBadges: ["Playable"],
+    browserPlayable: true,
+    typeBadges: ["Technical Prototype", "AI-Generated Events", "AI-Driven Dialogue"],
+    cardTypeBadges: ["Prototype", "AI Events"],
+    accessBadges: ["Turkish Only", "Playable Web"],
     status: "Technical Prototype",
     order: 63,
     linkNotes: {
@@ -359,14 +372,16 @@ const projectDetails = {
     steam: "#",
     itch: "https://beruke.itch.io/dm",
     webGL: "#",
-    youtube: "#",
+    youtube: "https://www.youtube.com/embed/RTvjWkhlqmk",
     additionalImages: [],
     cabinetColor: "#000000",
     neonColor: "#FFFFFF",
     turkish: false,
     categories: ["jam", "playable"],
-    typeBadges: ["Game Jam Project"],
-    accessBadges: ["Playable"],
+    browserPlayable: true,
+    typeBadges: ["Game Jam Project", "48-Hour Jam", "Trail Puzzle"],
+    cardTypeBadges: ["Game Jam", "48 Hours"],
+    accessBadges: ["Playable Web"],
     status: "Released",
     order: 44,
     linkNotes: {
@@ -389,8 +404,8 @@ const projectDetails = {
     neonColor: "#ffffff",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Technical Prototype", "Recruitment Assignment", "Custom Level Editor"],
-    cardTypeBadges: ["Technical Prototype", "Recruitment Assignment"],
+    typeBadges: ["Technical Prototype", "Recruitment Assignment", "Custom Level Editor", "Unity Editor Tooling"],
+    cardTypeBadges: ["Case Study", "Level Editor"],
     accessBadges: ["Source Available"],
     status: "Technical Case Study",
     order: 55,
@@ -414,8 +429,8 @@ const projectDetails = {
     turkish: false,
     categories: ["archive"],
     typeBadges: ["Retired Mobile Release", "Arcade Experiment"],
-    cardTypeBadges: ["Arcade Experiment"],
-    accessBadges: ["No Public Build"],
+    cardTypeBadges: ["Retired", "Arcade Experiment"],
+    accessBadges: ["One-Touch Controls", "No Public Build"],
     status: "Retired Mobile Release",
     order: 59,
     distributionNote: "No longer publicly distributed."
@@ -423,7 +438,7 @@ const projectDetails = {
   "Cat-Race-Final": {
     name: "Purrfect Race",
     image: "https://play-lh.googleusercontent.com/u_3UcS4BdU_7n11o470ZvPbBVj1FvH4w7pQx1BJXGsIY3qc8JbtgoYdAso0wwhS--d4=w240-h480-rw",
-    description: "Purrfect Race is a cat racing and betting game. Choose your favorite feline contender, use each cat's unique ability to gain an edge, and place your bets to climb the standings.",
+    description: "Buy, train, and breed cats with different stats and abilities, enter them in races, or predict the winner to earn rewards.",
     googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.PurrfectRaceTurboPawsChamps",
     steam: "#",
     itch: "https://beruke.itch.io/purrfect-race",
@@ -436,11 +451,13 @@ const projectDetails = {
       "https://play-lh.googleusercontent.com/kh4VejqPvnbRVPk0szXlHFJtJLkJa5eE_V6icsHrQMfn1oDuYzxRT3KQOJJHIow3W8s=w526-h296-rw"
     ],
     cabinetColor: "#FFFFFF",
-    neonColor: "#ffd97",
+    neonColor: "#ffd977",
     turkish: false,
     categories: ["released", "playable"],
-    typeBadges: ["Released Game"],
-    accessBadges: ["Google Play", "Web"],
+    browserPlayable: true,
+    typeBadges: ["Cat Racing", "Breeding & Training", "Stat Progression", "Race Prediction"],
+    cardTypeBadges: ["Released", "Breed & Race"],
+    accessBadges: ["Google Play", "Playable Web"],
     status: "Released",
     order: 21
   },
@@ -461,8 +478,8 @@ const projectDetails = {
     neonColor: "#bf8234",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Retired Publisher Prototype", "Mobile Puzzle"],
-    cardTypeBadges: ["Publisher Prototype"],
+    typeBadges: ["Retired Publisher Prototype", "Mobile Puzzle", "Publisher Test", "Market-Tested Prototype"],
+    cardTypeBadges: ["Retired", "Publisher Test"],
     accessBadges: ["Build Unavailable"],
     status: "Retired Publisher Prototype",
     order: 64,
@@ -471,7 +488,7 @@ const projectDetails = {
   "rps-online": {
     name: "Rock Paper Scissors Online",
     image: "https://img.itch.zone/aW1nLzIwNzY1NjQyLnBuZw==/315x250%23c/qc2GYP.png",
-    description: "An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express. Players could create rooms, join through room codes, and synchronize match state through a lightweight backend. This early networking experiment later informed the experimental online co-op beta in Stick Slasher.",
+    description: "An early online multiplayer prototype built with Unity WebGL, NativeWebSocket, Node.js, and Express. Players could create rooms, join through room codes, and synchronize match state through a lightweight backend. This was an early networking experiment created before the experimental online co-op work in Stick Slasher.",
     googlePlay: "#",
     steam: "#",
     itch: "#",
@@ -483,8 +500,8 @@ const projectDetails = {
     neonColor: "#ffd600",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Offline Multiplayer Prototype", "WebSocket Experiment"],
-    cardTypeBadges: ["WebSocket Experiment"],
+    typeBadges: ["Offline Multiplayer Prototype", "WebSocket Experiment", "Unity WebGL", "Node.js / Express"],
+    cardTypeBadges: ["Prototype", "WebSocket"],
     accessBadges: ["Backend Retired", "Source Available"],
     status: "Retired Prototype",
     order: 65,
@@ -509,7 +526,7 @@ const projectDetails = {
     neonColor: "#ff3366",
     turkish: false,
     categories: ["archive"],
-    typeBadges: ["Unreleased Student Project", "Team Project"],
+    typeBadges: ["Unreleased Student Project", "Team Project", "Pixel-Art Fighter", "Mobile Prototype"],
     cardTypeBadges: ["Student Project", "Team Project"],
     accessBadges: ["No Public Build", "Source Available"],
     status: "Unreleased Student Project",
@@ -524,6 +541,7 @@ const LINK_DEFS = [
   { key: "googlePlay", icon: "fab fa-google-play", label: "Google Play" },
   { key: "steam",      icon: "fab fa-steam",       label: "Steam" },
   { key: "itch",       icon: "fab fa-itch-io",     label: "Itch.io" },
+  { key: "playgama",   icon: "fas fa-gamepad",     label: "Playgama" },
   { key: "github",     icon: "fab fa-github",      label: "Source Code" }
 ];
 
@@ -594,7 +612,8 @@ function badgeClass(text, group) {
   return group === 'access' ? 'badge-access' : 'badge-type';
 }
 
-// One short badge per card keeps the arcade grid minimal.
+// The first card badge communicates project status; the optional second badge
+// highlights one distinctive feature. Cards never render more than two badges.
 function primaryCardBadge(p) {
   const cats = p.categories || [];
   if (cats.includes('featured')) return { text: 'Featured', cls: 'badge-featured' };
@@ -612,6 +631,12 @@ function primaryCardBadge(p) {
 }
 
 function buildCabinetBadges(p) {
+  const configured = (p.cardTypeBadges || []).slice(0, 2);
+  if (configured.length) {
+    return configured
+      .map((text, index) => `<span class="cabinet-badge ${index === 0 ? badgeClass(text, 'type') : 'badge-access'}">${text.toUpperCase()}</span>`)
+      .join('');
+  }
   const primary = primaryCardBadge(p);
   if (!primary) return '';
   return `<span class="cabinet-badge ${primary.cls}">${primary.text.toUpperCase()}</span>`;
@@ -715,7 +740,7 @@ function createArcadeCabinets() {
           </div>`;
 
     target.insertAdjacentHTML('beforeend', `
-      <div class="arcade-cabinet${isArchive ? ' archive-cabinet' : ''}" data-project="${key}" tabindex="0" role="button" aria-label="Open details for ${p.name}">
+      <div class="arcade-cabinet${isArchive ? ' archive-cabinet' : ''}${(p.categories || []).includes('featured') ? ' featured-cabinet' : ''}" data-project="${key}" tabindex="0" role="button" aria-label="Open details for ${p.name}">
         <div class="cabinet-body">
           <div class="cabinet-badges">${badges}</div>
           <div class="cabinet-screen">
@@ -759,7 +784,7 @@ function filterCabinets() {
     // the rest match the categories array (featured / jam / archive).
     const matchesFilter =
       currentFilter === 'all' ||
-      (currentFilter === 'web' && project.webGL !== '#') ||
+      (currentFilter === 'web' && (project.webGL !== '#' || project.browserPlayable === true || (project.playgama && project.playgama !== '#'))) ||
       (currentFilter === 'mobile' && project.googlePlay !== '#') ||
       categories.includes(currentFilter);
     const matchesLanguage = !englishOnly || !project.turkish;
@@ -870,7 +895,12 @@ function showProjectDetails(project) {
     additionalImagesHtml = `<h3 class="gallery-title secondary-neon">Gallery</h3><div class="game-gallery">${project.additionalImages.map((img,i)=>`<div class="gallery-image-container"><img src="${img}" alt="${project.name} screenshot ${i+1}" class="gallery-image" data-full="${img}" loading="lazy"></div>`).join('')}</div>`;
   }
 
-  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info">${badgeRows}<div class="game-description"><p>${project.description}</p></div>${distributionNote}<div class="game-links"></div></div></div>${additionalImagesHtml}`;
+  let extraSectionsHtml = '';
+  if (project.extraSections && project.extraSections.length) {
+    extraSectionsHtml = `<div class="modal-extra-sections">${project.extraSections.map(section => `<section class="modal-extra-section"><h3>${section.title}</h3><p>${section.text}</p></section>`).join('')}</div>`;
+  }
+
+  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info">${badgeRows}<div class="game-description"><p>${project.description}</p></div>${distributionNote}<div class="game-links"></div></div></div>${extraSectionsHtml}${additionalImagesHtml}`;
 
   document.getElementById('game-details-content').innerHTML = detailsHTML;
   document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);

@@ -12,6 +12,7 @@ const LINK_DEFS = [
   { key: 'steam', label: 'Steam' },
   { key: 'itch', label: 'Itch.io' },
   { key: 'webGL', label: 'Play in Browser' },
+  { key: 'playgama', label: 'Playgama' },
   { key: 'github', label: 'Source Code' },
 ];
 
@@ -20,6 +21,7 @@ const PLATFORM_NAME = {
   steam: 'Steam',
   itch: 'itch.io',
   webGL: 'Web',
+  playgama: 'Web',
   github: 'Source',
 };
 
@@ -465,9 +467,20 @@ function main() {
   });
 
   const slugs = new Set();
+  const orders = new Map();
   games.forEach((game) => {
     if (slugs.has(game.slug)) throw new Error(`Duplicate game page slug: ${game.slug}`);
     slugs.add(game.slug);
+    if (!game.description || !(game.typeBadges || []).length || !(game.accessBadges || []).length) {
+      throw new Error(`Missing description or detail badges: ${game.name}`);
+    }
+    if ((game.cardTypeBadges || []).length > 2) {
+      throw new Error(`More than two card badges: ${game.name}`);
+    }
+    if (orders.has(game.order)) {
+      throw new Error(`Duplicate game order ${game.order}: ${orders.get(game.order)} and ${game.name}`);
+    }
+    orders.set(game.order, game.name);
   });
 
   const gamesDir = path.join(ROOT, 'games');
