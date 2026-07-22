@@ -1,4 +1,5 @@
 // Central game data for Beruke Games.
+// imageBg: optional backdrop for transparent key art (omit for opaque images).
 // categories: featured | released | playable | jam | archive.
 //   Arcade filters use featured / jam / archive directly; the "Play in Browser"
 //   and "Mobile" filters are derived from live webGL / googlePlay links.
@@ -223,21 +224,29 @@ const projectDetails = {
     name: "TimeLoop Traffic",
     image: "https://play-lh.googleusercontent.com/BjNVTvEkKtDVvRgOhcy0MltQQTQj-A7aYpBT315xHNxvdXEGUs1ImmBKLJ4uBW9dlRM=w416-h235-rw",
     description: "Every completed route creates a clone that repeats your previous drive, gradually filling the city with traffic made from your own past runs.",
-    googlePlay: "https://play.google.com/store/apps/details?id=com.BerukeGames.TimeLoopTrafficAutoCloneCity",
+    googlePlay: "#",
     steam: "#",
-    itch: "#",
-    webGL: "#",
+    itch: "https://beruke.itch.io/timeloop-traffic-autoclone-city",
+    webGL: "https://itch.io/embed-upload/18438043?color=000000",
     youtube: "#",
     additionalImages: ["https://play-lh.googleusercontent.com/fFkzusy5Llnkz8QcNGtDm_LPH1yKsJKckBPc2g66syNkcCN2RZaQa7enHVgoQC_lL-bz=w2560-h1440-rw", "https://play-lh.googleusercontent.com/p0E4399rmAHCJ5N3aliEdprUrTRLjFTJ657EIXjwUUTyrqyX4pm3a_V_6l8M1IxGszo4=w2560-h1440-rw"],
     cabinetColor: "#000000",
     neonColor: "#F1F1F1",
+    // Key art is a transparent PNG drawn in black line art - it needs a light
+    // backdrop or the title and clock icon vanish against the dark theme.
+    imageBg: "#ffffff",
     turkish: false,
-    categories: ["released", "playable"],
-    typeBadges: ["Time-Loop System", "Past-Action Cloning", "Traffic Strategy", "PlayFab Leaderboard"],
-    cardTypeBadges: ["Released", "Past-Action Cloning"],
-    accessBadges: ["Google Play"],
-    status: "Released",
-    order: 23
+    categories: ["archive", "playable"],
+    typeBadges: ["Retired Mobile Release", "Time-Loop System", "Past-Action Cloning", "Traffic Strategy"],
+    cardTypeBadges: ["Retired", "Past-Action Cloning"],
+    accessBadges: ["Browser Playable", "Web"],
+    status: "Retired Mobile Release",
+    order: 57,
+    distributionNote: "No longer distributed on Google Play. A browser-playable version is preserved on itch.io.",
+    linkNotes: {
+      itch: "Browser version on itch.io",
+      webGL: "Play in your browser"
+    }
   },
   "rgb-square": {
     name: "RGB Square",
@@ -744,7 +753,7 @@ function createArcadeCabinets() {
         <div class="cabinet-body">
           <div class="cabinet-badges">${badges}</div>
           <div class="cabinet-screen">
-            <img src="${p.image}" alt="${p.name} artwork" class="screen-content" loading="lazy">
+            <img src="${p.image}" alt="${p.name} artwork" class="screen-content" loading="lazy"${p.imageBg ? ` style="background-color:${p.imageBg}"` : ''}>
             <div class="screen-glare"></div>
           </div>
           <div class="cabinet-header"><h3 style="color:${p.neonColor}">${p.name}</h3></div>
@@ -900,7 +909,7 @@ function showProjectDetails(project) {
     extraSectionsHtml = `<div class="modal-extra-sections">${project.extraSections.map(section => `<section class="modal-extra-section"><h3>${section.title}</h3><p>${section.text}</p></section>`).join('')}</div>`;
   }
 
-  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"></a>${youtubeEmbedHtml}</div><div class="game-info">${badgeRows}<div class="game-description"><p>${project.description}</p></div>${distributionNote}<div class="game-links"></div></div></div>${extraSectionsHtml}${additionalImagesHtml}`;
+  const detailsHTML = `<div class="game-header"><h2 class="primary-neon">${project.name}</h2>${statusMessage}</div><div class="game-content"><div class="game-media"><a class="game-main-image-link" href="${getGamePageUrl(project)}" aria-label="Open ${project.name} game page"><img src="${project.image}" alt="${project.name}" class="game-main-image"${project.imageBg ? ` style="background-color:${project.imageBg}"` : ''}></a>${youtubeEmbedHtml}</div><div class="game-info">${badgeRows}<div class="game-description"><p>${project.description}</p></div>${distributionNote}<div class="game-links"></div></div></div>${extraSectionsHtml}${additionalImagesHtml}`;
 
   document.getElementById('game-details-content').innerHTML = detailsHTML;
   document.querySelector('#game-details-content .game-links').replaceWith(linksContainer);

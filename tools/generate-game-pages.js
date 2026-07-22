@@ -173,7 +173,7 @@ function trailerEmbed(game) {
   if (!game.youtube || game.youtube === '#') {
     return `
       <div class="media-frame">
-        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} artwork" loading="lazy">
+        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} artwork" loading="lazy"${game.imageBg ? ` style="background-color:${escapeHtml(game.imageBg)}"` : ''}>
       </div>
       <p>Trailer is not available yet. The artwork above is provided for press and store reference.</p>`;
   }
@@ -320,7 +320,7 @@ function renderGamePage(game, games) {
         ${renderBadgeGroups(game)}
       </div>
       <div class="hero-art">
-        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} key art">
+        <img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)} key art"${game.imageBg ? ` style="background-color:${escapeHtml(game.imageBg)}"` : ''}>
       </div>
     </section>
 
@@ -411,7 +411,7 @@ function renderGamesIndex(games) {
     <div class="seo-game-grid">
       ${games.map((game) => `
       <article class="seo-game-card">
-        <a href="${escapeHtml(game.slug)}.html"><img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)}" loading="lazy"></a>
+        <a href="${escapeHtml(game.slug)}.html"><img src="${escapeHtml(gamePageAsset(game.image))}" alt="${escapeHtml(game.name)}" loading="lazy"${game.imageBg ? ` style="background-color:${escapeHtml(game.imageBg)}"` : ''}></a>
         <div class="seo-game-card-content">
           <h2><a href="${escapeHtml(game.slug)}.html">${escapeHtml(game.name)}</a></h2>
           <p>${escapeHtml(game.hook)}</p>
