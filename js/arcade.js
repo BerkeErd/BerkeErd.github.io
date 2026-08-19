@@ -9,7 +9,7 @@
 const projectDetails = {
   "wizards-path": {
     name: "Wizard's Path",
-    image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/6da6178c4218ffd12bd50fe343103ac22580410a/capsule_616x353.jpg",
+    image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/de50254b91bda7a4814c35f8c00a5c20805efe66/capsule_616x353.jpg",
     description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. Currently in development - wishlist it now on Steam and try the free demo in your browser.",
     googlePlay: "#",
     steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
