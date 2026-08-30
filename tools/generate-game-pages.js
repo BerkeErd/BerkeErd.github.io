@@ -12,6 +12,7 @@ const LINK_DEFS = [
   { key: 'steam', label: 'Steam' },
   { key: 'itch', label: 'Itch.io' },
   { key: 'webGL', label: 'Play in Browser' },
+  { key: 'website', label: 'Official Website' },
   { key: 'playgama', label: 'Playgama' },
   { key: 'github', label: 'Source Code' },
 ];
@@ -21,6 +22,7 @@ const PLATFORM_NAME = {
   steam: 'Steam',
   itch: 'itch.io',
   webGL: 'Web',
+  website: 'Web',
   playgama: 'Web',
   github: 'Source',
 };

@@ -90,6 +90,41 @@ const projectDetails = {
       }
     ]
   },
+  "turkiye-tahmin": {
+    name: "Türkiye Tahmin",
+    image: "images/TurkiyeTahmin/turkiye-tahmin-cover.png",
+    description: "A free browser-based statistics guessing game built around real data from Türkiye. Its 34,000+ question pool is generated from current datasets covering population, names, migration, education, geography, and the economy, with daily challenges, mixed rounds, an endless mode, and Türkiyedle.",
+    googlePlay: "#",
+    steam: "#",
+    itch: "#",
+    webGL: "#",
+    website: "https://turkiyetahmin.com/",
+    browserPlayable: true,
+    youtube: "#",
+    additionalImages: [],
+    cabinetColor: "#09111d",
+    neonColor: "#ffb224",
+    turkish: true,
+    categories: ["featured", "released", "playable"],
+    typeBadges: ["Featured Project", "Data-Driven Web Game", "Daily Challenge"],
+    cardTypeBadges: ["Featured", "34K+ Questions"],
+    accessBadges: ["Free Browser Game", "No Sign-Up"],
+    status: "Released",
+    order: 4,
+    linkNotes: {
+      website: "Play free at turkiyetahmin.com"
+    },
+    extraSections: [
+      {
+        title: "Real Data, Fresh Questions",
+        text: "Questions are generated from datasets published by TÜİK, Wikidata, the World Bank, and Wikimedia, turning public statistics into short, replayable guessing rounds."
+      },
+      {
+        title: "Four Ways to Play",
+        text: "Günün Tahmini gives everyone the same ten questions, Karışık Oyna starts a fresh mixed round, Sonsuz Mod adds a three-life challenge, and Türkiyedle offers a daily name or city puzzle."
+      }
+    ]
+  },
   "sesli-sorulu-milyonlar": {
     name: "Sesli Sorulu Milyonlar",
     image: "https://play-lh.googleusercontent.com/aH_-37UFLVfxqSQXQlKS3Gug2HVY_mKaJ5B72JivVsdvSgCPLXlL76SYZTA7GR6hwZjT=w416-h235-rw",
@@ -550,6 +585,7 @@ const LINK_DEFS = [
   { key: "googlePlay", icon: "fab fa-google-play", label: "Google Play" },
   { key: "steam",      icon: "fab fa-steam",       label: "Steam" },
   { key: "itch",       icon: "fab fa-itch-io",     label: "Itch.io" },
+  { key: "website",    icon: "fas fa-globe",       label: "Official Website" },
   { key: "playgama",   icon: "fas fa-gamepad",     label: "Playgama" },
   { key: "github",     icon: "fab fa-github",      label: "Source Code" }
 ];
