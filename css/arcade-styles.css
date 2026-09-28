@@ -1244,6 +1244,24 @@ input:checked + .slider:before {
   line-height: 1.7;
 }
 
+/* Bonus stage (third-party badge) */
+.bonus-stage {
+  position: relative;
+  z-index: 10;
+}
+
+.bonus-stage-badge {
+  display: inline-block;
+  margin-top: 18px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.bonus-stage-badge:hover,
+.bonus-stage-badge:focus-visible {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px var(--secondary-neon, #00e5aa));
+}
+
 .archive-section .arcade-machines {
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 22px;
