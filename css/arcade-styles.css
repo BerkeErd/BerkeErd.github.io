@@ -129,6 +129,94 @@ body {
 }
 
 
+/* Portfolio trailer above the game filters */
+.portfolio-trailer {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+  align-items: center;
+  gap: 30px;
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 24px;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, var(--cabinet-light), var(--arcade-dark));
+  border: 1px solid rgba(254, 76, 1, 0.45);
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(254, 76, 1, 0.12);
+}
+
+.portfolio-trailer-eyebrow {
+  margin: 0 0 16px;
+  color: var(--secondary-neon);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.portfolio-trailer h2 {
+  margin: 0 0 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 0 12px rgba(254, 76, 1, 0.65);
+}
+
+.portfolio-trailer-description {
+  margin: 0 0 20px;
+  color: #b9c7cd;
+  line-height: 1.7;
+}
+
+.portfolio-trailer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-neon);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.portfolio-trailer-link:hover,
+.portfolio-trailer-link:focus-visible {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.portfolio-trailer-link:focus-visible {
+  outline: 2px solid var(--secondary-neon);
+  outline-offset: 6px;
+}
+
+.portfolio-trailer-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid rgba(0, 229, 170, 0.35);
+  border-radius: 10px;
+  background: #000;
+}
+
+.portfolio-trailer-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .portfolio-trailer {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    width: calc(100% - 24px);
+    padding: 18px;
+  }
+}
+
 .control-panel {
   width: 80%;
   max-width: 1000px;
