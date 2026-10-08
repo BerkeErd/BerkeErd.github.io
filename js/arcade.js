@@ -10,7 +10,8 @@ const projectDetails = {
   "wizards-path": {
     name: "Wizard's Path",
     image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/de50254b91bda7a4814c35f8c00a5c20805efe66/capsule_616x353.jpg",
-    description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. Currently in development - wishlist it now on Steam and try the free demo in your browser.",
+    description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. The Steam demo is out now, offering a much more polished experience than the earlier browser demo. Play the demo on Steam and wishlist the full game, currently in development.",
+    hookOverride: "Build a wildly different mage every run in a fast-paced action roguelite, now with a demo on Steam.",
     googlePlay: "#",
     steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
     itch: "https://beruke.itch.io/wizards-path-trial",
@@ -22,14 +23,20 @@ const projectDetails = {
     turkish: false,
     categories: ["featured", "playable"],
     typeBadges: ["Featured Game", "In Development", "Action Roguelite"],
-    cardTypeBadges: ["Featured", "Web Demo"],
-    accessBadges: ["Free Web Demo", "Steam Wishlist"],
+    cardTypeBadges: ["Featured", "Steam Demo"],
+    accessBadges: ["Steam Demo", "Steam Wishlist"],
     status: "In Development",
     order: 1,
+    primaryLink: "steam",
+    linkLabels: {
+      steam: "Play Steam Demo",
+      itch: "Earlier Demo on itch.io",
+      webGL: "Earlier Web Demo"
+    },
     linkNotes: {
-      steam: "Wishlist on Steam",
-      itch: "Free demo on itch.io",
-      webGL: "Play the demo in your browser"
+      steam: "Steam demo available now - wishlist the full game",
+      itch: "Earlier demo; play the latest, more polished demo on Steam",
+      webGL: "Earlier browser demo; the Steam demo is the recommended way to play"
     }
   },
   "flagRush": {
@@ -613,9 +620,10 @@ function buildLinkButtons(game) {
     a.href = game[key];
     a.target = '_blank';
     a.rel = 'noopener';
-    a.className = 'game-link-btn btn btn-outline-light m-1';
+    a.className = `game-link-btn btn ${game.primaryLink === key ? 'btn-success' : 'btn-outline-light'} m-1`;
     const note = game.linkNotes && game.linkNotes[key];
-    a.innerHTML = `<i class="${icon} mr-1"></i> ${label}`;
+    const linkLabel = (game.linkLabels && game.linkLabels[key]) || label;
+    a.innerHTML = `<i class="${icon} mr-1"></i> ${linkLabel}`;
     if (note) a.title = note;
     frag.appendChild(a);
   });
@@ -910,12 +918,14 @@ function showProjectDetails(project) {
 
   if (project.webGL !== '#') {
     const playBtn = document.createElement('button');
-    playBtn.className = 'game-link-btn btn btn-success m-1';
+    playBtn.className = `game-link-btn btn ${project.primaryLink ? 'btn-outline-light' : 'btn-success'} m-1`;
     playBtn.dataset.toggle = 'modal';
     playBtn.dataset.target = '#gameModal';
     playBtn.dataset.webgl = project.webGL;
     playBtn.dataset.name = project.name;
-    playBtn.innerHTML = '<i class="fas fa-gamepad mr-1"></i> Play in Browser';
+    const playLabel = (project.linkLabels && project.linkLabels.webGL) || 'Play in Browser';
+    playBtn.innerHTML = `<i class="fas fa-gamepad mr-1"></i> ${playLabel}`;
+    if (project.linkNotes && project.linkNotes.webGL) playBtn.title = project.linkNotes.webGL;
     linksContainer.appendChild(playBtn);
   }
 

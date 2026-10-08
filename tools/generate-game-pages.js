@@ -111,7 +111,7 @@ function platformLinks(game) {
     .filter(({ key }) => game[key] && game[key] !== '#')
     .map(({ key, label }) => ({
       key,
-      label,
+      label: (game.linkLabels && game.linkLabels[key]) || label,
       url: game[key],
       note: (game.linkNotes && game.linkNotes[key]) || '',
     }));

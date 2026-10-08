@@ -175,52 +175,6 @@ function initMediaControls() {
   });
 }
 
-function initFeaturedDemoFrame() {
-  const frame = document.querySelector('.featured-demo-frame');
-  if (!frame) return;
-
-  const baseWidth = 960;
-  const baseHeight = 640;
-
-  const updateFrameSize = () => {
-    const width = frame.clientWidth;
-    if (!width) return;
-
-    const scale = Math.min(1, width / baseWidth);
-    frame.style.setProperty('--demo-scale', scale.toFixed(4));
-    frame.style.height = `${Math.round(baseHeight * scale)}px`;
-  };
-
-  updateFrameSize();
-
-  if ('ResizeObserver' in window) {
-    const observer = new ResizeObserver(updateFrameSize);
-    observer.observe(frame);
-    frame.featuredDemoResizeObserver = observer;
-  } else {
-    window.addEventListener('resize', updateFrameSize);
-  }
-}
-
-function initFeaturedDemoModal() {
-  const iframe = document.getElementById('featuredGameIframe');
-  if (!iframe || typeof $ === 'undefined') return;
-
-  const demoUrl = iframe.getAttribute('data-src');
-  const modal = $('#gameModal');
-
-  modal.on('shown.bs.modal', function() {
-    if (!iframe.getAttribute('src')) {
-      iframe.setAttribute('src', demoUrl);
-    }
-  });
-
-  modal.on('hidden.bs.modal', function() {
-    iframe.removeAttribute('src');
-  });
-}
-
-
 function initSnakeGame() {
   document.querySelector('.main-logo').addEventListener('click', function() {
     launchSnakeGame();
@@ -651,10 +605,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
   initMediaControls();
 
-  initFeaturedDemoFrame();
-
-  initFeaturedDemoModal();
-  
   initEasterEgg();
   
   $('[data-toggle="tooltip"]').tooltip();
