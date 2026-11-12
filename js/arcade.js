@@ -10,33 +10,25 @@ const projectDetails = {
   "wizards-path": {
     name: "Wizard's Path",
     image: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4669130/de50254b91bda7a4814c35f8c00a5c20805efe66/capsule_616x353.jpg",
-    description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, items, and risky challenges to survive endless enemy waves, defeat bosses, and push your most broken build as far as it can go. The Steam demo is out now, offering a much more polished experience than the earlier browser demo. Play the demo on Steam and wishlist the full game, currently in development.",
-    hookOverride: "Build a wildly different mage every run in a fast-paced action roguelite, now with a demo on Steam.",
+    description: "Build a wildly different mage every run in a fast-paced action roguelite. Combine spell schools, loot, boons, and risky challenges to survive enemy waves and defeat bosses. Available now on Steam as a full PC release.",
+    hookOverride: "Build a wildly different mage every run in a fast-paced action roguelite, available now on Steam.",
     googlePlay: "#",
     steam: "https://store.steampowered.com/app/4669130/Wizards_Path_Palette_of_Spells/",
-    itch: "https://beruke.itch.io/wizards-path-trial",
-    webGL: "https://itch.io/embed-upload/17920362?color=000000",
+    itch: "#",
+    webGL: "#",
     youtube: "#",
     additionalImages: [],
     cabinetColor: "#2a1e4a",
     neonColor: "#ffcc00",
     turkish: false,
-    categories: ["featured", "playable"],
-    typeBadges: ["Featured Game", "In Development", "Action Roguelite"],
-    cardTypeBadges: ["Featured", "Steam Demo"],
-    accessBadges: ["Steam Demo", "Steam Wishlist"],
-    status: "In Development",
+    categories: ["featured", "released", "playable"],
+    typeBadges: ["Featured Game", "Action Roguelite"],
+    cardTypeBadges: ["Featured", "Released"],
+    accessBadges: ["Steam", "Full Game"],
+    status: "Released",
     order: 1,
-    primaryLink: "steam",
-    linkLabels: {
-      steam: "Play Steam Demo",
-      itch: "Earlier Demo on itch.io",
-      webGL: "Earlier Web Demo"
-    },
     linkNotes: {
-      steam: "Steam demo available now - wishlist the full game",
-      itch: "Earlier demo; play the latest, more polished demo on Steam",
-      webGL: "Earlier browser demo; the Steam demo is the recommended way to play"
+      steam: "Full PC release on Steam"
     }
   },
   "flagRush": {
