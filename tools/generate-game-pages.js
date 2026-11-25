@@ -266,6 +266,28 @@ function renderScreenshots(game) {
     </div>`;
 }
 
+function renderCommunityGameplay(game) {
+  if (!game.communityVideos?.length) return '';
+  return `
+    <section class="game-section" aria-labelledby="community-gameplay-heading">
+      <h2 id="community-gameplay-heading">Community Gameplay</h2>
+      <ul class="gameplay-grid" role="list">${game.communityVideos.map(({ id, title, channel }) => `
+        <li>
+          <a class="gameplay-card" href="https://www.youtube.com/watch?v=${escapeHtml(id)}" target="_blank" rel="noopener noreferrer">
+            <span class="gameplay-preview">
+              <img src="https://i.ytimg.com/vi/${escapeHtml(id)}/mqdefault.jpg" width="320" height="180" alt="" loading="lazy" decoding="async">
+              <span class="gameplay-play" aria-hidden="true"></span>
+            </span>
+            <span class="gameplay-card-text">
+              <strong>${escapeHtml(title)}</strong>
+              <span>${escapeHtml(channel)}</span>
+            </span>
+          </a>
+        </li>`).join('')}
+      </ul>
+    </section>`;
+}
+
 function renderSimilar(current, games) {
   return `
     <div class="similar-grid">
@@ -331,11 +353,12 @@ function renderGamePage(game, games) {
       <p>${escapeHtml(game.descriptionText)}</p>
       ${distributionNote}
     </section>
-${renderExtraSections(game)}
+${renderExtraSections(game)}${game.communityVideos?.length && (!game.youtube || game.youtube === '#') ? '' : `
     <section class="game-section" aria-labelledby="trailer-heading">
       <h2 id="trailer-heading">Trailer</h2>
       ${trailerEmbed(game)}
-    </section>
+    </section>`}
+${renderCommunityGameplay(game)}
 
     <section class="game-section" aria-labelledby="screenshots-heading">
       <h2 id="screenshots-heading">Screenshots</h2>
